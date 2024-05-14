@@ -1,0 +1,22 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+.header {
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbarutama {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    font-weight: bold;
+    background-color: gainsboro;
+}
+a{
+    color: white !important;
+}
+
