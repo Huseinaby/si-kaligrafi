@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('bahan', function (Blueprint $table) {
             $table->id();
-            $table->varchar('nama_bahan');
-            $table->varchar('jenis_bahan');
+            $table->string('nama_bahan');
+            $table->string('jenis_bahan');
             $table->text('deskripsi_bahan');
-            $table->varchar('foto_bahan ');
+            $table->string('foto_bahan');
             $table->timestamps();
         });
     }
