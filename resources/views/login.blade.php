@@ -50,7 +50,7 @@
 
   <footer id="navbar">
     <div class="footer-address">
-      <img src="./Ok.svg" alt="icon ok">
+      <img src="../image/Ok.svg" alt="icon ok">
       <h4>Alamat Workshop Kami</h4>
     </div>
 
@@ -61,7 +61,7 @@
      
 <br>
 <div class="footer-address2">
-  <img src="c.png" alt="">
+  <img src="../image/c.png" alt="">
   <p>2024 [merk]</p>
 </div>
 
