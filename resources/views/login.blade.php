@@ -5,24 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaligrafi Indah</title>
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
 
-  <div class="navbar">
-    <a class="logo" href="#logo">Logo</a>
-    <a class="tentang" href="#tentang">Tentang</a>
-    <a href="#layanan">Layanan</a>
-    <a href="#bahan">Bahan</a>
-    <a href="#ornamen">Ornamen</a>
-    <a href="#portofolio">Portofolio</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#testimoni">Testimoni</a>
-    <a class="login" href="#Sign In">Sign In</a>
-
-  </div>
-  <br><br><br><br><br>
+  <header class="menu">
+    <div class="icon">
+      <h2 class="logo">Kaligrafi</h2>
+    </div>
+      <ul>
+        <li><a href="#">Tentang</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li><a href="#">Bahan</a></li>
+        <li><a href="#">Ornamen</a></li>
+        <li><a href="#">Portofolio</a></li>
+        <li><a href="#">Galeri</a></li>
+        <li><a href="#">Testimoni</a></li>
+        <li><a href="#" class="tbl">Sign In</a></li>
+      </ul>
+    </header>
+  <br><br><br>
 
   <h1 class="satu">User Login</h1>
 
@@ -43,6 +46,7 @@
     </form>
   </div>
 
+  <br><br><br><br>
 
   <footer id="navbar">
     <div class="footer-address">

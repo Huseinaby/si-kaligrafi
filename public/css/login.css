@@ -1,4 +1,3 @@
-
 /* CSS untuk styling navbar */
 body {
     margin: 0;
@@ -9,45 +8,89 @@ body {
     background-position: 100% 50%;
 }
 
-.navbar {
-    background-color: #003C43; /* Warna navbar */
-    display: flex;
-    justify-content: space-between; /* Membuat elemen di dalam navbar terpisah sejauh mungkin */
-    align-items: center; /* Pusatkan vertikal */
-    padding: 15px 20px;
-    text-align: right;
+/* navbar */
+
+.navbar{
+  width: 1200px;
+  height: 70px;
+  margin: auto;
+  
 }
 
-.navbar a {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 15px; /* Padding horizontal dan vertikal */
-    text-decoration: none;
-   
+.icon{
+  width: 200px;
+  float: left;
+  height: 80px;
 }
 
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
+.logo{
+  color: white;
+  font-size: 35px;
+ 
+  padding-left: 20px;
+  float: left;
+  padding-top: 15px;
 }
 
-.navbar a.active {
-    background-color: #4CAF50;
-    color: white;
+
+
+header .menu{
+  width: 750px;
+  float: left;
+  height: 90px;
+ 
+
+}
+header {
+  width: 100%;
+  height: 95px;
+  background: transparent;
+  position: sticky;
+  top: 0;
+  background-color: #003C43; /* Warna navbar */
 }
 
-.navbar .login {
-    background-color: #FFC700;
+
+ul{
+  float: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 0 100px;
+}
+
+ul li{
+  list-style: none;
+  margin-left: 55px;
+  margin-top: 25px;
+  font-size: 15px;
+  text-decoration: none;
+}
+ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+  
+}
+
+ul li a:hover{
+  color: #ffc700;
+  text-decoration: none;
+}
+a.tbl{
+  background: #FFC700;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+     background-color: #FFC700;
     color: black;
     padding: 10px 20px;
     border-radius: 10px;
-    text-decoration: none;
-    margin-left: auto; /* Pindahkan ke pojok kanan */
-}
 
-.navbar .tentang{
-    text-decoration: none;
-    margin-left: auto; /* Pindahkan ke pojok kanan */   
 }
 
 /*Login username dan password  */
@@ -154,3 +197,6 @@ font-size: 30px;
   text-align: center;
   justify-content: center;
 }
+
+
+
