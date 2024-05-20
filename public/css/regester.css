@@ -26,11 +26,17 @@ height: 80px;
 .logo{
 color: white;
 font-size: 35px;
-
 padding-left: 20px;
 float: left;
 padding-top: 15px;
 }
+
+
+.logo a {
+text-decoration: none;
+color: white;
+}
+
 
 
 
@@ -66,9 +72,6 @@ margin-top: 25px;
 font-size: 15px;
 text-decoration: none;
 }
- 
-
-
 ul li a{
 text-decoration: none;
 color: white;
@@ -86,7 +89,7 @@ background: #FFC700;
 border-radius: 20px;
 margin-top: 20px;
 padding: 15px 20px 15px 20px;
-color: black;
+color: white;
 cursor: pointer;
 font-weight: bold;
    background-color: #FFC700;
@@ -94,6 +97,12 @@ font-weight: bold;
   padding: 10px 20px;
   border-radius: 10px;
 
+}
+
+a.tbl:hover{
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
 }
 
 /*Login username dan password  */
@@ -201,8 +210,5 @@ text-align: center;
 justify-content: center;
 }
 
-.menu a {
-  text-decoration: none;
-  color: white;
-}
+
 
