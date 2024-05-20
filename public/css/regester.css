@@ -198,5 +198,8 @@ text-align: center;
 justify-content: center;
 }
 
-
+.menu a {
+  text-decoration: none;
+  color: white;
+}
 

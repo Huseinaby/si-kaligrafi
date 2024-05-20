@@ -12,7 +12,7 @@
 
   <header class="menu">
     <div class="icon">
-      <h2 class="logo">Kaligrafi</h2>
+      <h2 class="logo"><a href="\">Kaligrafi</a></h2>
     </div>
       <ul>
         <li><a href="#">Tentang</a></li>
@@ -22,15 +22,15 @@
         <li><a href="#">Portofolio</a></li>
         <li><a href="#">Galeri</a></li>
         <li><a href="#">Testimoni</a></li>
-        <li><a href="#" class="tbl">Sign In</a></li>
+        <li><a href="login" class="tbl">Sign In</a></li>
       </ul>
     </header>
   <br><br><br>
 
-  <h1 class="satu">User Login</h1>
+  <h1 class="satu">Register</h1>
 
   <div class="container">
-    <h1><b> Login</b></h1>
+    <h1><b>Register</b></h1>
     <form action="#">
       <div class="form-group">
         <label for="username"><b> Username:</b></label>
@@ -44,9 +44,9 @@
         <label for="password"><b>Password:</b></label>
         <input type="password" id="password" name="password" required>
       </div>
-      <button type="submit"><b> Sign In</b></button>
+      <button type="submit"><b> Sign Up</b></button>
       <br><br>
-      <p>Don't have account? Sign Up</p>
+      <p>Back to <a href="login">login</a></p>
     </form>
   </div>
 

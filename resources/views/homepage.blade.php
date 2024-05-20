@@ -23,7 +23,7 @@
           <li><a href="#">Portofolio</a></li>
           <li><a href="#">Galeri</a></li>
           <li><a href="#">Testimoni</a></li>
-          <li><a href="#" class="tbl">Sign In</a></li>
+          <li><a href="login" class="tbl">Sign In</a></li>
         </ul>
       </header>
       <div class="content">
