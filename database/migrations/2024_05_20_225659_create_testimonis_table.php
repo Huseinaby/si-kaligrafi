@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('testimonis', function (Blueprint $table) {
             $table->id();
-            $table->string('username')->unique();
-            $table->string('nama-lengkap');
-            $table->string('password');
+            $table->string('nama_panitia');
+            $table->text('isi_testimoni');
+            $table->timestamp('tgl_testimoni')->nullable();
+            $table->string('lokasi_masjid');
+            $table->string('nama_masjid');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('testimonis');
     }
 };
