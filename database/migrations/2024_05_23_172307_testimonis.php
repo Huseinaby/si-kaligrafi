@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('testimonis', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
+            $table->foreign('username')->references('username')->on('users');
+            $table->unsignedBigInteger('karya_id');
+            $table->foreign('karya_id')->references('id_karya')->on('karyas');
             $table->string('nama_panitia');
             $table->text('isi_testimoni');
             $table->timestamp('tgl_testimoni')->nullable();

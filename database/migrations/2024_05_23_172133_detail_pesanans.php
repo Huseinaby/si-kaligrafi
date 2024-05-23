@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ornamens', function (Blueprint $table) {
+        Schema::create('datail_pesanans', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_ornamen');
-            $table->text('deskirpsi_ornamen');
-            $table->string('jenis_ornamen');
-            $table->string('foto_ornamen');
-            $table->string('kategori');
+            $table->string('username');
+            $table->foreign('username')->references('username')->on('users');
+            $table->unsignedBigInteger('karya_id');
+            $table->foreign('karya_id')->references('id_karya')->on('karyas');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ornamens');
+        Schema::dropIfExists('datail_pesanans');
     }
 };
