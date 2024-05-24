@@ -27,7 +27,7 @@ body {
   font-size: 35px;
   padding-left: 20px;
   float: left;
-  padding-top: 15px;
+  padding-top: -1px;
 }
 
 
@@ -104,6 +104,11 @@ a.tbl:hover{
   border-width: 1px;
 }
 
+
+.logo{
+  font-size: 30px;
+  
+  } 
 /*Login username dan password  */
 
 
@@ -194,11 +199,6 @@ a.tbl:hover{
   margin-left: 50px;
 }
 
-
-.logo{
-font-size: 30px;
-
-} 
 
 .footer-address2 {
   display: flex;

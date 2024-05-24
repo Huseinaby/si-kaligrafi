@@ -16,6 +16,10 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/portofolio', function () {
+    return view('portofolio');
+});
+
 Route::get('/testimonis', [TestimoniController::class, 'index']);
 
 Route::get('/testimoni/{testimoni:id}', [TestimoniController::class, 'show']);
