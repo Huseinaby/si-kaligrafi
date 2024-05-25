@@ -1,0 +1,136 @@
+
+
+.navbar{
+    width: 1200px;
+    height: 70px;
+    margin: auto;
+    
+  }
+  
+  .icon{
+    width: 200px;
+    float: left;
+    height: 80px;
+  }
+  
+  .logo{
+    color: #003C43;
+    font-size: 35px;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+  }
+  
+  
+  .logo a {
+    text-decoration: none;
+    color: #003C43;
+  }
+  
+  
+  
+  
+  header .menu{
+    width: 750px;
+    float: left;
+    height: 90px;
+   
+  
+  }
+  header {
+    width: 100%;
+    height: 95px;
+    background: transparent;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Warna navbar */
+  }
+  
+  
+  ul{
+    float: right;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0 100px;
+  }
+  
+  ul li{
+    list-style: none;
+    margin-left: 55px;
+    margin-top: 25px;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  ul li a{
+    text-decoration: none;
+    color: #003C43;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    
+  }
+  
+  ul li a:hover{
+    color: #ffc700;
+    text-decoration: none;
+  }
+  a.tbl{
+    background: #003C43;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+  
+  }
+  
+  a.tbl:hover{
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  
+  .logo{
+    font-size: 30px;
+    
+    } 
+
+
+    /* corousel */
+
+
+    .carousel-item img {
+      width: 600px;
+      height: 400px;}
+
+  
+
+  .text{
+    font-size: 35px;
+    margin-top: 35px;
+    margin-left: 140px;
+    color: #003C43;
+
+  }
+  
+
+  /* card */
+
+ .kotak{
+  margin-left: 250px;
+  display: flex ;
+  gap: 50px;
+  
+ }
+
+
+.card{
+  background-color: #003C43;
+  color: white;
+
+}

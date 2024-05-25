@@ -1,0 +1,31 @@
+footer {
+    background-color: #333333;  /* Navbar background color */
+    color: white; /* Text color */
+    width: 100%; /* Make navbar full width */
+    height: 285px; /* Set navbar height (optional) */
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .footer-address {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 50px;
+  }
+  
+  .address {
+    text-align: left;
+    margin-left: 50px;
+  }
+  
+  
+  .footer-address2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 50px;
+    text-align: center;
+    justify-content: center;
+  }
+  
