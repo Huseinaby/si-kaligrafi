@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BahanController;
+use App\Http\Controllers\OrnamenController;
 use App\Http\Controllers\TestimoniController;
 use App\Models\Testimoni;
 use Illuminate\Support\Facades\Route;
@@ -20,5 +22,11 @@ Route::get('/testimonis', [TestimoniController::class, 'index']);
 
 Route::get('/testimoni/{testimoni:id}', [TestimoniController::class, 'show']);
 
+Route::get('/ornamens', [OrnamenController::class, 'index']);
 
+Route::get('/ornamens/{ornamen:id}', [OrnamenController::class, 'show']);
+
+Route::get('/bahans', [BahanController::class, 'index']);
+
+Route::get('/bahans/{bahan:id}', [BahanController::class, 'type']);
 

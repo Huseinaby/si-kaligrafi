@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Testimoni extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 
-    protected $fillable = ['nama_panitia', 'isi_testimoni', 'lokasi_masjid','nama_masjid'];
+    protected $primaryKey =  ['id'];
+
+    public function karya(){
+        return $this->belongsTo(Karya::class, 'id');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'id');
+    }
 }

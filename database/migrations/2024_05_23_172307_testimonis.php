@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('username');
             $table->foreign('username')->references('username')->on('users');
-            $table->unsignedBigInteger('karya_id');
-            $table->foreign('karya_id')->references('id_karya')->on('karyas');
+            $table->foreignId('karya_id')->constrained('karyas')->onDelete('cascade');
             $table->string('nama_panitia');
             $table->text('isi_testimoni');
             $table->timestamp('tgl_testimoni')->nullable();
