@@ -7,11 +7,11 @@
     <title>{{ $ornamen->nama_ornamen }}</title>
 </head>
 <body>
-    <h2>{{ $ornamen->nama_ornamen }}</h2>
-    <p>{{ $ornamen->jenis_ornamen }}</p>
-    <p>{{ $ornamen->kategori }}</p>
-    <p>{{ $ornamen->foto_ornamen }}</p>
-    <p><a href="/bahans/{{ $ornamen->bahan_id }}">{{ $ornamen->bahan->nama_bahan}}</a></p>
-    <p>{{ $ornamen->deskripsi_ornamen }}</p>
+    <h2>Ornamen {{ $ornamen->nama_ornamen }}</h2>
+    <p>Jenis : {{ $ornamen->jenis_ornamen }}</p>
+    <p>Kategori :{{ $ornamen->kategori }}</p>
+    <p>Foto :{{ $ornamen->foto_ornamen }}.jpg</p>
+    <p><a href="/bahans/{{ $ornamen->bahan->slug }}">Bahan : {{ $ornamen->bahan->nama_bahan}}</a></p>
+    <p>Deskripsi :{{ $ornamen->deskripsi_ornamen }}</p>
 </body>
 </html>

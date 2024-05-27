@@ -28,9 +28,9 @@ Route::get('/testimoni/{testimoni:id}', [TestimoniController::class, 'show']);
 
 Route::get('/ornamens', [OrnamenController::class, 'index']);
 
-Route::get('/ornamens/{ornamen:id}', [OrnamenController::class, 'show']);
+Route::get('/ornamens/{ornamen:slug}', [OrnamenController::class, 'show']);
 
 Route::get('/bahans', [BahanController::class, 'index']);
 
-Route::get('/bahans/{bahan:id}', [BahanController::class, 'type']);
+Route::get('/bahans/{bahan:slug}', [BahanController::class, 'type']);
 

@@ -12,7 +12,7 @@
     <h2>Macam Ornamen</h2>
     <ul>
         @foreach ($bahans as $bahan)
-            <li><a href="/bahans/{{ $bahan->id }}">{{ $bahan->nama_bahan }}</a></li>
+            <li><a href="/bahans/{{ $bahan->slug }}">{{ $bahan->nama_bahan }}</a></li>
         @endforeach
     </ul>
 </body>

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('bahan_id')->constrained('bahans')->onDelete('cascade');
             $table->string('nama_ornamen');
+            $table->string('slug');
             $table->text('deskripsi_ornamen');
             $table->string('jenis_ornamen');
             $table->string('foto_ornamen');

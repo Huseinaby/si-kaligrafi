@@ -15,7 +15,7 @@ class BahanController extends Controller
     public function type(Bahan $bahan){
         return view('bahan',[
             'title' => $bahan->nama_bahan,
-            'ornamens' => $bahan->ornamen
+            'ornamens' => $bahan->ornamens
         ]);
     }
 }

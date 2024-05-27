@@ -12,9 +12,10 @@
     <h2>Macam Ornamen</h2>
     
     @foreach ($ornamens as $ornamen)
-        <h2><a href="/ornamens/{{ $ornamen->id }}">{{ $ornamen->nama_ornamen }}</a></h2>
-        <p>{{ $ornamen->jenis_ornamen }}</p>
-        <p>{{ $ornamen->deskripsi_ornamen }}</p>
+        <h2><a href="/ornamens/{{ $ornamen->slug }}">Ornamen : {{ $ornamen->nama_ornamen }}</a></h2>
+        <p>Jenis : {{ $ornamen->jenis_ornamen }}</p>
+        <p><a href="/bahans/{{ $ornamen->bahan->slug }}">Bahan : {{ $ornamen->bahan->nama_bahan}}</a></p>
+        <p>Deskirpsi : {{ $ornamen->deskripsi_ornamen }}</p>
     @endforeach
     
 </body>

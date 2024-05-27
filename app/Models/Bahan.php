@@ -19,7 +19,7 @@ class Bahan extends Model
 
     protected $primaryKey = 'id';
 
-    public function ornamen(){
+    public function ornamens(){
         return $this->hasMany(Ornamen::class);
     }
 }

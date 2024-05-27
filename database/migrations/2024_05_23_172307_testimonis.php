@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('username')->references('username')->on('users');
             $table->foreignId('karya_id')->constrained('karyas')->onDelete('cascade');
             $table->string('nama_panitia');
+            $table->string('slug');
             $table->text('isi_testimoni');
             $table->timestamp('tgl_testimoni')->nullable();
             $table->string('lokasi_masjid');
