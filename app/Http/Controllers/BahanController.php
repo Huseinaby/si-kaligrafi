@@ -8,14 +8,14 @@ class BahanController extends Controller
 {
     public function index(){
         return view('bahans', [
-            'bahans' => Bahan::all()
+            'bahans' => Bahan::with('bahan')->latest()->get()
         ]);
     }
 
     public function type(Bahan $bahan){
         return view('bahan',[
             'title' => $bahan->nama_bahan,
-            'ornamens' => $bahan->ornamens
+            'ornamens' => $bahan->ornamens->load('bahan')
         ]);
     }
 }

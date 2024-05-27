@@ -17,7 +17,7 @@
       <ul>
         <li><a href="#">Tentang</a></li>
         <li><a href="#">Layanan</a></li>
-        <li><a href="#">Bahan</a></li>
+        <li><a href="/bahans">Bahan</a></li>
         <li><a href="/ornamens">Ornamen</a></li>
         <li><a href="portofolio">Portofolio</a></li>
         <li><a href="#">Galeri</a></li>
