@@ -8,7 +8,7 @@ class OrnamenController extends Controller
 {
     public function index(){
         return view('ornamens',[
-            'ornamens' => Ornamen::with('bahan')->latest()->get()
+            'ornamens' => Ornamen::latest()->get()
         ]);
     }
 

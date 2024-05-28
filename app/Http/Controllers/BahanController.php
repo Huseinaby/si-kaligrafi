@@ -8,7 +8,7 @@ class BahanController extends Controller
 {
     public function index(){
         return view('bahans', [
-            'bahans' => Bahan::with('bahan')->latest()->get()
+            'bahans' => Bahan::latest()->get()
         ]);
     }
 

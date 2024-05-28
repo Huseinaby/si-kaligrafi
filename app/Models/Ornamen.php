@@ -20,6 +20,8 @@ class Ornamen extends Model
 
     protected $primaryKey =  'id';
 
+    protected $with = ['bahan'];
+
     public function bahan(){
         return $this->belongsTo(Bahan::class, 'bahan_id');
     }
