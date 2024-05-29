@@ -22,6 +22,10 @@ Route::get('/portofolio', function () {
     return view('portofolio');
 });
 
+Route::get('/isi_testimoni', function () {
+    return view('isi_tastimoni');
+});
+
 Route::get('/testimonis', [TestimoniController::class, 'index']);
 
 Route::get('/testimoni/{testimoni:id}', [TestimoniController::class, 'show']);

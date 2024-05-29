@@ -15,12 +15,13 @@
 <nav>
 		<ul>
       <li><h1 class="logo">KALIGRAFI</h1></li>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="tentang">tentang</a></li>
+			<li><a href="layanan">layanan</a></li>
+			<li><a href="bahan">bahan</a></li>
+			<li><a href="ornamen">ornamen</a></li>
+			<li><a href="portofolio">portofolio</a></li>
+			<li><a href="galeri">galeri</a></li>
+      <li><a href="testimoni">testimoni</a></li>
 			<li><a href="/login" class="btn">Sign In</a></li>
 		</ul>
 	</nav>
@@ -44,7 +45,7 @@
     <div class="col-md-3">
       <div class="card">
         <div class="card-body">
-        <img class="fkualitas" src="" >
+          <h5 class="card-title">Card title</h5>
           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
