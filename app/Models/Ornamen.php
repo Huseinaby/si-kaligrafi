@@ -27,6 +27,6 @@ class Ornamen extends Model
     }
 
     public function karya(){
-        return $this->hasMany(Karya::class);
+        return $this->hasMany(Karya::class, 'karya_id');
     }
 }

@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\BahanController;
-use App\Http\Controllers\OrnamenController;
-use App\Http\Controllers\TestimoniController;
 use App\Models\Testimoni;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BahanController;
+use App\Http\Controllers\KaryaController;
+use App\Http\Controllers\OrnamenController;
+use App\Http\Controllers\TestimoniController;
 
 Route::get('/', function () {
     return view('homepage');
@@ -18,9 +19,7 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/portofolio', function () {
-    return view('portofolio');
-});
+Route::get('/portofolio', [KaryaController::class, 'index']);
 
 Route::get('/testimonis', [TestimoniController::class, 'index']);
 

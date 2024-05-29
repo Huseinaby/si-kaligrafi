@@ -13,7 +13,21 @@ class Karya extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
-    protected $primaryKey =  ['id'];
+    protected $fillable = [
+        'ornamen_id',
+        'nama_karya',
+        'slug',
+        'deskripsi_karya',
+        'jenis_karya',
+        'foto_karya',
+        'tgl_pembuatan',
+        'lokasi',
+        'nama_masjid'
+    ];
+
+    protected $primaryKey =  'id';
+
+    protected $with = 'ornamen';
 
     public function ornamen(){
         return $this->belongsTo(Ornamen::class, 'id');
@@ -24,6 +38,6 @@ class Karya extends Model
     }
 
     public function user(){
-        return $this->belongsToMany(User::class, 'id_karya');
+        return $this->belongsToMany(User::class, 'karya_id');
     }
 }

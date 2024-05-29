@@ -54,70 +54,28 @@
         </div>
       
         <h2 class="text">Portofolio</h2>
-
-        <br><br>
         
       <!-- card -->
 
-      <div class="kotak row">
+      <div class="kotak row mt-5">
+
+        @foreach ($portofolios as $portofolio)
         <div class="col-md-3">
           <div class="card ">
             <img src="image/baru.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
+              <h5>{{ $portofolio->nama_karya }}</h5>
+              <p>{{ $portofolio->deskripsi_karya }}</p>
             </div>
           </div>
         </div>
-      
-        <div class="col-md-3">
-          <div class="card ">
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-3">
-          <div class="card" >
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
+        @endforeach
+
       </div>
 
-      <br><br><br>
+      
 
-      <div class="kotak row">
-        <div class="col-md-3">
-          <div class="card ">
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-3">
-          <div class="card ">
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-3">
-          <div class="card" >
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
       
       
 <br><br><br>
