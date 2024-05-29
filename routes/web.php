@@ -21,6 +21,10 @@ Route::get('/register', function () {
 
 Route::get('/portofolio', [KaryaController::class, 'index']);
 
+Route::get('/isi_testimoni', function () {
+    return view('isi_tastimoni');
+});
+
 Route::get('/testimonis', [TestimoniController::class, 'index']);
 
 Route::get('/testimoni/{testimoni:id}', [TestimoniController::class, 'show']);

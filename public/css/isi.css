@@ -1,0 +1,235 @@
+.navbar{
+    width: 1200px;
+    height: 70px;
+    margin: auto;
+    
+    }
+    
+    .icon{
+    width: 200px;
+    float: left;
+    height: 80px;
+    }
+    
+    .logo{
+    color: white;
+    font-size: 35px;
+    padding-left: 20px;
+    float: left;
+    padding-top: 15px;
+    margin-top: 10px;
+    }
+    
+    
+    .logo a {
+    text-decoration: none;
+    color: #003C43;
+    
+    }
+    
+    
+  
+    
+    .header .menu{
+    width: 750px;
+    float: left;
+    height: 90px;
+    
+    
+    
+    }
+    header {
+    width: 100%;
+    height: 95px;
+    background: transparent;
+    position: sticky;
+    top: 0;
+    background-color: white; 
+    }
+    
+    
+    ul{
+    float: right;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0 100px;
+    margin-right: 8px;
+    margin-top: -3px;
+    }
+    
+    ul li{
+    list-style: none;
+    margin-left: 55px;
+    margin-top: 25px;
+    font-size: 15px;
+    text-decoration: none;
+    
+    }
+    ul li a{
+    text-decoration: none;
+    color: #003C43;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+
+    
+    }
+ 
+    
+    a.tbl:hover{
+      background-color: transparent;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+
+
+    /* header */
+
+
+   
+    
+    .site-header {
+        background-color: #003C43;
+        color: white;
+        padding: 10px;
+        
+    }
+    
+    .site-header h1 {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* form */
+
+    .container {
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        font-size: 20px;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        width: 150px;
+        margin-right: 10px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        flex: 1;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    
+    .form-group textarea {
+        resize: vertical;
+    }
+    
+    .submit-btn {
+        background-color: #FFC700   ;
+        color: white;
+        padding: 7px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 530px;
+        font-size: 20px;
+        
+    }
+    
+    .submit-btn:hover {
+        background-color: #FFC700;
+        margin-left: 530px;
+    }
+    
+
+    /* footer */
+
+    footer {
+        background-color: #333333;  /* Navbar background color */
+        color: white; /* Text color */
+        width: 100%; /* Make navbar full width */
+        height: 285px; /* Set navbar height (optional) */
+        text-align: left;
+        padding: 10px;
+      }
+      
+      .footer-address {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 50px;
+      }
+      
+      .address {
+        text-align: left;
+        margin-left: 50px;
+      }
+      
+      
+      .footer-address2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 50px;
+        text-align: center;
+        justify-content: center;
+      }
+
+
+      /* gambar navbar */
+
+  
+
+    header img {
+      
+        width: 50px;  /* Lebar gambar */
+        height: 50px;  /* Tinggi gambar sama dengan lebar untuk membuatnya lingkaran */
+        border-radius: 50%;  /* Membuat gambar berbentuk lingkaran */
+        object-fit: cover;  
+        
+    
+    }
+
+    
+    
+ 
+   
+    
+
+
+      
+
+      
+      
