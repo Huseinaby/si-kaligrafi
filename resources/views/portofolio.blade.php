@@ -66,13 +66,14 @@
             <div class="card-body">
               <h5>{{ $portofolio->nama_karya }}</h5>
               <p>{{ $portofolio->deskripsi_karya }}</p>
-              <p>{{ $portofolio->nama_masjid }}</p>
-              <p>{{ $portofolio->lokasi }}</p>
+              <p>{{ $portofolio->nama_masjid }}, {{ $portofolio->lokasi }}</p>
+              <p>Ditambahkan {{ $portofolio->created_at->diffForHumans() }}</p>
             </div>
           </div>
         </div>
         @endforeach
 
+        {{ $portofolios->links() }}
       </div>
 
       
