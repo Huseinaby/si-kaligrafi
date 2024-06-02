@@ -11,9 +11,13 @@ class User extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['username'];
+    protected $fillable = [
+        'username',
+        'nama_lengkap',
+        'password'
+    ];
 
-    protected $primaryKey =  ['username'];
+    // protected $primaryKey =  'username';
 
     public function testimoni(){
         return $this->hasMany(Testimoni::class, 'username');

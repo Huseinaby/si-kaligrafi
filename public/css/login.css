@@ -5,6 +5,7 @@ body {
     background-color: #135D66;
     background-image: url('../image/background.svg');
     background-position: 100% 50%;
+    z-index: 2;
 }
 
 
@@ -44,6 +45,7 @@ header .menu{
   width: 750px;
   float: left;
   height: 90px;
+  z-index: 2;
  
 
 }
@@ -212,4 +214,12 @@ a.tbl:hover{
 }
 
 
+
+.alert {
+  z-index: 1;
+}
+
+.menu {
+  z-index: 3;
+}
 

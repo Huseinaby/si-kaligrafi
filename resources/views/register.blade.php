@@ -21,16 +21,16 @@
       @csrf
       <div class="form-group">
         <div class="form-group">
-          <label for="name"><b>Nama Lengkap:</b></label>
-          <input class="is-invalid" type="text" id="name" name="name" required>
-          @error('name')
+          <label for="nama_lengkap"><b>Nama Lengkap:</b></label>
+          <input class="is-invalid" type="text" id="nama_lengkap" name="nama_lengkap" required value="{{ old('nama_lengkap') }}">
+          @error('nama_lengkap')
           <div class="invalid-feedback">
             {{ $message }}
           </div>
           @enderror
         </div>
         <label for="username"><b> Username:</b></label>
-        <input class="is-invalid" type="text" id="username" name="username" required>
+        <input class="is-invalid" type="text" id="username" name="username" required value="{{ old('username') }}">
         @error('username')
         <div class="invalid-feedback">
           {{ $message }}
