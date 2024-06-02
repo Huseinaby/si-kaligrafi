@@ -28,6 +28,7 @@ body {
   padding-left: 20px;
   float: left;
   padding-top: -1px;
+  margin-top: 30px;
 }
 
 
@@ -62,6 +63,7 @@ ul{
   justify-content: right;
   align-items: center;
   padding: 0 100px;
+  margin-top: 13px;
 }
 
 ul li{
@@ -138,7 +140,7 @@ a.tbl:hover{
   
   input[type="text"],
   input[type="password"] {
-    width: 95%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 4px 4px 4px rgba(128, 128, 128, 0.3);
@@ -156,7 +158,7 @@ a.tbl:hover{
     transition: background-color 0.3s;
     width: 100%;
     border-radius: 12px;
-  
+    margin-top: 5px;
  
   }
   
