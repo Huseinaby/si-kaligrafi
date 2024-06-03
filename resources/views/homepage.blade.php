@@ -25,12 +25,17 @@
       @auth
       <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-          Dropdown link
+          {{ auth()->user()->nama_lengkap }}
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+          <li><hr class="dropdown-divider"></hr></li>
+          <li>
+              <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">Logout</button>  
+              </form>  
+          </li>
         </ul>
       </div>
       @else

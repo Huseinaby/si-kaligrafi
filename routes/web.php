@@ -14,9 +14,11 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
 Route::post('/login', [LoginController::class, 'auth']);
+
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 
@@ -40,4 +42,4 @@ Route::get('/bahans', [BahanController::class, 'index']);
 
 Route::get('/bahans/{bahan:slug}', [BahanController::class, 'type']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'] );
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
