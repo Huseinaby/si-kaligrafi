@@ -24,11 +24,17 @@
                 {{ session('success') }}
             </div>
         @endif
+        @if (@session()->has('loginError'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('loginError') }}
+            </div>
+        @endif
         <h1><b> Login</b></h1>
-        <form action="#">
+        <form action="\login" method="POST">
+            @csrf
             <div class="form-group">
                 <label for="username"><b> Username:</b></label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" autofocus required>
             </div>
             <div class="form-group">
                 <label for="password"><b>Password:</b></label>

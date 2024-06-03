@@ -4,10 +4,11 @@ namespace App\Models;
 
 use App\Models\Testimoni;
 use App\Models\Detail_pesanan;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class User extends Model
+class User extends Authenticatable
 {
     use HasFactory;
 
@@ -17,7 +18,7 @@ class User extends Model
         'password'
     ];
 
-    // protected $primaryKey =  'username';
+    protected $primaryKey =  'username';
 
     public function testimoni(){
         return $this->hasMany(Testimoni::class, 'username');
