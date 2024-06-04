@@ -18,6 +18,8 @@ class RegisterController extends Controller
             'password' => 'required|min:8|max:255'
         ]);
 
+        $validatedData['level'] = '2';
+
         $validatedData['password'] = bcrypt($validatedData['password']);
         
         User::create($validatedData);

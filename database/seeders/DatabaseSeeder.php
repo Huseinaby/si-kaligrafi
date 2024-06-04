@@ -169,6 +169,12 @@ class DatabaseSeeder extends Seeder
             Karya::create($karya);
         }
         
+        User::create([
+            'username' => "admin",
+            'nama_lengkap' => 'Maulidin Abdi',
+            'password' => bcrypt('admin'),
+            'level' => '1'
+        ]);
 
         // User::factory()->create([
         //     'name' => 'Test User',

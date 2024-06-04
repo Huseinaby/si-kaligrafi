@@ -20,7 +20,12 @@ class LoginController extends Controller
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
 
-            return redirect()->intended('/dashboard');
+            $user = Auth::user();
+            if($user->level == '1'){
+                return redirect()->intended('/admin/dashboard');
+            }elseif($user->level == '2'){
+                return redirect()->intended('/dashboard');
+            }
         }
 
         return back()->with('loginError', 'Login Gagal!');

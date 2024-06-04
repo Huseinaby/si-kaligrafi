@@ -43,3 +43,5 @@ Route::get('/bahans', [BahanController::class, 'index']);
 Route::get('/bahans/{bahan:slug}', [BahanController::class, 'type']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::get('/admin/dashboard', [DashboardController::class, 'admDash'])->middleware('auth');

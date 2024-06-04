@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('username')->primary();
             $table->string('nama_lengkap');
             $table->string('password');
+            $table->string('level');
             $table->timestamps();
         });
 
