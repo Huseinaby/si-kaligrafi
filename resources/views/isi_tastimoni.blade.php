@@ -8,30 +8,7 @@
     <link rel="stylesheet" href="css/isi.css">
   </head>
   <body>
-    <!-- navbar -->
-    
-    <header class="menu">
-        <div class="icon">
-          <h2 class="logo"><a href="\">Kaligrafi</a></h2>
-        </div>
-<div class="heder">
-
-
-</div>
-
-          <ul>
-            <li><a href="tentang">Tentang</a></li>
-            <li><a href="layanan">Layanan</a></li>
-            <li><a href="bahan">Bahan</a></li>
-            <li><a href="ornamens">Ornamen</a></li>
-            <li><a href="portofolio">Portofolio</a></li>
-            <li><a href="galeri">Galeri</a></li>
-            <li><a href="testimonis">Testimoni</a></li>
-            <li> <img src="image/yae.png" alt=""></li>
-         
-           
-          </ul>
-        </header>
+    @include('partials.navbar')
 
         <!-- header  -->
 
@@ -43,7 +20,7 @@
 
 <br><br><br><br><br><br>
 
-<div class="container">
+<div class="container-isi">
     
     <form>
         <div class="form-group">

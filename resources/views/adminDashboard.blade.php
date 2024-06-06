@@ -9,6 +9,10 @@
 </head>
 <body>
     <h1 class="alert-warning">Ini Dashboard Admin</h1>
+    <ul>
+        <li><a href="/testimonis">Semua testimoni</a></li>
+        <li><a href="/isi-testimoni">Mengisi Testimoni</a></li>
+    </ul>
     <a href="/">balik ke home buat logout</a>
 </body>
 </html>

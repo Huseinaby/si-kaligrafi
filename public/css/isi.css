@@ -123,11 +123,11 @@
 
     /* form */
 
-    .container {
-        max-width: 600px;
+    .container-isi {
+        width: 750px;
         background-color: white;
-        padding: 20px;
-        border-radius: 8px;
+        padding: 40px;
+        border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         margin: auto;
         font-size: 20px;
@@ -138,11 +138,13 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: 15px;
+        
     }
     
     .form-group label {
         width: 150px;
         margin-right: 10px;
+        
     }
     
     .form-group input,
@@ -150,27 +152,32 @@
         flex: 1;
         padding: 8px;
         box-sizing: border-box;
+        
     }
     
     .form-group textarea {
         resize: vertical;
+        
     }
     
     .submit-btn {
         background-color: #FFC700   ;
-        color: white;
+        color: #003c34;
         padding: 7px 15px;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         cursor: pointer;
-        margin-left: 530px;
+        margin-left: 0px;
         font-size: 20px;
+        box-shadow: 3px 3px 3px grey;
+        transition: 0.2s ease;
         
     }
     
     .submit-btn:hover {
-        background-color: #FFC700;
-        margin-left: 530px;
+        background-color: #ddad00;
+        margin-left: 0px;
+        box-shadow: 0px 0px 0px grey;
     }
     
 

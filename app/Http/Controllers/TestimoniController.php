@@ -8,7 +8,7 @@ class TestimoniController extends Controller
 {
     public function index() {
         return view('testimonis', [
-            "testimonis" => Testimoni::lastest()->get()
+            "testimonis" => Testimoni::latest()->get()
         ]);
     }
 

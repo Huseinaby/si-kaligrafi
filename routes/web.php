@@ -45,3 +45,7 @@ Route::get('/bahans/{bahan:slug}', [BahanController::class, 'type']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::get('/admin/dashboard', [DashboardController::class, 'admDash'])->middleware('auth');
+
+Route::get('isi-testimoni', function(){
+    return view('isi_tastimoni');
+});

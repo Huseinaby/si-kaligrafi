@@ -223,3 +223,13 @@ a.tbl:hover{
   z-index: 3;
 }
 
+header img {
+      
+  width: 50px;  /* Lebar gambar */
+  height: 50px;  /* Tinggi gambar sama dengan lebar untuk membuatnya lingkaran */
+  border-radius: 50%;  /* Membuat gambar berbentuk lingkaran */
+  object-fit: cover;  
+  
+
+}
+

@@ -17,6 +17,6 @@
         <li>Nama Masjid : {{ $testimoni->nama_masjid }}</li>
     </ul>
     @endforeach
-    <a href="/">Kembali</a>
+    <a href="/admin/dashboard">Kembali</a>
 </body>
 </html>

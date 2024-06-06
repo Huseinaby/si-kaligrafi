@@ -24,6 +24,11 @@
         <li><a href="portofolio">Portofolio</a></li>
         <li><a href="#">Galeri</a></li>
         <li><a href="testimonis">Testimoni</a></li>
-        <li><a href="login" class="tbl">Sign In</a></li>
+        <li>
+          @auth
+          <li><img src="image/yae.png" alt=""></li>
+            @else
+            <a href◘="login" class="tbl">Sign In</a></li>
+          @endauth
       </ul>
     </header>
