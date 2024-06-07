@@ -66,7 +66,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // Users
     Route::get('/users', [UserController::class, 'index'])->name('user');
     Route::post('/users', [UserController::class, 'store'])->name('user.store');
-    Route::put('/users/{id_user}', [UserController::class, 'update'])->name('user.update');
+    Route::put('/users/{id}', [UserController::class, 'update'])->name('user.update');
 
     // Bahan
     Route::get('/bahan', [BahanController::class, 'admBahan'])->name('bahan');

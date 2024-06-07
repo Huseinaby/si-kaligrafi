@@ -39,12 +39,11 @@
                                     <td>{{ $row->nama_lengkap }}</td>
                                     <td>{{ $row->level == 1 ? 'Admin' : 'User' }}</td>
                                     <td>
-                                        <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditUser{{ $row->id_user }}"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditUser{{ $row->user_id }}"><i class="fas fa-edit"></i> Edit</a>
                                         <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
                                     </td>
                                 </tr>
                                 <!-- Modal Edit Data User-->
-                                <div class="modal fade" id="formModalEditUser{{ $row->id_user }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -54,7 +53,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="{{ route('user.update', ['id_user' => $row->id_user]) }}" method="POST">
+                                                <form action="{{ route('user.update', ['id' => $row->id]) }}" method="POST">
                                                     @csrf
                                                     @method('PUT')
                                                     <div class="form-group text-gray-800">
@@ -141,7 +140,7 @@
         </div>
 
         <!-- Modal Edit Data User-->
-        <div class="modal fade" id="formModalEditUser{{ $row->id_user }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="formModalEditUser{{ $row->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -151,7 +150,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ route('user.update', ['id_user' => $row->id_user]) }}" method="POST">
+                        <form action="{{ route('user.update', ['id' => $row->id]) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="form-group text-gray-800">

@@ -115,9 +115,11 @@
 
             <!-- Nav Item - Logout -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-door-open"></i>
-                    <span>Log Out</span></a>
+                    <form action="/logout" method="POST">
+                        @csrf
+
+                        <button type="submit" class="nav-link bg-gradient-primary border-0"><i class="fas fa-fw fa-door-open"></i> Logout</button>  
+                      </form>  
             </li>
             
             <!-- Divider -->
