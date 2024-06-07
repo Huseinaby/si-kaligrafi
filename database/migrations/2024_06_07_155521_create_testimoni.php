@@ -11,11 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('datail_pesanans', function (Blueprint $table) {
+        Schema::create('testimonis', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->foreign('username')->references('username')->on('users');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('karya_id')->constrained('karyas')->onDelete('cascade');
+            $table->string('nama_panitia');
+            $table->string('slug');
+            $table->text('isi_testimoni');
+            $table->timestamp('tgl_testimoni')->nullable();
+            $table->string('lokasi_masjid');
+            $table->string('nama_masjid');
             $table->timestamps();
         });
     }
@@ -25,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('datail_pesanans');
+        Schema::dropIfExists('testimonis');
     }
 };

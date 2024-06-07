@@ -17,16 +17,15 @@ class User extends Authenticatable
         'nama_lengkap',
         'password',
         'level',
-        'id_user'
     ];
 
-    protected $primaryKey = 'id_user';
+    protected $primaryKey = 'id';
 
     public function testimoni(){
-        return $this->hasMany(Testimoni::class, 'username');
+        return $this->hasMany(Testimoni::class, 'id');
     }
 
     public function karya(){
-        return $this->belongsToMany(Karya::class, 'username');
+        return $this->belongsToMany(Karya::class, 'id');
     }
 }
