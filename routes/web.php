@@ -9,10 +9,16 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrnamenController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\LayananController;
+use App\Http\Controllers\AccessController;
 
 Route::get('/', function () {
     return view('homepage');
 });
+
+Route::get('/no-access', [AccessController::class, 'noAccess'])->name('no-access');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
@@ -44,8 +50,33 @@ Route::get('/bahans/{bahan:slug}', [BahanController::class, 'type']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
-Route::get('/admin/dashboard', [DashboardController::class, 'admDash'])->middleware('auth');
-
 Route::get('isi-testimoni', function(){
     return view('isi_tastimoni');
+});
+
+// Admin section
+Route::middleware(['auth', 'admin'])->group(function () {
+
+    // Dashboard
+    Route::get('/admin', [DashboardController::class, 'admDash'])->name('dashboard');
+    
+    // Ornamen
+    Route::get('/ornamen', [OrnamenController::class, 'admOrnamen'])->name('ornamen');
+
+    // Users
+    Route::get('/users', [UserController::class, 'index'])->name('user');
+    Route::post('/users', [UserController::class, 'store'])->name('user.store');
+    Route::put('/users/{id_user}', [UserController::class, 'update'])->name('user.update');
+
+    // Bahan
+    Route::get('/bahan', [BahanController::class, 'admBahan'])->name('bahan');
+
+    // Galeri
+    Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');
+
+    // Karya
+    Route::get('/karya', [KaryaController::class, 'admKarya'])->name('karya');
+
+    // Layanan
+    Route::get('/layanan', [LayananController::class, 'admLayanan'])->name('layanan');
 });

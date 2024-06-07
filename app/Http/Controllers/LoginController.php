@@ -22,7 +22,7 @@ class LoginController extends Controller
 
             $user = Auth::user();
             if($user->level == '1'){
-                return redirect()->intended('/admin/dashboard');
+                return redirect()->intended('/admin');
             }elseif($user->level == '2'){
                 return redirect()->intended('/dashboard');
             }

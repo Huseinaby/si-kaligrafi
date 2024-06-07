@@ -17,4 +17,10 @@ class OrnamenController extends Controller
             'ornamen' => $ornamen
         ]);
     }
+
+    public function admOrnamen() {
+        return view('pages.admin-ornamen', [
+            'admin_ornamen' => Ornamen::latest()->get()
+        ]);
+    }
 }

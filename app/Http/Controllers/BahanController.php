@@ -18,4 +18,10 @@ class BahanController extends Controller
             'ornamens' => $bahan->ornamens->load('bahan')
         ]);
     }
+
+    public function admBahan(){
+        return view('pages.admin-bahan', [
+            'admin_bahan' => Bahan::latest()->get()
+        ]);
+    }
 }

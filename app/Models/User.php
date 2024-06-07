@@ -16,10 +16,11 @@ class User extends Authenticatable
         'username',
         'nama_lengkap',
         'password',
-        'level'
+        'level',
+        'id_user'
     ];
 
-    protected $primaryKey =  'username';
+    protected $primaryKey = 'id_user';
 
     public function testimoni(){
         return $this->hasMany(Testimoni::class, 'username');

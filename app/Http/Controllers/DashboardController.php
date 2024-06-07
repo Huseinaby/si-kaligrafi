@@ -11,6 +11,6 @@ class DashboardController extends Controller
     }
 
     public function admDash(){
-        return view('adminDashboard');
+        return view('pages.admin-dashboard');
     }
 }

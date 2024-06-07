@@ -11,4 +11,10 @@ class KaryaController extends Controller
             'portofolios' => Karya::latest()->paginate(6)
         ]);
     }
+
+    public function admKarya(){
+        return view('pages.admin-karya', [
+            'admin_karya' => Karya::latest()->paginate(6)
+        ]);
+    }
 }
