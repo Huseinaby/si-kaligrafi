@@ -54,16 +54,17 @@
 
 
 
+            
             <!-- Nav Item - Requests-management -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="/testimonis">
+                <a class="nav-link" href="{{ route('u-testimonis') }}">
                     <i class="fas fa-fw fa-bell"></i>
                     <span>Isi Testimoni</span></a>
             </li>
 
             <!-- Nav Item - Logout -->
             <li class="nav-item request-management">
-                    <form action="{{ route('u-testimonis') }}" method="POST">
+                    <form action="/logout" method="POST">
                         @csrf
 
                         <button type="submit" class="nav-link bg-gradient-primary border-0"><i class="fas fa-fw fa-door-open"></i> Logout</button>  

@@ -12,6 +12,10 @@ class TestimoniController extends Controller
         ]);
     }
 
+    public function admTesti(){
+        return view('pages.admin-testimoni');
+    }
+
     public function show(Testimoni $testimoni) {
         return view('testimoni', [
             "testimoni" => $testimoni

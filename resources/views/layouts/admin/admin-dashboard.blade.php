@@ -94,7 +94,7 @@
                         </a>
 
                         <!-- Tabel testimoni-->
-                        <a class="collapse-item" href=""> <!-- route('ornamen') -->
+                        <a class="collapse-item" href="{{ route('testimonis') }}"> <!-- route('ornamen') -->
                             <span>Testimoni</span>
                         </a>
 

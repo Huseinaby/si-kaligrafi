@@ -1,4 +1,4 @@
-@extends('layouts/admin/admin-dashboard')
+@extends('partials\dashboard')
 
 @section('title', 'Pesanan Anda')
 

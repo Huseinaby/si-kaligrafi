@@ -79,11 +79,13 @@ Route::middleware(['auth','admin'])->group(function () {
 
     // Layanan
     Route::get('/layanan', [LayananController::class, 'admLayanan'])->name('layanan');
+
+    Route::get('/testimonis', [TestimoniController::class, 'admtesti'])->name('testimonis');
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('u-dashboard');
+    Route::get('/user/dashboard', [DashboardController::class, 'index'])->name('u-dashboard');
     
-    Route::get('/testimonis', [TestimoniController::class, 'index'])->name('u-testimonis');
+    Route::get('/user/testimonis', [TestimoniController::class, 'index'])->name('u-testimonis');
 
 });
