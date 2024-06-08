@@ -48,14 +48,14 @@ Route::get('/bahans', [BahanController::class, 'index']);
 
 Route::get('/bahans/{bahan:slug}', [BahanController::class, 'type']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+// Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::get('isi-testimoni', function(){
     return view('isi_tastimoni');
 });
 
 // Admin section
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware(['auth','admin'])->group(function () {
 
     // Dashboard
     Route::get('/admin', [DashboardController::class, 'admDash'])->name('dashboard');
@@ -79,4 +79,11 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     // Layanan
     Route::get('/layanan', [LayananController::class, 'admLayanan'])->name('layanan');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('u-dashboard');
+
+    Route::get('/ornamen', [OrnamenController::class, 'index'])->name('u-ornamen');    
+
 });

@@ -10,7 +10,10 @@
 
 <body>
     <h2>Macam Ornamen</h2>
-    
+    <h2>
+
+        <a href="/dashboard">Kembali ke dashboard</a>
+    </h2>
     @foreach ($ornamens as $ornamen)
         <h2><a href="/ornamens/{{ $ornamen->slug }}">Ornamen : {{ $ornamen->nama_ornamen }}</a></h2>
         <p>Jenis : {{ $ornamen->jenis_ornamen }}</p>

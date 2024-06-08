@@ -47,7 +47,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item dashboard">
-                <a class="nav-link" href="{{ route('dashboard') }}"> 
+                <a class="nav-link" href="{{ route('u-dashboard') }}"> 
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -90,7 +90,7 @@
                         </a>
 
                         <!-- Tabel ornamen-->
-                        <a class="collapse-item" href="{{  route('ornamen') }}"> <!-- route('ornamen') -->
+                        <a class="collapse-item" href="{{  route('u-ornamen') }}"> <!-- route('ornamen') -->
                             <span>Ornamen</span>
                         </a>
 

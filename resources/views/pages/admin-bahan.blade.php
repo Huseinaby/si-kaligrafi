@@ -61,7 +61,7 @@
                         <form>
 
                             <div class="form-group text-gray-800">
-                                <label for="exampleInputPassword1">Judul</label>
+                                <label for="exampleInputPassword1">Nama Bahan</label>
                                 <input type="text" class="form-control" id="judul1" required>
                             </div>
 
