@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('datail_pesanans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id'); 
+            $table->foreign('user_id')->references('id_user')->on('users')->onDelete('cascade');
             $table->foreignId('karya_id')->constrained('karyas')->onDelete('cascade');
             $table->timestamps();
         });
