@@ -84,7 +84,7 @@ Route::middleware(['auth','admin'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/user/dashboard/{id}', [DashboardController::class, 'index'])->name('u-dashboard');
+    Route::get('/user/dashboard/{user:id_user}', [DashboardController::class, 'index'])->name('u-dashboard');
     
     Route::get('/user/testimonis', [KaryaController::class, 'userKarya'])->name('u-testimonis');
 

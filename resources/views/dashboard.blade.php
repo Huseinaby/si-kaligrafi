@@ -14,7 +14,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Testimoni</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">count</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $testimonis->count() }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -60,9 +60,9 @@
                         <thead>
                             <tr>
                                 <th>Nama Mesjid</th>
-                                <th>Alamat Mesjid</th>
-                                <th>Tanggal Testimoni</th>
-                                <th>Aksi</th>
+                                <th>Nama Panitia</th>
+                                <th>Lokasi</th>
+                                <th>Tanggal</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
@@ -74,13 +74,10 @@
                                     <tr>
                                         <td>{{ $row->nama_masjid }}</td>
                                         <td>{{ $row->nama_panitia }}</td>
-                                        <td>{{ $row->lokasi }}</td>
+                                        <td>{{ $row->lokasi_masjid }}</td>
                                         <td>{{ $row->tgl_testimoni }}</td>
                                         <td>
-                                            <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>
-                                                Hapus</a>
+                                            Pending/Approve
                                         </td>
                                     </tr>
                                 @endforeach

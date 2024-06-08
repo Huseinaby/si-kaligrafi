@@ -195,6 +195,7 @@ class DatabaseSeeder extends Seeder
             'nama_masjid' => 'Al-Muhajirin'
         ]);
 
+        
         Testimoni::create([
             'id_user' => 2,
             'karya_id' => 4,
@@ -205,7 +206,16 @@ class DatabaseSeeder extends Seeder
             'lokasi_masjid' => 'amuntai',
             'nama_masjid' => 'Al-Muhajirin'
         ]);
-
+        Testimoni::create([
+            'id_user' => 1,
+            'karya_id' => 6,
+            'nama_panitia' => 'Hidayat',
+            'slug' => 'testimoni-3',
+            'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
+            'tgl_testimoni' => '2023-7-12',
+            'lokasi_masjid' => 'amuntai',
+            'nama_masjid' => 'Al-Muhajirin'
+        ]);
         // User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
