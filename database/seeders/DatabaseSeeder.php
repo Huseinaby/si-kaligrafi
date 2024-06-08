@@ -7,6 +7,7 @@ use App\Models\Bahan;
 use App\Models\Karya;
 use App\Models\Ornamen;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Testimoni;
 use Faker\Provider\Lorem;
 use Illuminate\Database\Seeder;
 
@@ -174,6 +175,35 @@ class DatabaseSeeder extends Seeder
             'nama_lengkap' => 'Maulidin Abdi',
             'password' => bcrypt('admin'),
             'level' => '1'
+        ]);
+
+        User::create([
+            'username' => "Husein",
+            'nama_lengkap' => 'Abu Husein',
+            'password' => bcrypt('1234'),
+            'level' => '2'
+        ]);
+
+        Testimoni::create([
+            'id_user' => 2,
+            'karya_id' =>  1,
+            'nama_panitia' => 'maulidin',
+            'slug' => 'testimoni-1',
+            'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
+            'tgl_testimoni' => '2022-10-12',
+            'lokasi_masjid' => 'Banjarbaru',
+            'nama_masjid' => 'Al-Muhajirin'
+        ]);
+
+        Testimoni::create([
+            'id_user' => 2,
+            'karya_id' => 4,
+            'nama_panitia' => 'maulidin',
+            'slug' => 'testimoni-2',
+            'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
+            'tgl_testimoni' => '2023-7-12',
+            'lokasi_masjid' => 'amuntai',
+            'nama_masjid' => 'Al-Muhajirin'
         ]);
 
         // User::factory()->create([

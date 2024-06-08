@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Testimoni;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TestimoniController extends Controller
@@ -16,9 +17,9 @@ class TestimoniController extends Controller
         return view('pages.admin-testimoni');
     }
 
-    public function show(Testimoni $testimoni) {
+    public function userTesti(User $user) {
         return view('testimoni', [
-            "testimoni" => $testimoni
+            "testimoni" => $user->testimonis
         ]);
     }
 }

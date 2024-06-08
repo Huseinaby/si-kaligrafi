@@ -17,20 +17,22 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Nama Masjid</th>
-                                <th>Nama Panitia</th>
+                                <th>Nama Karya</th>
+                                <th>Jenis Karya</th>
                                 <th>Tempat</th>
+                                <th>Nama Masjid</th>
                                 <th>Tanggal</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($testimonis as $row)
+                            @foreach ($karyas as $row)
                                 <tr>
-                                    <td>{{ $row->nama_masjid }}</td>
-                                    <td>{{ $row->nama_panitia }}</td>
+                                    <td>{{ $row->nama_karya }}</td>
+                                    <td>{{ $row->jenis_karya }}</td>
                                     <td>{{ $row->lokasi }}</td>
-                                    <td>{{ $row->tgl_testimoni }}</td>
+                                    <td>{{ $row->nama_masjid }}</td>☻
+                                    <td>{{ $row->tgl_pembuatan }}</td>
                                     <td>
                                         <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                                         <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('testimonis', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id'); 
-            $table->foreign('user_id')->references('id_user')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('id_user'); 
+            $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
             $table->foreignId('karya_id')->constrained('karyas')->onDelete('cascade');
             $table->string('nama_panitia');
             $table->string('slug');

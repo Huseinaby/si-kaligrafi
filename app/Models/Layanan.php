@@ -16,5 +16,5 @@ class Layanan extends Model
     ];
     protected $guarded = ['id'];
 
-    protected $primaryKey =  ['id'];
+    protected $primaryKey =  'id';
 }

@@ -53,7 +53,8 @@
                 <div class="table-responsive">
 
                     <h1 class="h4 mb-2 text-gray-800">Testimoni Anda</h1>
-                    <hr></hr>
+                    <hr>
+                    </hr>
 
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
@@ -66,6 +67,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @if ($testimonis == null )
+    
+                            @else
+                                @foreach ($testimonis as $row)
+                                    <tr>
+                                        <td>{{ $row->nama_masjid }}</td>
+                                        <td>{{ $row->nama_panitia }}</td>
+                                        <td>{{ $row->lokasi }}</td>
+                                        <td>{{ $row->tgl_testimoni }}</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i>
+                                                Edit</a>
+                                            <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>
+                                                Hapus</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
+
                         </tbody>
                     </table>
                 </div>

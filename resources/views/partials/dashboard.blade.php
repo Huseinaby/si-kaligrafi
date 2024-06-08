@@ -47,9 +47,10 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item dashboard">
-                <a class="nav-link" href="{{ route('u-dashboard') }}"> 
+                <a class="nav-link" href="/user/dashboard/{{ auth()->user()->id_user }}" >
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard</span>
+                </a>
             </li>
 
 
