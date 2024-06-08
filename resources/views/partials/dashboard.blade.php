@@ -52,71 +52,18 @@
                     <span>Dashboard</span></a>
             </li>
 
-             <!-- Nav Item - User Management -->
-             <li class="nav-item user-management">
-                <a class="nav-link" href="{{ route('user') }}">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span>User Management</span></a>
-            </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Tables</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-
-                        <!-- Tabel bahan -->
-                        <a class="collapse-item" href="{{ route('bahan') }}"> <!-- route('ornamen') -->
-                            <span>Bahan</span>
-                        </a>
-
-                        <!-- Tabel galeri -->
-                        <a class="collapse-item" href="{{ route('galeri') }}"> <!-- route('ornamen') -->
-                            <span>Galeri</span>
-                        </a>
-
-                        <!-- Tabel karya -->
-                        <a class="collapse-item" href="{{ route('karya') }}"> <!-- route('ornamen') -->
-                            <span>Karya</span>
-                        </a>
-
-                        <!-- Tabel layanan -->
-                        <a class="collapse-item" href="{{ route('layanan') }}"> <!-- route('ornamen') -->
-                            <span>Layanan</span>
-                        </a>
-
-                        <!-- Tabel ornamen-->
-                        <a class="collapse-item" href="{{  route('u-ornamen') }}"> <!-- route('ornamen') -->
-                            <span>Ornamen</span>
-                        </a>
-
-                        <!-- Tabel testimoni-->
-                        <a class="collapse-item" href=""> <!-- route('ornamen') -->
-                            <span>Testimoni</span>
-                        </a>
-
-                        <!-- Tabel destail pesanan-->
-                        <a class="collapse-item" href=""> <!-- route('ornamen') -->
-                            <span>Detail Pesanan</span>
-                        </a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Requests-management -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/testimonis">
                     <i class="fas fa-fw fa-bell"></i>
-                    <span>Requests Management</span></a>
+                    <span>Isi Testimoni</span></a>
             </li>
 
             <!-- Nav Item - Logout -->
             <li class="nav-item request-management">
-                    <form action="/logout" method="POST">
+                    <form action="{{ route('u-testimonis') }}" method="POST">
                         @csrf
 
                         <button type="submit" class="nav-link bg-gradient-primary border-0"><i class="fas fa-fw fa-door-open"></i> Logout</button>  
@@ -149,20 +96,6 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -193,34 +126,8 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
+                        <li class="nav-item ">
+                            <h6 class="nav-item mt-2">Selamat datang, {{ auth()->user()->username }}</h6>
                         </li>
                     </ul>
 
@@ -257,25 +164,7 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('sbadmin/vendor/jquery/jquery.min.js') }}"></script>

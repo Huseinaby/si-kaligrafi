@@ -83,7 +83,7 @@ Route::middleware(['auth','admin'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('u-dashboard');
-
-    Route::get('/ornamen', [OrnamenController::class, 'index'])->name('u-ornamen');    
+    
+    Route::get('/testimonis', [TestimoniController::class, 'index'])->name('u-testimonis');
 
 });
