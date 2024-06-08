@@ -39,11 +39,13 @@
                                     <td>{{ $row->nama_lengkap }}</td>
                                     <td>{{ $row->level == 1 ? 'Admin' : 'User' }}</td>
                                     <td>
-                                        <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditUser{{ $row->user_id }}"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditUser{{ $row->id_user }}"><i class="fas fa-edit"></i> Edit</a>
                                         <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
                                     </td>
                                 </tr>
+                                
                                 <!-- Modal Edit Data User-->
+                                <div class="modal fade" id="formModalEditUser{{ $row->id_user }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -53,17 +55,19 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="{{ route('user.update', ['id' => $row->id]) }}" method="POST">
+                                                <form action="{{ route('user.update', ['id' => $row->id_user]) }}" method="POST">
                                                     @csrf
                                                     @method('PUT')
                                                     <div class="form-group text-gray-800">
                                                         <label for="nama_lengkap">Nama Lengkap</label>
                                                         <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" value="{{ old('nama_lengkap', $row->nama_lengkap) }}" required>
                                                     </div>
+
                                                     <div class="form-group text-gray-800">
                                                         <label for="password">Password</label>
                                                         <input type="password" class="form-control" id="password" name="password">
                                                     </div>
+
                                                     <div class="form-group text-gray-800">
                                                         <label for="level">Level User</label>
                                                         <select class="form-control" id="level" name="level">
@@ -71,7 +75,9 @@
                                                             <option value="2" {{ $row->level == 2 ? 'selected' : '' }}>User</option>
                                                         </select>
                                                     </div>
+
                                                     <hr></hr>
+
                                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                                                     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
                                                 </form>
@@ -138,48 +144,5 @@
                 </div>
             </div>
         </div>
-
-        <!-- Modal Edit Data User-->
-        <div class="modal fade" id="formModalEditUser{{ $row->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-gray-800" id="exampleModalLabel">Edit Data User</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="{{ route('user.update', ['id' => $row->id]) }}" method="POST">
-                            @csrf
-                            @method('PUT')
-                            <div class="form-group text-gray-800">
-                                <label for="nama_lengkap">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" value="{{ old('nama_lengkap', $row->nama_lengkap) }}" required>
-                            </div>
-
-                            <div class="form-group text-gray-800">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password">
-                            </div>
-
-                            <div class="form-group text-gray-800">
-                                <label for="level">Level User</label>
-                                <select class="form-control" id="level" name="level">
-                                    <option value="1" {{ $row->level == 1 ? 'selected' : '' }}>Admin</option>
-                                    <option value="2" {{ $row->level == 2 ? 'selected' : '' }}>User</option>
-                                </select>
-                            </div>
-
-                            <hr></hr>
-
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
 @endsection
