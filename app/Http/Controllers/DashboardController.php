@@ -9,7 +9,8 @@ class DashboardController extends Controller
 {
     public function index(User $user){
         return view('dashboard', [
-            "testimonis" => $user->testimoni
+            "testimonis" => $user->testimoni,
+            "karyas" => $user->karya
         ]);
     }
 

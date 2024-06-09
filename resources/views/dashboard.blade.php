@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">count</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $karyas->count() }}</div>
                                     </div>
                                 </div>
                             </div>
@@ -63,6 +63,7 @@
                                 <th>Nama Panitia</th>
                                 <th>Lokasi</th>
                                 <th>Tanggal</th>
+                                <th>Aksi</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
@@ -76,6 +77,11 @@
                                         <td>{{ $row->nama_panitia }}</td>
                                         <td>{{ $row->lokasi_masjid }}</td>
                                         <td>{{ $row->tgl_testimoni }}</td>
+                                        <th>
+                                            <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                                            <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+                                        </td>
+                                        </th>
                                         <td>
                                             Pending/Approve
                                         </td>
