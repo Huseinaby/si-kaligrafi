@@ -28,6 +28,6 @@ class User extends Authenticatable
     }
 
     public function karya(){
-        return $this->belongsToMany(Karya::class, 'id_user');
+        return $this->belongsToMany(Karya::class, 'detail_pesanan', 'id_user', 'karya_id')->withTimestamps();
     }
 }

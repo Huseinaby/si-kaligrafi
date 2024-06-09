@@ -58,7 +58,7 @@
             
             <!-- Nav Item - Requests-management -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="{{ route('u-testimonis') }}">
+                <a class="nav-link" href="/user/testimonis/{{ auth()->user()->id_user }}">
                     <i class="fas fa-fw fa-bell"></i>
                     <span>Isi Testimoni</span></a>
             </li>

@@ -38,6 +38,6 @@ class Karya extends Model
     }
 
     public function user(){
-        return $this->belongsToMany(User::class, 'karya_id');
+        return $this->belongsToMany(User::class, 'detail_pesanan','karya_id', 'id_user')->withTimestamps();
     }
 }
