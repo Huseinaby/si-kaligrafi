@@ -67,9 +67,13 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::get('/users', [UserController::class, 'index'])->name('user');
     Route::post('/users', [UserController::class, 'store'])->name('user.store');
     Route::put('/users/{id}', [UserController::class, 'update'])->name('user.update');
+    Route::delete('/user/{id_user}', [UserController::class, 'destroy'])->name('user.destroy');
 
     // Bahan
     Route::get('/bahan', [BahanController::class, 'admBahan'])->name('bahan');
+    Route::post('/bahan', [BahanController::class, 'store'])->name('bahan.store');
+    Route::put('/bahan/{slug}', [BahanController::class, 'update'])->name('bahan.update');
+    Route::delete('/bahan/{slug}', [BahanController::class, 'destroy'])->name('bahan.destroy');
 
     // Galeri
     Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');
@@ -80,7 +84,10 @@ Route::middleware(['auth','admin'])->group(function () {
     // Layanan
     Route::get('/layanan', [LayananController::class, 'admLayanan'])->name('layanan');
 
-    Route::get('/testimonis', [TestimoniController::class, 'admtesti'])->name('testimonis');
+    // Testimoni
+    Route::get('/testimonies', [TestimoniController::class, 'admTesti'])->name('testimonies');
+    Route::get('/req-testimonies', [TestimoniController::class, 'admReqTesti'])->name('req-testimonies');
+    Route::patch('/testimonies/{testimonial}/status', [TestimoniController::class, 'updateStatus'])->name('testimonials.updateStatus');
 });
 
 Route::middleware(['auth'])->group(function () {

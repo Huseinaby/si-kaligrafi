@@ -50,6 +50,12 @@ class UserController extends Controller
         return redirect()->route('user')->with('success', 'Data user berhasil diperbarui');
     }
 
-    
+    public function destroy($id_user)
+    {
+        $user = User::where('id_user', $id_user)->firstOrFail();
+        $user->delete();
+
+        return redirect()->route('user')->with('success', 'User berhasil dihapus');
+    }
     
 }

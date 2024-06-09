@@ -17,6 +17,9 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
+    <!-- Animation alert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Custom styles for this template-->
     <link href="{{ asset('sbadmin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
@@ -94,7 +97,7 @@
                         </a>
 
                         <!-- Tabel testimoni-->
-                        <a class="collapse-item" href="{{ route('testimonis') }}"> <!-- route('ornamen') -->
+                        <a class="collapse-item" href="{{ route('testimonies') }}"> <!-- route('ornamen') -->
                             <span>Testimoni</span>
                         </a>
 
@@ -108,18 +111,18 @@
 
             <!-- Nav Item - Requests-management -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('req-testimonies') }}">
                     <i class="fas fa-fw fa-bell"></i>
-                    <span>Requests Management</span></a>
+                    <span>Requests Management</span>
+                </a>
             </li>
 
-            <!-- Nav Item - Logout -->
+            <!-- Nav Item - Requests-management -->
             <li class="nav-item request-management">
-                    <form action="/logout" method="POST">
-                        @csrf
-
-                        <button type="submit" class="nav-link bg-gradient-primary border-0"><i class="fas fa-fw fa-door-open"></i> Logout</button>  
-                      </form>  
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-door-open"></i>
+                    <span>Logout</span>
+                </a>
             </li>
             
             <!-- Divider -->

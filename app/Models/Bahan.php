@@ -14,7 +14,8 @@ class Bahan extends Model
         'nama_bahan',
         'jenis_bahan',
         'deskripsi_bahan',
-        'foto_bahan'
+        'foto_bahan',
+        'slug'
     ];
 
     protected $primaryKey = 'id';

@@ -13,8 +13,28 @@ class TestimoniController extends Controller
         ]);
     }
 
+    public function admReqTesti(){
+        return view('pages.admin-request-testimoni', [
+            "admin_testimoni" => Testimoni::latest()->get()
+        ]);
+    }
+
     public function admTesti(){
-        return view('pages.admin-testimoni');
+        return view('pages.admin-testimoni', [
+            "admin_testimoni" => Testimoni::latest()->get()
+        ]);
+    }
+
+    public function updateStatus(Request $request, Testimoni $testimonial)
+    {
+        $request->validate([
+            'status' => 'required|in:accepted,rejected',
+        ]);
+
+        $testimonial->status = $request->status;
+        $testimonial->save();
+
+        return redirect()->back()->with('success', 'Testimonial status updated successfully!');
     }
 
     public function userTesti(User $user) {

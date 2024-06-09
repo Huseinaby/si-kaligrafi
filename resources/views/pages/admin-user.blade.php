@@ -8,7 +8,7 @@
         <h1 class="h3 mb-2 text-gray-800">User Management</h1>
 
         @if (session('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <div class="alert alert-success alert-dismissible fade show animate__animated animate__fadeInDown" role="alert">
                 {{ session('success') }}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -40,7 +40,7 @@
                                     <td>{{ $row->level == 1 ? 'Admin' : 'User' }}</td>
                                     <td>
                                         <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditUser{{ $row->id_user }}"><i class="fas fa-edit"></i> Edit</a>
-                                        <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+                                        <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#formModalDeleteUser{{ $row->id_user }}"><i class="fas fa-trash"></i> Hapus</a>
                                     </td>
                                 </tr>
                                 
@@ -85,6 +85,32 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Form Modal Delete User -->
+                                <div class="modal fade" id="formModalDeleteUser{{ $row->id_user }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title text-gray-800" id="exampleModalLabel">Hapus Data User</h5>
+                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Apakah Anda yakin ingin menghapus user <strong>{{ $row->username }}</strong>?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="{{ route('user.destroy', $row->id_user) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             @endforeach
                         </tbody>
                     </table>
@@ -106,21 +132,21 @@
                     <div class="modal-body">
 
                         <!-- content modal -->
-                        <form action="{{ route('user.store') }}" method="POST">
+                        <form id="tambahBahanForm" action="{{ route('user.store') }}" method="POST">
                             @csrf
                             <div class="form-group text-gray-800">
                                 <label for="exampleInputPassword1">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required>
                             </div>
 
                             <div class="form-group text-gray-800">
                                 <label for="exampleInputPassword1">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
+                                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama lengkap" required>
                             </div>
 
                             <div class="form-group text-gray-800">
                                 <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Panjang password minimal 8 karakter" required>
                             </div>
 
                             <div class="form-group text-gray-800">
@@ -133,7 +159,7 @@
 
                             <hr></hr>
 
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm()">Batal</button>
                             <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
                           </form>
                           <!-- End content -->
@@ -145,4 +171,10 @@
             </div>
         </div>
 
+        <script>
+            function resetForm() {
+                document.getElementById('tambahBahanForm').reset();
+            }
+        </script>
+        
 @endsection
