@@ -1,131 +1,100 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kaligrafi Indah</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/portofolio.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- navbar -->
-    
+
     <header class="menu">
         <div class="icon">
-          <h2 class="logo"><a href="\">Kaligrafi</a></h2>
+            <h2 class="logo"><a
+                    href="\">Kaligrafi</a></h2>
         </div>
           <ul>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Layanan</a></li>
-            <li><a href="#">Bahan</a></li>
-            <li><a href="#">Ornamen</a></li>
-            <li><a href="">Portofolio</a></li>
-            <li><a href="#">Galeri</a></li>
-            <li><a href="testimonis">Testimoni</a></li>
-            <li><a href="register" class="tbl">Sign In</a></li>
-          </ul>
-        </header>
+            <li><a href="#">Tentang</a>
+                </li>
+                <li><a href="#">Layanan</a></li>
+                <li><a href="#">Bahan</a></li>
+                <li><a href="/ornamens">Ornamen</a></li>
+                <li><a href="">Portofolio</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="testimonis">Testimoni</a></li>
+                <li><a href="register" class="tbl">Sign In</a></li>
+                </ul>
+    </header>
 
-        <!-- carousel -->
-<br>
+    <!-- carousel -->
+    <br>
 
 
-        <div id="carouselExample" class="carousel slide">
-          <div class="carousel-inner">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="image/contoh.png" class="d-block w-100" alt="...">
+                <img src="image/contoh.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="image/contoh.png" class="d-block w-100 " alt="...">
+                <img src="image/contoh.png" class="d-block w-100 " alt="...">
             </div>
             <div class="carousel-item">
-              <img src="image/contoh.png" class="d-block w-100" alt="...">
+                <img src="image/contoh.png" class="d-block w-100" alt="...">
             </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      
-        <h2 class="text">Portofolio</h2>
+        </button>
+    </div>
 
-        <br><br>
-        
-      <!-- card -->
+    <h2 class="text">Portofolio</h2>
 
-      <div class="kotak row">
-        <div class="col-md-3">
-          <div class="card ">
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-3">
-          <div class="card ">
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-3">
-          <div class="card" >
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- card -->
 
-      <br><br><br>
+    <div class="kotak row mt-5">
 
-      <div class="kotak row">
-        <div class="col-md-3">
-          <div class="card ">
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
+        @foreach ($portofolios as $portofolio)
+            <div class="col-md-3">
+                <div class="card ">
+                    <img src="image/baru.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5>{{ $portofolio->nama_karya }}</h5>
+                        <p>{{ $portofolio->deskripsi_karya }}</p>
+                        <p>{{ $portofolio->nama_masjid }}, {{ $portofolio->lokasi }}</p>
+                        <p>Ditambahkan {{ $portofolio->created_at->diffForHumans() }}</p>
+                    </div>
+                </div>
             </div>
-          </div>
+        @endforeach
+        <div class="page">
+            {{ $portofolios->links() }}
         </div>
-      
-        <div class="col-md-3">
-          <div class="card ">
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-3">
-          <div class="card" >
-            <img src="image/baru.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Beberapa contoh teks cepat untuk dibuat pada judul kartu dan mengisi sebagian besar konten kartu.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-<br><br><br>
-       
-@include('partials.footer')
-    
+    </div>
 
-        </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+
+
+
+
+
+    <br><br><br>
+
+    @include('partials.footer')
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>

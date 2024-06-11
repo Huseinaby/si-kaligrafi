@@ -6,6 +6,9 @@ footer {
     text-align: left;
     padding: 10px;
   }
+.footer-side{
+  margin-top: 50px;
+}
   
   .footer-address {
     display: flex;
@@ -28,4 +31,3 @@ footer {
     text-align: center;
     justify-content: center;
   }
-  

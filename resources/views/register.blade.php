@@ -17,18 +17,34 @@
 
   <div class="container">
     <h1><b>Register</b></h1>
-    <form action="#">
+    <form action="/register" method="POST">
+      @csrf
       <div class="form-group">
+        <div class="form-group">
+          <label for="nama_lengkap"><b>Nama Lengkap:</b></label>
+          <input class="is-invalid" type="text" id="nama_lengkap" name="nama_lengkap" required value="{{ old('nama_lengkap') }}">
+          @error('nama_lengkap')
+          <div class="invalid-feedback">
+            {{ $message }}
+          </div>
+          @enderror
+        </div>
         <label for="username"><b> Username:</b></label>
-        <input type="text" id="username" name="username" required>
+        <input class="is-invalid" type="text" id="username" name="username" required value="{{ old('username') }}">
+        @error('username')
+        <div class="invalid-feedback">
+          {{ $message }}
+        </div>
+        @enderror
       </div>
       <div class="form-group">
         <label for="password"><b>Password:</b></label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="form-group">
-        <label for="password"><b>Password:</b></label>
-        <input type="password" id="password" name="password" required>
+        <input class="is-invalid" type="password" id="password" name="password" required>
+        @error('password')
+        <div class="invalid-feedback">
+          {{ $message }}
+        </div>
+        @enderror
       </div>
       <button type="submit"><b> Sign Up</b></button>
       <br><br>

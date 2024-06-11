@@ -8,21 +8,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/nice-forms.css@0.1.7/dist/nice-forms.css"/>
     <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Home Page</title>
 </head>
-<>
 <nav>
 		<ul>
-      <li><h1 class="logo">KALIGRAFI</h1></li>
-			<li><a href="#">Tentang </a></li>
-			<li><a href="#">Layanan</a></li>
-			<li><a href="#">Bahan</a></li>
-			<li><a href="#">Ornamen</a></li>
-			<li><a href="#">Portofolio</a></li>
-			<li><a href="#">Galeri</a></li>
-      <li><a href="#">Testimoni</a></li>
-			<li><a href="#" class="btn">Sign In</a></li>
+      <li><h1>KALIGRAFI</h1></li>
+			<li><a href="tentang">Tentang</a></li>
+			<li><a href="layanan">Layanan</a></li>
+			<li><a href="bahan">Bahan</a></li>
+			<li><a href="ornamen">Ornamen</a></li>
+			<li><a href="portofolio">Portofolio</a></li>
+			<li><a href="galeri">Galeri</a></li>
+      <li><a href="testimoni">Testimoni</a></li>
+      @auth
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+          {{ auth()->user()->nama_lengkap }}
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+          <li><hr class="dropdown-divider"></hr></li>
+          <li>
+              <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">Logout</button>  
+              </form>  
+          </li>
+        </ul>
+      </div>
+      @else
+        <li><a href="/login" class="btn">Sign In</a></li>
+      @endauth
 		</ul>
 	</nav>
     <div class="content">
@@ -42,7 +59,7 @@
       <h2>Kualitas Kami</h2>
       <div class="container">
   <div class="row">
-    <div class="col-md-3">
+  <div class="col-md-3">
       <div class="card">
         <div class="card-body">
           <h5 class="logku"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/></svg></h5>
@@ -82,40 +99,22 @@
 </div>
 <div class="layanan">
   <h5>Layanan</h5>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="image/layanan1.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="image/layanan2.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="image/layanan3.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="image/layanan4.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="image/layanan5.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-      </div>
-    </div>
-    <div class="swiper-pagination"></div>
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="image/layanan1.jpg" ></div>
+    <div class="swiper-slide"><img src="image/layanan2.jpg" ></div>
+    <div class="swiper-slide"><img src="image/layanan3.jpg" ></div>
+    <div class="swiper-slide"><img src="image/layanan4.jpg" ></div>
+    <div class="swiper-slide"><img src="image/layanan5.jpg" ></div>
+    <div class="swiper-slide"><img src="image/layanan6.jpg" ></div>
+    <div class="swiper-slide"><img src="image/layanan7.jpg" ></div>
+    <div class="swiper-slide"><img src="image/layanan8.jpg" ></div>
   </div>
+    <div class="swiper-pagination"></div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="homepage.js"></script>
+
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="homepage.js"></script>
 </body>
 </html>
