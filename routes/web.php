@@ -33,7 +33,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/portofolio', [KaryaController::class, 'index']);
 
 Route::get('/isi_testimoni', function () {
-    return view('isi_tastimoni');
+    return view('isi_testimoni_new');
 });
 
 Route::get('/testimonis', [TestimoniController::class, 'index']);
