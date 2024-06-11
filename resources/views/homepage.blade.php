@@ -112,7 +112,9 @@
   </div>
     <div class="swiper-pagination"></div>
 </div>
+<div class="bahan">
 
+</div>
 </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="homepage.js"></script>
