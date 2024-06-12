@@ -187,34 +187,26 @@ class DatabaseSeeder extends Seeder
         Testimoni::create([
             'id_user' => 2,
             'karya_id' =>  1,
-            'nama_panitia' => 'maulidin',
             'slug' => 'testimoni-1',
             'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
             'tgl_testimoni' => '2022-10-12',
-            'lokasi_masjid' => 'Banjarbaru',
-            'nama_masjid' => 'Al-Muhajirin'
+
         ]);
 
         
         Testimoni::create([
             'id_user' => 2,
             'karya_id' => 4,
-            'nama_panitia' => 'maulidin',
             'slug' => 'testimoni-2',
             'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
             'tgl_testimoni' => '2023-7-12',
-            'lokasi_masjid' => 'amuntai',
-            'nama_masjid' => 'Al-Muhajirin'
         ]);
         Testimoni::create([
             'id_user' => 1,
             'karya_id' => 6,
-            'nama_panitia' => 'Hidayat',
             'slug' => 'testimoni-3',
             'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
             'tgl_testimoni' => '2023-7-12',
-            'lokasi_masjid' => 'amuntai',
-            'nama_masjid' => 'Al-Muhajirin'
         ]);
         // User::factory()->create([
         //     'name' => 'Test User',
