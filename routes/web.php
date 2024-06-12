@@ -32,10 +32,6 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/portofolio', [KaryaController::class, 'index']);
 
-Route::get('/isi_testimoni', function () {
-    return view('isi_testimoni_new');
-});
-
 Route::get('/testimonis', [TestimoniController::class, 'index']);
 
 Route::get('/testimoni/{testimoni:id}', [TestimoniController::class, 'show']);
@@ -50,9 +46,6 @@ Route::get('/bahans/{bahan:slug}', [BahanController::class, 'type']);
 
 // Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
-Route::get('isi-testimoni', function(){
-    return view('isi_tastimoni');
-});
 
 // Admin section
 Route::middleware(['auth','admin'])->group(function () {
@@ -91,8 +84,12 @@ Route::middleware(['auth','admin'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/user/dashboard/{user:id_user}', [DashboardController::class, 'index'])->name('u-dashboard');
+    Route::get('/user/dashboard', [DashboardController::class, 'index'])->name('u-dashboard');
     
-    Route::get('/user/testimonis/{user:id_user}', [KaryaController::class, 'userKarya'])->name('u-testimonis');
+    Route::get('/user/testimonis', [KaryaController::class, 'userKarya'])->name('u-testimonis');
+
+    Route::get('/user/isi_testimoni/{karya:slug}', [TestimoniController::class, 'isiTest']);
+
+    Route::post('/user/isi_testimoni/{karya:slug}', [TestimoniController::class, 'store']);
 
 });

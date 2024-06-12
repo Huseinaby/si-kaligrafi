@@ -23,6 +23,7 @@
                             </tr>
                         </thead>
                         <tbody>
+
                             @foreach ($karyas as $row)
                                 <tr>
                                     <td>{{ $row->nama_karya }}</td>
@@ -31,7 +32,7 @@
                                     <td>{{ $row->nama_masjid }}</td>☻
                                     <td>{{ $row->tgl_pembuatan }}</td>
                                     <td>
-                                        <a href="" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Beri Testimoni</a>
+                                        <a href="/user/isi_testimoni/{{ $row->slug }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Beri Testimoni</a>
                                     </td>
                                 </tr>
                             @endforeach

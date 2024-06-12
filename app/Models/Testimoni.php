@@ -22,7 +22,7 @@ class Testimoni extends Model
     protected $primaryKey =  'id';
 
     public function karya(){
-        return $this->belongsTo(Karya::class, 'id');
+        return $this->belongsTo(Karya::class, 'karya_id');
     }
 
     public function user(){

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,7 +46,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item dashboard">
-                <a class="nav-link" href="/user/dashboard/{{ auth()->user()->id_user }}" >
+                <a class="nav-link" href="/user/dashboard" >
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -58,7 +57,7 @@
             
             <!-- Nav Item - Requests-management -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="/user/testimonis/{{ auth()->user()->id_user }}">
+                <a class="nav-link" href="/user/testimonis">
                     <i class="fas fa-fw fa-bell"></i>
                     <span>Isi Testimoni</span></a>
             </li>

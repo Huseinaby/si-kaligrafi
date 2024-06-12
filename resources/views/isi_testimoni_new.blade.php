@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/testimoni.css">
+    <title>Kaligrafi | Isi Testimoni</title>
+    <link rel="stylesheet" href="{{ asset('css/testimoni.css') }}">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
 <body>
+    <img src="" alt="" srcset="">
 
     <!-- Navbar -->
     <nav>
@@ -38,7 +38,7 @@
                 <a href="#">Testimoni</a>
             </li>
             <div class="gabut">
-            <div ><img src="image/yae.png" alt=""> </div>
+            <div ><img src="{{ asset('image/yae.png') }}" alt=""> </div>
 
             <div class="menu-icon"> <i class="ph ph-list"></i></div>
         </div>
@@ -59,18 +59,22 @@
    
     <div class="container">
        
-        <form action="">
+        <form method="post" action="/user/isi_testimoni/{{ $karya->slug }}">
+            @csrf
+            <label for="namaKarya">Nama Karya</label>
+            <input type="text" id="namaKarya" name="namaKarya" value="{{ $karya->nama_karya }}" readonly>
+
             <label for="namaLengkap">Nama Lengkap</label>
-            <input type="text" id="namaLengkap" name="namaLengkap" placeholder="Nama Lengkap" required>
+            <input type="text" id="namaLengkap" name="namaLengkap" value="{{ $user->nama_lengkap }}" readonly>
 
             <label for="namaMasjid">Nama Masjid</label>
-            <input type="text" id="namaMasjid" name="namaMasjid" placeholder="Nama Masjid" required>
+            <input type="text" id="namaMasjid" name="namaMasjid" value="{{ $karya->nama_masjid }}" readonly>
 
             <label for="lokasi">Lokasi</label>
-            <input type="text" id="lokasi" name="lokasi" placeholder="Lokasi" required>
+            <input type="text" id="lokasi" name="lokasi" value="{{ $karya->lokasi }}" readonly>
 
-            <label for="testimoni">Testimoni Anda</label>
-            <textarea id="testimoni" name="testimoni" placeholder="Testimoni Anda" required></textarea>
+            <label for="isi_testimoni">Testimoni Anda</label>
+            <textarea id="isi_testimoni" name="isi_testimoni" placeholder="testimoni Anda" required></textarea>
 
             <div class="button-container">
                 <button type="reset">Batal</button>

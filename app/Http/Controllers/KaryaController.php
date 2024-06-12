@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Karya;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -19,7 +20,8 @@ class KaryaController extends Controller
         ]);
     }
 
-    public function userKarya(User $user){
+    public function userKarya(){
+        $user = Auth::user();
         return view('testimonis', [
             'karyas' => $user->karya
         ]);

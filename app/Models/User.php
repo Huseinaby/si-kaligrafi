@@ -13,7 +13,6 @@ class User extends Authenticatable
     use HasFactory;
 
     protected $fillable = [
-        'id_user',
         'username',
         'nama_lengkap',
         'password',
@@ -24,7 +23,7 @@ class User extends Authenticatable
     protected $primaryKey = 'id_user';
 
     public function testimoni(){
-        return $this->hasMany(Testimoni::class, 'id_user');
+        return $this->hasMany(Testimoni::class);
     }
 
     public function karya(){

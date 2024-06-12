@@ -59,10 +59,9 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Nama Mesjid</th>
-                                <th>Nama Panitia</th>
+                                <th>Nama Masjid</th>
                                 <th>Lokasi</th>
-                                <th>Tanggal</th>
+                                <th>Tangga</th>
                                 <th>Aksi</th>
                                 <th>Status</th>
                             </tr>
@@ -73,9 +72,8 @@
                             @else
                                 @foreach ($testimonis as $row)
                                     <tr>
-                                        <td>{{ $row->nama_masjid }}</td>
-                                        <td>{{ $row->nama_panitia }}</td>
-                                        <td>{{ $row->lokasi_masjid }}</td>
+                                        <td>{{ $row->karya->nama_masjid }}</td>
+                                        <td>{{ $row->karya->lokasi }}</td>
                                         <td>{{ $row->tgl_testimoni }}</td>
                                         <th>
                                             <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
@@ -83,7 +81,7 @@
                                         </td>
                                         </th>
                                         <td>
-                                            Pending/Approve
+                                            {{ $row->status }}
                                         </td>
                                     </tr>
                                 @endforeach
