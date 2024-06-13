@@ -77,7 +77,9 @@
             <textarea id="isi_testimoni" name="isi_testimoni" placeholder="testimoni Anda" required></textarea>
 
             <div class="button-container">
-                <button type="reset">Batal</button>
+                <button>
+                    <a href="/user/testimonis" style="text-decoration: none; color: initial">Batal</a>
+                </button>
                 <button type="submit">Simpan</button>
             </div>
         </form>

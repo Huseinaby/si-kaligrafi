@@ -38,13 +38,13 @@
                 <a href="#">Testimoni</a>
             </li>
             <div class="gabut">
-            <div ><img src="{{ asset('image/yae.png') }}" alt=""> </div>
+                <div><img src="{{ asset('image/yae.png') }}" alt=""> </div>
 
-            <div class="menu-icon"> <i class="ph ph-list"></i></div>
-        </div>
+                <div class="menu-icon"> <i class="ph ph-list"></i></div>
+            </div>
         </ul>
-      
-        
+
+
     </nav>
 
     <!-- Header Bawah -->
@@ -55,10 +55,10 @@
 
     <!-- Form -->
 
-   
-   
+
+
     <div class="container">
-       
+
         <form method="post" action="/user/edit_testimoni/{{ $testimoni->id }}">
             @csrf
             <label for="namaKarya">Nama Karya</label>
@@ -68,7 +68,8 @@
             <input type="text" id="namaLengkap" name="namaLengkap" value="{{ $user->nama_lengkap }}" readonly>
 
             <label for="namaMasjid">Nama Masjid</label>
-            <input type="text" id="namaMasjid" name="namaMasjid" value="{{ $testimoni->karya->nama_masjid }}" readonly>
+            <input type="text" id="namaMasjid" name="namaMasjid" value="{{ $testimoni->karya->nama_masjid }}"
+                readonly>
 
             <label for="lokasi">Lokasi</label>
             <input type="text" id="lokasi" name="lokasi" value="{{ $testimoni->karya->lokasi }}" readonly>
@@ -77,15 +78,17 @@
             <textarea id="isi_testimoni" name="isi_testimoni" required>{{ $testimoni->isi_testimoni }}</textarea>
 
             <div class="button-container">
-                <button type="reset">Batal</button>
+                <button>
+                    <a href="/user/dashboard" style="text-decoration: none; color: initial">Batal</a>
+                </button>
                 <button type="submit">Simpan</button>
             </div>
         </form>
     </div>
 </body>
+
 </html>
 
 </body>
 
 </html>
-

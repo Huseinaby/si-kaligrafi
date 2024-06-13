@@ -20,6 +20,10 @@ class KaryaController extends Controller
         ]);
     }
 
+    public function admPesanan(){
+        return view('');
+    }
+
     public function userKarya(){
         $user = Auth::user();
         return view('testimonis', [

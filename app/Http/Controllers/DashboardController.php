@@ -11,7 +11,7 @@ class DashboardController extends Controller
 {
     public function index(){
         $user = Auth::user();
-        $testimonis = Testimoni::where('id_user', $user->id_user)->get();
+        $testimonis = Testimoni::where('id_user', $user->id_user)->latest()->get();
         
         return view('dashboard', [
             "testimonis" => $testimonis,

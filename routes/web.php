@@ -74,6 +74,8 @@ Route::middleware(['auth','admin'])->group(function () {
     // Karya
     Route::get('/karya', [KaryaController::class, 'admKarya'])->name('karya');
 
+    Route::get('/pesanan', [KaryaController::class, 'admPesanan'])->name('pesanan');
+
     // Layanan
     Route::get('/layanan', [LayananController::class, 'admLayanan'])->name('layanan');
 
