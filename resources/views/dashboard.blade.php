@@ -61,7 +61,7 @@
                             <tr>
                                 <th>Nama Masjid</th>
                                 <th>Lokasi</th>
-                                <th>Tangga</th>
+                                <th>Tanggal</th>
                                 <th>Aksi</th>
                                 <th>Status</th>
                             </tr>
@@ -76,8 +76,14 @@
                                         <td>{{ $row->karya->lokasi }}</td>
                                         <td>{{ $row->tgl_testimoni }}</td>
                                         <th>
-                                            <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                                            <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="/user/edit_testimoni/{{ $row->id }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                                            <form action="{{ route('u-hapus-testimoni', $row->id) }}" method="POST" style="display:inline;">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus testimoni ini?')">
+                                                    <i class="fas fa-trash"></i> Hapus
+                                                </button>
+                                            </form>
                                         </td>
                                         </th>
                                         <td>

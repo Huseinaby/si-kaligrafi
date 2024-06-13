@@ -51,6 +51,37 @@ class TestimoniController extends Controller
         return redirect('/user/dashboard')->with('success', 'Testimoni sedang ditinjau');
     }
 
+    public function edit(Testimoni $testimoni){
+        return view('edit_testimoni', [
+            'user' => Auth::user(),
+            'testimoni' => $testimoni
+        ]);
+    }
+
+    public function update(Request $request, Testimoni $testimoni){
+
+        $testimon = Testimoni::where('id', $testimoni->id);
+
+        $credential = $request->validate([
+            'isi_testimoni' => 'required'
+        ]);
+
+        $credential['slug'] = Str::slug(Auth()->user()->nama_lengkap, '-');
+        $credential['id_user'] = Auth()->id();
+        $credential['karya_id'] = $testimoni->karya->id;
+        $credential['tgl_testimoni'] = now();
+
+        $testimon->update($credential);
+
+        return redirect('/user/dashboard')->with('success', 'Testimoni tersimpan');
+    }
+
+    public function destroy(Testimoni $testimoni){
+        $testimoni->delete();
+
+        return redirect('/user/dashboard')->with('success', 'Testimoni Berhasil dihapus');
+    }
+
     public function updateStatus(Request $request, Testimoni $testimonial)
     {
         $request->validate([

@@ -92,4 +92,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/user/isi_testimoni/{karya:slug}', [TestimoniController::class, 'store']);
 
+    Route::get('/user/edit_testimoni/{testimoni:id}', [TestimoniController::class, 'edit']);
+
+    Route::post('/user/edit_testimoni/{testimoni:id}', [TestimoniController::class, 'update']);
+
+    Route::delete('/user/hapus_testimoni/{testimoni:id}', [TestimoniController::class, 'destroy'])->name('u-hapus-testimoni');
+
 });
