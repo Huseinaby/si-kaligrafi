@@ -55,7 +55,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="{{ route('user.update', ['id' => $row->id_user]) }}" method="POST">
+                                                <form id="editUserForm{{ $row->id_user }}" action="{{ route('user.update', ['id' => $row->id_user]) }}" method="POST">
                                                     @csrf
                                                     @method('PUT')
                                                     <div class="form-group text-gray-800">
@@ -65,12 +65,20 @@
 
                                                     <div class="form-group text-gray-800">
                                                         <label for="password">Password</label>
-                                                        <input type="password" class="form-control" id="password" name="password">
+                                                        <div class="input-group">
+                                                            <input type="password" class="form-control" id="password-edit{{ $row->id_user }}" name="password" placeholder="Panjang password minimal 8 karakter">
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('password-edit{{ $row->id_user }}', 'toggleIcon-edit{{ $row->id_user }}')">
+                                                                    <i class="fas fa-eye" id="toggleIcon-edit{{ $row->id_user }}"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
                                                     </div>
 
                                                     <div class="form-group text-gray-800">
                                                         <label for="level">Level User</label>
                                                         <select class="form-control" id="level" name="level">
+                                                            <option value="">Pilih level user</option>
                                                             <option value="1" {{ $row->level == 1 ? 'selected' : '' }}>Admin</option>
                                                             <option value="2" {{ $row->level == 2 ? 'selected' : '' }}>User</option>
                                                         </select>
@@ -78,7 +86,7 @@
 
                                                     <hr></hr>
 
-                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm('editUserForm{{ $row->id_user }}')">Batal</button>
                                                     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
                                                 </form>
                                             </div>
@@ -132,7 +140,7 @@
                     <div class="modal-body">
 
                         <!-- content modal -->
-                        <form id="tambahBahanForm" action="{{ route('user.store') }}" method="POST">
+                        <form id="tambahUserForm" action="{{ route('user.store') }}" method="POST">
                             @csrf
                             <div class="form-group text-gray-800">
                                 <label for="exampleInputPassword1">Username</label>
@@ -145,21 +153,29 @@
                             </div>
 
                             <div class="form-group text-gray-800">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Panjang password minimal 8 karakter" required>
+                                <label for="password">Password</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password-tambah" name="password" placeholder="Panjang password minimal 8 karakter" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('password-tambah', 'toggleIcon-tambah')">
+                                            <i class="fas fa-eye" id="toggleIcon-tambah"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="form-group text-gray-800">
                                 <label for="exampleFormControlSelect1">Level User</label>
                                 <select class="form-control" id="level" name="level">
-                                  <option value="1">Admin</option>
-                                  <option value="2">User</option>
+                                    <option value="">Pilih level user</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">User</option>
                                 </select>
                             </div>
 
                             <hr></hr>
 
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm()">Batal</button>
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm('tambahUserForm')">Batal</button>
                             <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
                           </form>
                           <!-- End content -->
@@ -172,9 +188,25 @@
         </div>
 
         <script>
-            function resetForm() {
-                document.getElementById('tambahBahanForm').reset();
+            function resetForm(formId) {
+                document.getElementById(formId).reset();
             }
+
+            function togglePassword(inputId, toggleIconId) {
+                const passwordInput = document.getElementById(inputId);
+                const toggleIcon = document.getElementById(toggleIconId);
+
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    toggleIcon.classList.remove('fa-eye');
+                    toggleIcon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = "password";
+                    toggleIcon.classList.remove('fa-eye-slash');
+                    toggleIcon.classList.add('fa-eye');
+                }
+            }
+
         </script>
         
 @endsection

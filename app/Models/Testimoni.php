@@ -12,11 +12,10 @@ class Testimoni extends Model
         'id_user',
         'karya_id',
         'nama_panitia',
-        'slug',
         'isi_testimoni',
-        'tgl_testimoni',
-        'lokasi_masjid',
-        'nama_masjid'
+        'slug',
+        'status',
+        'tgl_testimoni'
     ];
 
     protected $primaryKey =  'id';

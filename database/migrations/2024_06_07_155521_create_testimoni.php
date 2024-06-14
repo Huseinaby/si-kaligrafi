@@ -16,9 +16,10 @@ return new class extends Migration
             $table->unsignedBigInteger('id_user'); 
             $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
             $table->foreignId('karya_id')->constrained('karyas')->onDelete('cascade');
+            $table->string('nama_panitia');
             $table->string('slug');
             $table->text('isi_testimoni');
-            $table->timestamp('tgl_testimoni')->nullable();
+            $table->timestamp('tgl_testimoni');
             $table->enum('status', ['pending', 'accepted', 'rejected'])->default('pending');
             $table->timestamps();
         });

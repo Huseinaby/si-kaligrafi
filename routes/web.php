@@ -65,6 +65,9 @@ Route::middleware(['auth','admin'])->group(function () {
     
     // Ornamen
     Route::get('/ornamen', [OrnamenController::class, 'admOrnamen'])->name('ornamen');
+    Route::post('/ornamen', [OrnamenController::class, 'store'])->name('ornamen.store');
+    Route::put('/ornamen/{slug}', [OrnamenController::class, 'update'])->name('ornamen.update');
+    Route::delete('/ornamen/{slug}', [OrnamenController::class, 'destroy'])->name('ornamen.destroy');
 
     // Users
     Route::get('/users', [UserController::class, 'index'])->name('user');
@@ -83,16 +86,22 @@ Route::middleware(['auth','admin'])->group(function () {
 
     // Karya
     Route::get('/karya', [KaryaController::class, 'admKarya'])->name('karya');
-
-    Route::get('/pesanan', [KaryaController::class, 'admPesanan'])->name('pesanan');
+    Route::post('/karya/store', [KaryaController::class, 'store'])->name('karya.store');
+    Route::put('/karya/update/{slug}', [KaryaController::class, 'update'])->name('karya.update');
+    Route::delete('/karya/delete/{slug}', [KaryaController::class, 'destroy'])->name('karya.destroy');
 
     // Layanan
     Route::get('/layanan', [LayananController::class, 'admLayanan'])->name('layanan');
+    Route::post('/layanan', [LayananController::class, 'store'])->name('layanan.store');
+    Route::put('/layanan/{slug}', [LayananController::class, 'update'])->name('layanan.update');
+    Route::delete('/layanan/{slug}', [LayananController::class, 'destroy'])->name('layanan.destroy');
 
     // Testimoni
     Route::get('/testimonies', [TestimoniController::class, 'admTesti'])->name('testimonies');
     Route::get('/req-testimonies', [TestimoniController::class, 'admReqTesti'])->name('req-testimonies');
-    Route::patch('/testimonies/{testimonial}/status', [TestimoniController::class, 'updateStatus'])->name('testimonials.updateStatus');
+    Route::post('/req-testimonies', [TestimoniController::class, 'adminStore'])->name('testimonies.store');
+    Route::get('/accept_status/{id}', [TestimoniController::class, 'accept_status']);
+    Route::get('/reject_status/{id}', [TestimoniController::class, 'reject_status']);
 });
 
 Route::middleware(['auth'])->group(function () {

@@ -23,7 +23,7 @@ class User extends Authenticatable
     protected $primaryKey = 'id_user';
 
     public function testimoni(){
-        return $this->hasMany(Testimoni::class);
+        return $this->hasMany(Testimoni::class, 'id_user');
     }
 
     public function karya(){

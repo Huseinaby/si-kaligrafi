@@ -30,11 +30,11 @@ class Karya extends Model
     protected $with = 'ornamen';
 
     public function ornamen(){
-        return $this->belongsTo(Ornamen::class, 'id');
+        return $this->belongsTo(Ornamen::class, 'ornamen_id');
     }
 
     public function testimoni(){
-        return $this->hasMany(Testimoni::class, 'id');
+        return $this->hasMany(Testimoni::class, 'karya_id');
     }
 
     public function user(){

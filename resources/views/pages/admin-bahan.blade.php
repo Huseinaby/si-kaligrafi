@@ -57,7 +57,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="{{ route('bahan.update', ['slug' => $row->slug]) }}" method="POST" enctype="multipart/form-data">
+                                                <form id="editBahanForm{{ $row->id }}" action="{{ route('bahan.update', ['slug' => $row->slug]) }}" method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     @method('PUT')
                                                     
@@ -89,7 +89,7 @@
 
                                                     <hr>
 
-                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm('editBahanForm{{ $row->id }}')">Batal</button>
                                                     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
                                                 </form>
                                             </div>
@@ -169,7 +169,7 @@
 
                             <hr></hr>
 
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm()">Batal</button>
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm('tambahBahanForm')">Batal</button>
                             <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
                         </form>
                         <!-- End content -->
@@ -182,8 +182,8 @@
         </div>
 
         <script>
-            function resetForm() {
-                document.getElementById('tambahBahanForm').reset();
+            function resetForm(formId) {
+                document.getElementById(formId).reset();
             }
         </script>
 

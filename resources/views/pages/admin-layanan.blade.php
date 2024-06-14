@@ -7,6 +7,15 @@
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Layanan</h1>
 
+        @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show animate__animated animate__fadeInDown" role="alert">
+                {{ session('success') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -18,7 +27,6 @@
                         <thead>
                             <tr>
                                 <th>Nama Layanan</th>
-                                <th>Slug</th>
                                 <th>Gambar</th>
                                 <th>Action</th>
                             </tr>
@@ -27,13 +35,78 @@
                             @foreach ($admin_layanan as $row)
                                 <tr>
                                     <td>{{ $row->nama_layanan }}</td>
-                                    <td>{{ $row->slug }}</td>
-                                    <td>{{ $row->foto_layanan }}</td>
+                                    <td><img src="{{ asset('storage/storage/' . $row->foto_layanan) }}" alt="Gambar Layanan" width="100"></td>
                                     <td>
-                                        <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                                        <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+                                        <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditLayanan{{ $row->id }}"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#formModalDeleteLayanan{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</a>
                                     </td>
                                 </tr>
+
+                                <!-- Modal Edit Data -->
+                                <div class="modal fade" id="formModalEditLayanan{{ $row->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title text-gray-800" id="exampleModalLabel">Edit Data Layanan</h5>
+                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="editLayananForm{{ $row->id }}" action="{{ route('layanan.update', ['slug' => $row->slug]) }}" method="POST" enctype="multipart/form-data">
+                                                    @csrf
+                                                    @method('PUT')
+                                                    
+                                                    <div class="form-group text-gray-800">
+                                                        <label for="nama_bahan">Nama Layanan</label>
+                                                        <input type="text" class="form-control" id="nama_layanan" name="nama_layanan" value="{{ old('nama_layanan', $row->nama_layanan) }}" required>
+                                                    </div>
+
+                                                    <div class="form-group text-gray-800">
+                                                        <label for="foto_layanan">Foto</label>
+                                                        <input type="file" class="form-control-file" id="foto_layanan" name="foto_layanan">
+                                                        <small class="form-text text-muted">
+                                                            Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
+                                                        </small>
+                                                        @if($row->foto_layanan)
+                                                            <img src="{{ Storage::url('public/storage/' . $row->foto_layanan) }}" alt="{{ $row->nama_layanan }}" class="img-thumbnail mt-2" width="150">
+                                                        @endif
+                                                    </div>
+
+                                                    <hr>
+
+                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm('editLayananForm{{ $row->id }}')">Batal</button>
+                                                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal Form Hapus Data -->
+                                <div class="modal fade" id="formModalDeleteLayanan{{ $row->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title text-gray-800" id="exampleModalLabel">Hapus Data Bahan</h5>
+                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Apakah Anda yakin ingin menghapus data yang dipilih ?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="{{ route('layanan.destroy', ['slug' => $row->slug]) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             @endforeach
                             
                         </tbody>
@@ -56,21 +129,24 @@
                     <div class="modal-body">
 
                         <!-- content modal -->
-                        <form>
-
+                        <form id="tambahLayananForm" action="{{ route('layanan.store') }}" enctype="multipart/form-data" method="POST">
+                            @csrf
                             <div class="form-group text-gray-800">
                                 <label for="exampleInputPassword1">Nama Layanan</label>
-                                <input type="text" class="form-control" id="judul1" required>
+                                <input type="text" class="form-control" id="nama_layanan" name="nama_layanan" placeholder="Masukkan nama layanan" required>
                             </div>
 
                             <div class="form-group text-gray-800">
                                 <label for="exampleFormControlFile1">Gambar</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                                <input type="file" class="form-control-file" id="foto_layanan" name="foto_layanan" required>
+                                <small class="form-text text-muted">
+                                    Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
+                                </small>
                             </div>
 
                             <hr></hr>
 
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm('tambahLayananForm')">Batal</button>
                             <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
                           </form>
                           <!-- End content -->
@@ -82,4 +158,9 @@
             </div>
         </div>
 
+        <script>
+            function resetForm(formId) {
+                document.getElementById(formId).reset();
+            }
+        </script>
 @endsection

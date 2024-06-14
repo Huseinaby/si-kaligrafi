@@ -17,9 +17,14 @@ class TestimoniController extends Controller
         ]);
     }
 
-    public function admReqTesti(){
+    public function admReqTesti() {
+        $users = User::all(); // Mengambil semua data user
+        $karyas = Karya::all(); // Mengambil semua data karya
+
         return view('pages.admin-request-testimoni', [
-            "admin_testimoni" => Testimoni::latest()->get()
+            'users' => $users,
+            'karyas' => $karyas,
+            'admin_req_testimoni' => Testimoni::latest()->get(),
         ]);
     }
 
@@ -82,21 +87,53 @@ class TestimoniController extends Controller
         return redirect('/user/dashboard')->with('success', 'Testimoni Berhasil dihapus');
     }
 
-    public function updateStatus(Request $request, Testimoni $testimonial)
-    {
-        $request->validate([
-            'status' => 'required|in:accepted,rejected',
-        ]);
-
-        $testimonial->status = $request->status;
-        $testimonial->save();
-
-        return redirect()->back()->with('success', 'Testimonial status updated successfully!');
-    }
-
     public function userTesti(User $user) {
         return view('testimoni', [
             "testimoni" => $user->testimonis
         ]);
+    }
+
+    public function adminStore(Request $request)
+    {
+        //dd($request->all());
+
+        $validatedData = $request->validate([
+            'id_user' => 'required|exists:users,id_user',
+            'nama_panitia' => 'required|max:255',
+            'karya_id' => 'required|exists:karyas,id',
+            'isi_testimoni' => 'required',
+            'status' => 'required|in:pending,accepted,rejected'
+        ]);
+
+        // Menghasilkan slug dari nama panitia
+        $slug = Str::slug($validatedData['nama_panitia']);
+
+        // Menambahkan slug ke data yang divalidasi
+        $validatedData['slug'] = $slug;
+        $validatedData['tgl_testimoni'] = now();
+
+        Testimoni::create($validatedData);
+
+        return redirect()->route('req-testimonies')->with('success', 'Data testimoni berhasil ditambah');
+    }
+
+    public function accept_status($id) {
+        $testimoni = Testimoni::findOrFail($id);
+
+        $testimoni -> status = 'accepted';
+
+        $testimoni -> save();
+
+        return redirect()->back()->with('success', 'Status testimoni berhasil diperbarui');
+    }
+
+    public function reject_status($id) {
+        $testimoni = Testimoni::findOrFail($id);
+
+        $testimoni -> status = 'rejected';
+
+        $testimoni -> save();
+
+        return redirect()->back()->with('success', 'Status testimoni berhasil diperbarui');
     }
 }
