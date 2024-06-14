@@ -18,6 +18,16 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+// Coba
+
+Route::get('/login_new', function () {
+    return view('responsive.login_new');
+});
+
+
+
+
+
 Route::get('/no-access', [AccessController::class, 'noAccess'])->name('no-access');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
