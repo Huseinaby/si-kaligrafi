@@ -19,6 +19,7 @@ class User extends Authenticatable
         'level',
         
     ];
+    
 
     protected $primaryKey = 'id_user';
 

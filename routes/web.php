@@ -13,6 +13,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\AccessController;
+use App\Http\Controllers\PesananController;
 
 Route::get('/', function () {
     return view('homepage');
@@ -89,6 +90,11 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::post('/karya/store', [KaryaController::class, 'store'])->name('karya.store');
     Route::put('/karya/update/{slug}', [KaryaController::class, 'update'])->name('karya.update');
     Route::delete('/karya/delete/{slug}', [KaryaController::class, 'destroy'])->name('karya.destroy');
+
+    Route::get('/pesanan', [PesananController::class, 'admPesanan'])->name('pesanan');
+    Route::post('/pesanan', [PesananController::class, 'addPesanan'])->name('addPesanan');
+    Route::delete('/pesanan/{id_user}/{karya_id}', [PesananController::class, 'deletePesanan'])->name('deletePesanan');
+    Route::put('/pesanan/{id_user}/{karya_id}', [PesananController::class, 'updatePesanan'])->name('updatePesanan');
 
     // Layanan
     Route::get('/layanan', [LayananController::class, 'admLayanan'])->name('layanan');

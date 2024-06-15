@@ -103,7 +103,7 @@
                         </a>
 
                         <!-- Tabel destail pesanan-->
-                        <a class="collapse-item" href=""> <!-- route('ornamen') -->
+                        <a class="collapse-item" href="/pesanan"> <!-- route('ornamen') -->
                             <span>Detail Pesanan</span>
                         </a>
                     </div>

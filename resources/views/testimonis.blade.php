@@ -29,7 +29,7 @@
                                     <td>{{ $row->nama_karya }}</td>
                                     <td>{{ $row->jenis_karya }}</td>
                                     <td>{{ $row->lokasi }}</td>
-                                    <td>{{ $row->nama_masjid }}</td>☻
+                                    <td>{{ $row->nama_masjid }}</td>
                                     <td>{{ $row->tgl_pembuatan }}</td>
                                     <td>
                                         <a href="/user/isi_testimoni/{{ $row->slug }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Beri Testimoni</a>
