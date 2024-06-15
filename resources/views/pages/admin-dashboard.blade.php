@@ -15,7 +15,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Users (Pengguna)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">count</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $users->count() }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -33,7 +33,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Services (Layanan)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">count</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $layanans->count() }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-tools fa-2x text-gray-300"></i>
@@ -51,7 +51,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Pending Requests</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">count</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $testimoniPending->count() }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-comments fa-2x text-gray-300"></i>

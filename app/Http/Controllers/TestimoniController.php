@@ -30,7 +30,7 @@ class TestimoniController extends Controller
 
     public function admTesti(){
         return view('pages.admin-testimoni', [
-            "admin_testimoni" => Testimoni::latest()->get()
+            "admin_testimoni" => Testimoni::latest()->get(),
         ]);
     }
 
@@ -78,7 +78,7 @@ class TestimoniController extends Controller
 
         $testimon->update($credential);
 
-        return redirect('/user/dashboard')->with('success', 'Testimoni tersimpan');
+        return redirect('/user/dashboard')->with('success', 'Testimoni berhasil dirubah');
     }
 
     public function destroy(Testimoni $testimoni){

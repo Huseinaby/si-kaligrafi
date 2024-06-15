@@ -14,9 +14,9 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-    @elseif (session('gagal'))
+    @elseif (session('error'))
         <div class="alert alert-danger alert-dismissible fade show animate__animated animate__fadeInDown" role="alert">
-            {{ session('gagal') }}
+            {{ session('error') }}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
