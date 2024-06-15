@@ -25,7 +25,7 @@ class PesananController extends Controller
         $karya_id = $request->karya_id;
 
         if ($user->karya()->where('karya_id', $karya_id)->exists()) {
-            return redirect()->back()->with('error', 'Pesanan sudah ada.');
+            return redirect()->back()->with('gagal', 'Pesanan sudah ada.');
         }
 
         $user->karya()->attach($karya_id);
