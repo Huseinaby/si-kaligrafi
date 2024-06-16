@@ -64,15 +64,15 @@
             <label for="namaKarya">Nama Karya</label>
             <input type="text" id="namaKarya" name="namaKarya" value="{{ $testimoni->karya->nama_karya }}" readonly>
 
-            <label for="namaLengkap">Nama Lengkap</label>
-            <input type="text" id="namaLengkap" name="namaLengkap" value="{{ $user->nama_lengkap }}" readonly>
-
             <label for="namaMasjid">Nama Masjid</label>
             <input type="text" id="namaMasjid" name="namaMasjid" value="{{ $testimoni->karya->nama_masjid }}"
                 readonly>
 
             <label for="lokasi">Lokasi</label>
             <input type="text" id="lokasi" name="lokasi" value="{{ $testimoni->karya->lokasi }}" readonly>
+
+            <label for="nama_panitia">Nama Panitia</label>
+            <input type="text" id="nama_panitia" name="nama_panitia" value="{{ $testimoni->nama_panitia }}">
 
             <label for="isi_testimoni">Testimoni Anda</label>
             <textarea id="isi_testimoni" name="isi_testimoni" required>{{ $testimoni->isi_testimoni }}</textarea>

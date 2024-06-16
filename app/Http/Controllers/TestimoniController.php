@@ -43,6 +43,7 @@ class TestimoniController extends Controller
 
     public function store(Request $request, Karya $karya){
         $credential = $request->validate([
+            'nama_panitia' => 'required',
             'isi_testimoni' => 'required'
         ]);
 
@@ -68,7 +69,8 @@ class TestimoniController extends Controller
         $testimon = Testimoni::where('id', $testimoni->id);
 
         $credential = $request->validate([
-            'isi_testimoni' => 'required'
+            'nama_panitia' => 'required',
+            'isi_testimoni' => 'required',
         ]);
 
         $credential['slug'] = Str::slug(Auth()->user()->nama_lengkap, '-');

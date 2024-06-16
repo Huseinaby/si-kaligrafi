@@ -71,6 +71,7 @@
                         <thead>
                             <tr>
                                 <th>Nama Masjid</th>
+                                <th>Nama Panitia</th>
                                 <th>Lokasi</th>
                                 <th>Tanggal</th>
                                 <th>Aksi</th>
@@ -84,6 +85,7 @@
                                 @foreach ($testimonis as $row)
                                     <tr>
                                         <td>{{ $row->karya->nama_masjid }}</td>
+                                        <td>{{ $row->nama_panitia }}</td>
                                         <td>{{ $row->karya->lokasi }}</td>
                                         <td>{{ $row->tgl_testimoni }}</td>
                                         <th>

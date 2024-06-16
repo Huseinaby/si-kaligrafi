@@ -187,23 +187,17 @@ class DatabaseSeeder extends Seeder
         Testimoni::create([
             'id_user' => 2,
             'karya_id' =>  1,
+            'nama_panitia' => 'Muhammad Abu Husein',
             'slug' => 'testimoni-1',
             'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
             'tgl_testimoni' => '2022-10-12',
 
-        ]);
-
-        
-        Testimoni::create([
-            'id_user' => 2,
-            'karya_id' => 4,
-            'slug' => 'testimoni-2',
-            'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
-            'tgl_testimoni' => '2023-7-12',
-        ]);
+        ]);        
+    
         Testimoni::create([
             'id_user' => 1,
             'karya_id' => 6,
+            'nama_panitia' => 'Muhammad Abu Husein',
             'slug' => 'testimoni-3',
             'isi_testimoni' => 'qwertyuiop asdfghjkl; zxcvbnm, wertyuio',
             'tgl_testimoni' => '2023-7-12',
