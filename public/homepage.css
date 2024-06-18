@@ -15,7 +15,7 @@ nav {
 	top: 0;
 	left: 0;
 	width: 100%;
-    background-color: #003c34;
+   
     font-family: 'Poppins';
     font-weight: bold;
     z-index: 2;
@@ -451,3 +451,14 @@ footer {
     text-align: center;
     justify-content: center;
   }
+
+
+  .navbar-color{
+    background: #003c34;
+    height: 100px;
+}
+
+.navbar-color-part2{
+    background: black;
+    height: 100px;
+}

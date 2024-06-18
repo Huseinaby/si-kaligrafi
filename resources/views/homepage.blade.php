@@ -15,11 +15,56 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
     <title>Home Page</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+    jQuery(function($) {
+        var $navbar = $('.header');
+        var scrollDistance = 700; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
+        
+        $(window).scroll(function(event){
+            var $current = $(this).scrollTop();
+            if ($current > scrollDistance) {
+                $navbar.addClass('navbar-color');
+            } else {
+                $navbar.removeClass('navbar-color');
+            }
+        });
+    });
+    </script>
+    
+
+    <script>
+        jQuery(function($) {
+            var $navbar = $('.header');
+            var scrollDistance = 2000; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
+            
+            $(window).scroll(function(event){
+                var $current = $(this).scrollTop();
+                if ($current > scrollDistance) {
+                    $navbar.addClass('navbar-color-part2');
+                } else {
+                    $navbar.removeClass('navbar-color-part2');
+                }
+            });
+        });
+        </script>
+
+
+
+
+    
 </head>
 <nav>
+    <div class="header">
     <ul>
         <li>
             <h1>KALIGRAFI</h1>
@@ -40,8 +85,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         @if (auth()->user()->level == '1')
-                        <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
-                            @else
+                            <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                        @else
                             <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
                         @endif
                         <li>
@@ -61,12 +106,14 @@
         @endauth
         </li>
     </ul>
+
+</div>
 </nav>
 <div class="content">
     <h2>KALIGRAFI</h2>
     <h3>Pembuatan</h3>
-    <p class="textutama"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sit nisi a nemo,<br> nihil
-        voluptatibus dicta veniam fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere repellat
+    <p class="textutama"> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Pariatur sit nisi a nemo, nihil
+        voluptatibus dicta veniam <br> fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere repellat
         perspiciatis odio.</p>
     <button class="btn"><a href="https://wa.me/6285845510008"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                 height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -160,10 +207,182 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+        <div class="bahan">
+            <h1>Bahan</h1>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
+                                <h6 class="card-title">PVC</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="image/layanan1.jpg" class="card-img-top" alt="Experienced Image">
+                                <h6 class="card-title">PVC</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="image/layanan1.jpg" class="card-img-top" alt="Expert Image">
+                                <h6 class="card-title">PVC</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="image/layanan1.jpg" class="card-img-top" alt="Trustworthy Image">
+                                <h6 class="card-title">PVC</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ornamen">
+            <h6>Ornamen</h6>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="grid-slider">
+                            <!-- Baris 1 -->
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 1">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 2">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 3">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <!-- Baris 2 -->
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 4">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 5">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 6">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="galeri">
+            <h6>Galeri</h6>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="grid-slider">
+                            <!-- Baris 1 -->
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 1">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 2">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 3">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <!-- Baris 2 -->
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 4">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 5">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="image/layanan1.jpg" alt="Image 6">
+                                <div class="overlay">
+                                    <h4>Testing</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimoni">
+            <div class="testi-header">
+                <h4>Testimoni</h4>
+                <p>Bagikan <strong>Pengalaman</strong> anda<br> yang telah menggunakan<br> layanan kami, dan bantu<br>
+                    kami memperbaiki layanan<br> kami lebih baik lagi!</p>
+                <button class="isi-testi-btn">Isi Testimoni</button>
+            </div>
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="homepage.js"></script>
-    </body>
+        </div>
+        <footer id="navbar">
+            <div class="footer-side">
+                <div class="footer-address">
+                    <img src="../image/Ok.svg" alt="icon ok">
+                    <h4>Alamat Workshop Kami</h4>
+                </div>
+
+
+                <p class="address">Jl. Keramat Raya, RT. 12 No. 55 Kel. Sungai Bilu,<br>
+                    Kec. Banjarmasin Timur Kota Banjarmasin, <br>
+                    Kalimantan Selatan,70236</p>
+            </div>
+            <br>
+            <div class="footer-address2">
+                <img src="../image/c.png" alt="">
+                <p>2024 [merk]</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        <script src="homepage.js"></script>
+        </body>
 
 </html>
