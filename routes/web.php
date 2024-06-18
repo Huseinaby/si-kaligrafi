@@ -84,6 +84,9 @@ Route::middleware(['auth','admin'])->group(function () {
 
     // Galeri
     Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');
+    Route::post('/galeri/store', [GaleriController::class, 'store'])->name('galeri.store');
+    Route::put('/galeri/update/{galeri:slug}', [GaleriController::class, 'update'])->name('galeri.update');
+    Route::delete('/galeri/delete/{galeri:slug}', [GaleriController::class, 'destroy'])->name('galeri.destroy');
 
     // Karya
     Route::get('/karya', [KaryaController::class, 'admKarya'])->name('karya');
