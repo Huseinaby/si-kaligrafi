@@ -19,13 +19,14 @@ nav {
     font-family: 'Poppins';
     font-weight: bold;
     z-index: 2;
+    justify-content: right;
 }
 
 nav h1{
     font-family: 'Urbanist';
     color: white;
     padding-top: 10px;
-    margin-right: 500px;
+    margin-right: 600px;
 }
 
 nav ul {
@@ -58,11 +59,11 @@ a.btn{
     cursor: pointer;
     font-weight: bold;
     transition: 0.4s ease-in-out;
-    color: #003c34;
+    color: #003c43;
 }   
 
 a.btn:hover{
-    background: #003c34;
+    background: #003c43;
     color: #ffc700;
 }
 
@@ -99,7 +100,7 @@ a.btn:hover{
     height: 40px;
     background: #ffc700;
     border: none;
-    margin-bottom: 138px;
+    margin-bottom: 160px;
     margin-left: 20px;
     font-size: 18px;
     border-radius: 10px;
@@ -110,11 +111,12 @@ a.btn:hover{
 
 .content .btn a{
     text-decoration: none;
-    color: white;
+    color: #ffff;
     transition: 0.4s ease;
 }
 
-.btn:hover{
+.content .btn:hover{ 
+    color: #ffc700;
     background: #003c43;
 }
 
@@ -150,13 +152,13 @@ a.btn:hover{
 .kualitas h2{
     font-size: 60px;
     padding-top: 150px;
-    padding-left: 70px;
+    padding-left: 90px;
     font-family: 'Urbanist';
     font-weight: bold;
     color: #003c43;
 }
 
-.card{
+.kualitas .card{
     margin-left: 10px;
     border-radius: 30px;
     margin-top: 70px;
@@ -164,7 +166,7 @@ a.btn:hover{
 }
 
 
-.card-title{
+.kualitas .card-title{
     font-size: 25px;
     font: 'Poppins';
     color: #003c43;
@@ -172,35 +174,38 @@ a.btn:hover{
 }
 
 .layanan {
-    height: 780px;
-    background-color: grey;
+    height: 800px;
+    background-color: #ffff;
     margin-top: 200px;
 }
 
 .layanan h5{
     font-family: 'Urbanist';
-    color: #ffff;
+    color: #003c43;
     font-size: 60px;
     font-weight: bold;
-    padding-top: 210px;
-    padding-bottom: 50px;
-    padding-left: 70px;
+    padding-top: 180px;
+    padding-bottom: 30px;
+    padding-left: 90px;
 }
 
 .swiper {
     width: 80%;
     height: 50%;
     border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 2;
 }
 
 .swiper-slide img {
@@ -210,3 +215,239 @@ a.btn:hover{
     object-fit: cover;
     border-radius: 30px;
 }
+
+.bahan{
+    height: 780px;
+    background-color: #fff;
+    margin-top: 100px;
+}
+
+.bahan h1{
+    color: #003c34;
+    font-family: 'Urbanist';
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 200px;
+    margin-left: 760px;
+    margin-bottom: -50px;
+}
+
+.card {
+    margin: 10px; 
+}
+.row {
+    justify-content: center; 
+}
+
+.ornamen{
+    height: 950px;
+    background-color: #fff;
+}
+
+.ornamen h6{
+    color: #003c34;
+    font-family: 'Urbanist';
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 100px;
+    margin-left: 700px;
+    margin-bottom: -50px;
+    padding-bottom: 30px;
+    justify-content: center;
+}
+
+.ornamen .grid-item {
+    position: relative;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.ornamen .grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.ornamen .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.ornamen .overlay h4{
+    font-family: 'Poppins';
+    color: #ffff;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.ornamen .grid-item:hover .overlay {
+    opacity: 1;
+    
+}
+.ornamen .slick-slide {
+    margin: 0 10px;
+}
+.ornamen .slick-prev, .slick-next {
+    color: #333;
+    font-size: 24px;
+}
+.ornamen .slick-prev:before, .slick-next:before {
+    color: #333;
+}
+
+.galeri{
+    height: 950px;
+    background-color: #fff;
+}
+
+.galeri h6{
+    color: #003c34;
+    font-family: 'Urbanist';
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 100px;
+    margin-left: 760px;
+    margin-bottom: -50px;
+    padding-bottom: 30px;
+    justify-content: center;
+}
+
+.galeri .grid-item {
+    position: relative;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.galeri .grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.galeri .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.galeri .overlay h4{
+    font-family: 'Poppins';
+    color: #ffff;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.galeri .grid-item:hover .overlay {
+    opacity: 1;
+    
+}
+.galeri .slick-slide {
+    margin: 0 10px;
+}
+.galeri .slick-prev, .slick-next {
+    color: #333;
+    font-size: 24px;
+}
+.galeri .slick-prev:before, .slick-next:before {
+    color: #333;
+}
+
+.testimoni {
+    height: 750px;
+    background-color: #fff;
+}
+
+.testi-header h4{
+    font-family: 'Urbanist';
+    font-size: 60px;
+    font-weight: bold;
+    color: #003c34;
+    padding-left: 90px;
+    padding-top: 180px;
+}
+
+.testi-header p{
+    font-family: 'Poppins';
+    padding-left: 250px;
+    padding-top: 80px;
+    font-size: 25px;
+}
+
+.isi-testi-btn{
+    font-family: 'Poppins';
+    margin-left: 250px;
+    background: #ffc700;
+    border: none;
+    margin-bottom: 160px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.4s ease;
+    width: 200px;
+    height: 40px;
+}
+
+.isi-testi-btn:hover{
+    color: #ffc700;
+    background: #003c43;
+}
+
+footer {
+    background-color: #333333;  /* Navbar background color */
+    color: white; /* Text color */
+    width: 100%; /* Make navbar full width */
+    height: 550px; /* Set navbar height (optional) */
+    text-align: left;
+    padding: 10px;
+  }
+.footer-side{
+  margin-top: 50px;
+}
+  
+  .footer-address {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 50px;
+  }
+  
+  .address {
+    text-align: left;
+    margin-left: 50px;
+  }
+  
+  
+  .footer-address2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 50px;
+    text-align: center;
+    justify-content: center;
+  }
