@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://unpkg.com/nice-forms.css@0.1.7/dist/nice-forms.css"/>
     <link rel="stylesheet" href="homepage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
     <title>Home Page</title>
 </head>
 <nav>
@@ -113,10 +115,152 @@
     <div class="swiper-pagination"></div>
 </div>
 <div class="bahan">
+  <h1>Bahan</h1>
+  <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
+                        <h6 class="card-title">PVC</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="image/layanan1.jpg" class="card-img-top" alt="Experienced Image">
+                        <h6 class="card-title">PVC</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="image/layanan1.jpg" class="card-img-top" alt="Expert Image">
+                        <h6 class="card-title">PVC</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="image/layanan1.jpg" class="card-img-top" alt="Trustworthy Image">
+                        <h6 class="card-title">PVC</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ornamen">
+  <h6>Ornamen</h6>
+  <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grid-slider">
+                    <!-- Baris 1 -->
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 1">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 2">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 3">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <!-- Baris 2 -->
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 4">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 5">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 6">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="galeri">
+  <h6>Galeri</h6>
+  <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grid-slider">
+                    <!-- Baris 1 -->
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 1">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 2">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 3">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <!-- Baris 2 -->
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 4">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 5">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="image/layanan1.jpg" alt="Image 6">
+                        <div class="overlay"><h4>Testing</h4></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="testimoni">
+   <div class="testi-header">
+    <h4>Testimoni</h4>
+    <p>Bagikan <strong>Pengalaman</strong> anda<br> yang telah menggunakan<br> layanan kami, dan bantu<br> kami memperbaiki layanan<br> kami lebih baik lagi!</p>
+    <button class="isi-testi-btn">Isi Testimoni</button>
+   </div>
+  
+</div>
+<footer id="navbar">
+    <div class="footer-side">
+        <div class="footer-address">
+            <img src="../image/Ok.svg" alt="icon ok">
+            <h4>Alamat Workshop Kami</h4>
+        </div>
 
-</div>
-</div>
+
+        <p class="address">Jl. Keramat Raya, RT. 12 No. 55 Kel. Sungai Bilu,<br>
+            Kec. Banjarmasin Timur Kota Banjarmasin, <br>
+            Kalimantan Selatan,70236</p>
+    </div>
+    <br>
+    <div class="footer-address2">
+        <img src="../image/c.png" alt="">
+        <p>2024 [merk]</p>
+    </div>
+</footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="homepage.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Link ke Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <script src="homepage.js"></script>
 </body>
 </html>
