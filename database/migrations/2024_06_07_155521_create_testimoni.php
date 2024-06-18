@@ -19,9 +19,8 @@ return new class extends Migration
             $table->string('nama_panitia');
             $table->string('slug');
             $table->text('isi_testimoni');
-            $table->timestamp('tgl_testimoni')->nullable();
-            $table->string('lokasi_masjid');
-            $table->string('nama_masjid');
+            $table->timestamp('tgl_testimoni');
+            $table->enum('status', ['pending', 'accepted', 'rejected'])->default('pending');
             $table->timestamps();
         });
     }

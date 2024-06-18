@@ -13,10 +13,21 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\AccessController;
+use App\Http\Controllers\PesananController;
 
 Route::get('/', function () {
     return view('homepage');
 });
+
+// Coba
+
+Route::get('/login_new', function () {
+    return view('responsive.login_new');
+});
+
+
+
+
 
 Route::get('/no-access', [AccessController::class, 'noAccess'])->name('no-access');
 
@@ -32,10 +43,6 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/portofolio', [KaryaController::class, 'index']);
 
-Route::get('/isi_testimoni', function () {
-    return view('isi_tastimoni');
-});
-
 Route::get('/testimonis', [TestimoniController::class, 'index']);
 
 Route::get('/testimoni/{testimoni:id}', [TestimoniController::class, 'show']);
@@ -50,9 +57,6 @@ Route::get('/bahans/{bahan:slug}', [BahanController::class, 'type']);
 
 // Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
-Route::get('isi-testimoni', function(){
-    return view('isi_tastimoni');
-});
 
 // Admin section
 Route::middleware(['auth','admin'])->group(function () {
@@ -62,6 +66,9 @@ Route::middleware(['auth','admin'])->group(function () {
     
     // Ornamen
     Route::get('/ornamen', [OrnamenController::class, 'admOrnamen'])->name('ornamen');
+    Route::post('/ornamen', [OrnamenController::class, 'store'])->name('ornamen.store');
+    Route::put('/ornamen/{slug}', [OrnamenController::class, 'update'])->name('ornamen.update');
+    Route::delete('/ornamen/{slug}', [OrnamenController::class, 'destroy'])->name('ornamen.destroy');
 
     // Users
     Route::get('/users', [UserController::class, 'index'])->name('user');
@@ -77,22 +84,48 @@ Route::middleware(['auth','admin'])->group(function () {
 
     // Galeri
     Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');
+    Route::post('/galeri/store', [GaleriController::class, 'store'])->name('galeri.store');
+    Route::put('/galeri/update/{galeri:slug}', [GaleriController::class, 'update'])->name('galeri.update');
+    Route::delete('/galeri/delete/{galeri:slug}', [GaleriController::class, 'destroy'])->name('galeri.destroy');
 
     // Karya
     Route::get('/karya', [KaryaController::class, 'admKarya'])->name('karya');
+    Route::post('/karya/store', [KaryaController::class, 'store'])->name('karya.store');
+    Route::put('/karya/update/{slug}', [KaryaController::class, 'update'])->name('karya.update');
+    Route::delete('/karya/delete/{slug}', [KaryaController::class, 'destroy'])->name('karya.destroy');
+
+    Route::get('/pesanan', [PesananController::class, 'admPesanan'])->name('pesanan');
+    Route::post('/pesanan', [PesananController::class, 'addPesanan'])->name('addPesanan');
+    Route::delete('/pesanan/{id_user}/{karya_id}', [PesananController::class, 'deletePesanan'])->name('deletePesanan');
+    Route::put('/pesanan/{id_user}/{karya_id}', [PesananController::class, 'updatePesanan'])->name('updatePesanan');
 
     // Layanan
     Route::get('/layanan', [LayananController::class, 'admLayanan'])->name('layanan');
+    Route::post('/layanan', [LayananController::class, 'store'])->name('layanan.store');
+    Route::put('/layanan/{slug}', [LayananController::class, 'update'])->name('layanan.update');
+    Route::delete('/layanan/{slug}', [LayananController::class, 'destroy'])->name('layanan.destroy');
 
     // Testimoni
     Route::get('/testimonies', [TestimoniController::class, 'admTesti'])->name('testimonies');
     Route::get('/req-testimonies', [TestimoniController::class, 'admReqTesti'])->name('req-testimonies');
-    Route::patch('/testimonies/{testimonial}/status', [TestimoniController::class, 'updateStatus'])->name('testimonials.updateStatus');
+    Route::post('/req-testimonies', [TestimoniController::class, 'adminStore'])->name('testimonies.store');
+    Route::get('/accept_status/{id}', [TestimoniController::class, 'accept_status']);
+    Route::get('/reject_status/{id}', [TestimoniController::class, 'reject_status']);
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/user/dashboard/{user:id_user}', [DashboardController::class, 'index'])->name('u-dashboard');
+    Route::get('/user/dashboard', [DashboardController::class, 'index'])->name('u-dashboard');
     
-    Route::get('/user/testimonis/{user:id_user}', [KaryaController::class, 'userKarya'])->name('u-testimonis');
+    Route::get('/user/testimonis', [KaryaController::class, 'userKarya'])->name('u-testimonis');
+
+    Route::get('/user/isi_testimoni/{karya:slug}', [TestimoniController::class, 'isiTest']);
+
+    Route::post('/user/isi_testimoni/{karya:slug}', [TestimoniController::class, 'store']);
+
+    Route::get('/user/edit_testimoni/{testimoni:id}', [TestimoniController::class, 'edit']);
+
+    Route::post('/user/edit_testimoni/{testimoni:id}', [TestimoniController::class, 'update']);
+
+    Route::delete('/user/hapus_testimoni/{testimoni:id}', [TestimoniController::class, 'destroy'])->name('u-hapus-testimoni');
 
 });

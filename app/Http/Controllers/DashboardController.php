@@ -2,19 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Testimoni;
+use App\Models\Layanan;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
-    public function index(User $user){
+    public function index(){
+        $user = Auth::user();
+        $testimonis = Testimoni::where('id_user', $user->id_user)->latest()->get();
+        
         return view('dashboard', [
-            "testimonis" => $user->testimoni,
+            "testimonis" => $testimonis,
             "karyas" => $user->karya
         ]);
     }
 
     public function admDash(){
-        return view('pages.admin-dashboard');
+        return view('pages.admin-dashboard', [
+            "users" => User::all(),
+            "layanans" => Layanan::all(),
+            "testimoniPending" => Testimoni::where('status', 'pending')->get(),
+            
+        ]);
     }
 }

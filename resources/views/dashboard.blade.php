@@ -3,6 +3,17 @@
 @section('title', 'Dashboard')
 
 @section('dashboard-content')
+
+<h1 class="h3 mb-2 ml-4 text-gray-800">Daftar testimoni</h1>
+
+@if (session('success'))
+<div class="alert alert-success alert-dismissible fade show animate__animated animate__fadeInDown" role="alert">
+    {{ session('success') }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
     <!-- Begin Page Content -->
     <div class="container-fluid">
         <div class="row">
@@ -59,7 +70,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Nama Mesjid</th>
+                                <th>Nama Masjid</th>
                                 <th>Nama Panitia</th>
                                 <th>Lokasi</th>
                                 <th>Tanggal</th>
@@ -73,19 +84,43 @@
                             @else
                                 @foreach ($testimonis as $row)
                                     <tr>
-                                        <td>{{ $row->nama_masjid }}</td>
+                                        <td>{{ $row->karya->nama_masjid }}</td>
                                         <td>{{ $row->nama_panitia }}</td>
-                                        <td>{{ $row->lokasi_masjid }}</td>
+                                        <td>{{ $row->karya->lokasi }}</td>
                                         <td>{{ $row->tgl_testimoni }}</td>
                                         <th>
-                                            <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                                            <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="/user/edit_testimoni/{{ $row->id }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                                            <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#formModalDeleteTestimoni{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</a>
                                         </td>
                                         </th>
                                         <td>
-                                            Pending/Approve
+                                            {{ $row->status }}
                                         </td>
                                     </tr>
+
+                                    <div class="modal fade" id="formModalDeleteTestimoni{{ $row->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">Hapus Testimoni</h5>
+                                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Apakah Anda yakin ingin menghapus data yang dipilih ?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <form action="/user/hapus_testimoni/{{ $row->id }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @endforeach
                             @endif
 

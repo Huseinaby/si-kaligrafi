@@ -14,13 +14,13 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Akun</th>
+                                <th>Akun (Username)</th>
                                 <th>Nama Panitia</th>
+                                <th>Pesanan (Karya)</th>
+                                <th>Nama Mesjid</th>
                                 <th>Isi Testimoni</th>
                                 <th>Tanggal Testimoni</th>
-                                <th>Lokasi Masjid</th>
-                                <th>Nama Masjid</th>
-                                <th>Status</th>
+                                <th>Status Now</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,10 +28,10 @@
                                 <tr>
                                     <td>{{ $row->user->username }}</td>
                                     <td>{{ $row->nama_panitia }}</td>
+                                    <td>{{ $row->karya->nama_karya }}</td>
+                                    <td>{{ $row->karya->nama_masjid }}</td>
                                     <td>{{ $row->isi_testimoni }}</td>
                                     <td>{{ $row->tgl_testimoni }}</td>
-                                    <td>{{ $row->lokasi_masjid }}</td>
-                                    <td>{{ $row->nama_masjid }}</td>
                                     <td>{{ $row->status }}</td>
                                 </tr>
                             @endforeach

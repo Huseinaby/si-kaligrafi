@@ -12,6 +12,7 @@ class Galeri extends Model
     protected $fillable = [
         'judul',
         'deskripsi_galeri',
+        'slug',
         'foto_galeri'
     ];
     protected $guarded = ['id'];

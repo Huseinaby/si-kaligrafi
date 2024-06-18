@@ -24,7 +24,7 @@ class LoginController extends Controller
             if($user->level == '1'){
                 return redirect()->intended('/admin');
             }elseif($user->level == '2'){
-                return redirect()->intended('/user/dashboard/'. $user->id_user);
+                return redirect()->intended('/user/dashboard');
             }
         }
 

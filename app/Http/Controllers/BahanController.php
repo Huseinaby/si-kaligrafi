@@ -5,6 +5,7 @@ use App\Models\Bahan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Crypt;
 
 class BahanController extends Controller
 {
@@ -44,9 +45,10 @@ class BahanController extends Controller
 
         if ($request->hasFile('foto_bahan')) {
             $image = $request->file('foto_bahan');
-            $filename = time() . '_' . $image->getClientOriginalName();
-            $image->storeAs('public/storage', $filename);
-            $validatedData['foto_bahan'] = $filename;
+            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
+            $encryptedFileName = Crypt::encrypt($filename);
+            $image->storeAs('public/storage', $encryptedFileName);
+            $validatedData['foto_bahan'] = $encryptedFileName;
         }
 
         Bahan::create($validatedData);
@@ -79,9 +81,10 @@ class BahanController extends Controller
             }
 
             $image = $request->file('foto_bahan');
-            $filename = time() . '_' . $image->getClientOriginalName();
-            $image->storeAs('public/storage', $filename);
-            $validatedData['foto_bahan'] = $filename;
+            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
+            $encryptedFileName = Crypt::encrypt($filename);
+            $image->storeAs('public/storage', $encryptedFileName);
+            $validatedData['foto_bahan'] = $encryptedFileName;
         } else {
             // Jika tidak ada file baru, tetap gunakan foto lama
             $validatedData['foto_bahan'] = $bahan->foto_bahan;

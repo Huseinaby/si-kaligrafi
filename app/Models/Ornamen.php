@@ -15,7 +15,8 @@ class Ornamen extends Model
         'deskripsi_ornamen',
         'jenis_ornamen',
         'foto_ornamen',
-        'kategori'
+        'kategori',
+        'slug'
     ];
 
     protected $primaryKey =  'id';

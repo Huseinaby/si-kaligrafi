@@ -1,13 +1,11 @@
-  var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-      centeredSlides: false,
-      spaceBetween: 40,
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
     $(document).ready(function(){
       $('.grid-slider').slick({
@@ -37,14 +35,3 @@
           ]
       });
   });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const cardWrapper = document.querySelector('.card-wrapper');
-    const cards = document.querySelectorAll('.card');
-    let index = 0;
-
-    setInterval(() => {
-        index = (index + 1) % cards.length;
-        cardWrapper.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000);
-});
