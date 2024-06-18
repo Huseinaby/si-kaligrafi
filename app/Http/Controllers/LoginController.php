@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     public function index(){
-        return view('login');
+        return view('responsive.login_new');
     }
 
     public function auth(Request $request){

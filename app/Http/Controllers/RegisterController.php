@@ -8,7 +8,7 @@ use App\Models\User;
 class RegisterController extends Controller
 {
     public function index(){
-        return view('register');
+        return view('responsive.register_new');
     }
 
     public function store(Request $request){

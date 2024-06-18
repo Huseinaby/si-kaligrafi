@@ -44,9 +44,7 @@
             <!-- Tombol Sign In -->
 
             <div class="login">
-                <li>
-                    <a href="#">Sign Up</a>
-                </li>
+              <li><a href="/login" class="tbl">Sign In</a></li>
             </div>
 
         </ul>
@@ -58,28 +56,44 @@
 
     <!-- Form Isi -->
     <br>
-    <h1 class="user-login">User Login</h1>
+    <h1 class="user-login">User Register</h1>
     <br>
     <div class="container">
-
-        <form action="#">
+        <form action="/register" method="POST">
+          @csrf
+          <div class="form-group">
             <div class="form-group">
-                <label for="nama-lengkap"><b> Nama Lengkap:</b></label>
-                <input type="text" id="nama-lengkap" name="nama-lengkap" required>
+              <label for="nama_lengkap"><b>Nama Lengkap:</b></label>
+              <input class="is-invalid" type="text" id="nama_lengkap" name="nama_lengkap" required value="{{ old('nama_lengkap') }}">
+              @error('nama_lengkap')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+              @enderror
             </div>
-            <div class="form-group">
-                <label for="username"><b> Username:</b></label>
-                <input type="text" id="username" name="username" required>
+            <label for="username"><b> Username:</b></label>
+            <input class="is-invalid" type="text" id="username" name="username" required value="{{ old('username') }}">
+            @error('username')
+            <div class="invalid-feedback">
+              {{ $message }}
             </div>
-            <div class="form-group">
-                <label for="password"><b>Password:</b></label>
-                <input type="password" id="password" name="password" required>
+            @enderror
+          </div>
+          <div class="form-group">
+            <label for="password"><b>Password:</b></label>
+            <input class="is-invalid" type="password" id="password" name="password" required>
+            @error('password')
+            <div class="invalid-feedback">
+              {{ $message }}
             </div>
-            <button type="submit"><b> Sign Up</b></button>
-            <br><br><br>
-            <p>Don't have account? Sign Up</p>
+            @enderror
+          </div>
+          <button type="submit"><b> Sign Up</b></button>
+          <br><br>
+          <p>Back to <a href="login">login</a></p>
         </form>
-    </div>
+      </div>
+    
 
 
     @include('partials.footer')

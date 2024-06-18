@@ -44,9 +44,11 @@
             <!-- Tombol Sign In -->
 
             <div class="login">
-                <li>
-                    <a href="#">Sign Up</a>
-                </li>
+                @if (Request::is('login'))
+                    <li><a href="/register" class="tbl">Register</a></li>X
+                @else
+                    <li><a href="/login" class="tbl">Login</a></li>X
+                @endif
             </div>
 
         </ul>

@@ -13,6 +13,7 @@ body {
     background-image: url(../image/bg.png);
     background-size: cover ;
     background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
     background-attachment: fixed;
     background-position: center;
 
@@ -78,7 +79,7 @@ nav ul li a {
 }
 
 .login:hover {
-    background-color: #45a049;
+    background-color: #003c34;
     color: white;
 }
 
@@ -99,6 +100,14 @@ nav ul li a {
 
 /* responsif */
 
+button a {
+    text-decoration: none;
+}
+
+button a:visited {
+    color: black;
+}
+ 
 
 @media only screen and (max-width : 1495px) {
 
