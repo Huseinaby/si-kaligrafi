@@ -85,7 +85,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         @if (auth()->user()->level == '1')
-                            <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="/admin">Dashboard</a></li>
                         @else
                             <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
                         @endif
