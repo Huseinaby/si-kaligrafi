@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Testimoni;
+use App\Models\Bahan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BahanController;
 use App\Http\Controllers\DashboardController;
@@ -16,7 +17,9 @@ use App\Http\Controllers\AccessController;
 use App\Http\Controllers\PesananController;
 
 Route::get('/', function () {
-    return view('homepage');
+    return view('homepage', [
+        'bahans' => Bahan::all()
+    ]);
 });
 
 // Coba
