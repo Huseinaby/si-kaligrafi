@@ -4,18 +4,20 @@
 
 @section('dashboard-content')
 
-<h1 class="h3 mb-2 ml-4 text-gray-800">Daftar testimoni</h1>
+    <h1 class="h3 mb-2 ml-4 text-gray-800">Daftar testimoni</h1>
 
-@if (session('success'))
-<div class="alert alert-success alert-dismissible fade show animate__animated animate__fadeInDown" role="alert">
-    {{ session('success') }}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
-@endif
+
     <!-- Begin Page Content -->
     <div class="container-fluid">
+        @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show animate__animated animate__fadeInDown "
+                role="alert">
+                {{ session('success') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
         <div class="row">
             <!-- Pending Requests Card Example (warna kuning untuk pemberitahuan/warning) -->
             <div class="col-xl-6 col-md-6 mb-4">
@@ -45,7 +47,8 @@
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $karyas->count() }}</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $karyas->count() }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -79,8 +82,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if ($testimonis == null )
-    
+                            @if ($testimonis == null)
                             @else
                                 @foreach ($testimonis as $row)
                                     <tr>
@@ -89,21 +91,27 @@
                                         <td>{{ $row->karya->lokasi }}</td>
                                         <td>{{ $row->tgl_testimoni }}</td>
                                         <th>
-                                            <a href="/user/edit_testimoni/{{ $row->id }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                                            <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#formModalDeleteTestimoni{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</a>
-                                        </td>
+                                            <a href="/user/edit_testimoni/{{ $row->id }}"
+                                                class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                                            <a href="" class="btn btn-danger btn-sm" data-toggle="modal"
+                                                data-target="#formModalDeleteTestimoni{{ $row->id }}"><i
+                                                    class="fas fa-trash"></i> Hapus</a>
+                                            </td>
                                         </th>
                                         <td>
                                             {{ $row->status }}
                                         </td>
                                     </tr>
 
-                                    <div class="modal fade" id="formModalDeleteTestimoni{{ $row->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="formModalDeleteTestimoni{{ $row->id }}" tabindex="-1"
+                                        role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">Hapus Testimoni</h5>
-                                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">Hapus
+                                                        Testimoni</h5>
+                                                    <button class="close" type="button" data-dismiss="modal"
+                                                        aria-label="Close">
                                                         <span aria-hidden="true">×</span>
                                                     </button>
                                                 </div>
@@ -111,11 +119,14 @@
                                                     <p>Apakah Anda yakin ingin menghapus data yang dipilih ?</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <form action="/user/hapus_testimoni/{{ $row->id }}" method="POST">
+                                                    <form action="/user/hapus_testimoni/{{ $row->id }}"
+                                                        method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                                                        <button class="btn btn-secondary" type="button"
+                                                            data-dismiss="modal">Batal</button>
+                                                        <button type="submit" class="btn btn-danger"><i
+                                                                class="fas fa-trash"></i> Hapus</button>
                                                     </form>
                                                 </div>
                                             </div>

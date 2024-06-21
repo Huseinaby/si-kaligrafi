@@ -26,28 +26,28 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
     <script>
-    jQuery(function($) {
-        var $navbar = $('.header');
-        var scrollDistance = 700; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
-        
-        $(window).scroll(function(event){
-            var $current = $(this).scrollTop();
-            if ($current > scrollDistance) {
-                $navbar.addClass('navbar-color');
-            } else {
-                $navbar.removeClass('navbar-color');
-            }
+        jQuery(function($) {
+            var $navbar = $('.header');
+            var scrollDistance = 700; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
+
+            $(window).scroll(function(event) {
+                var $current = $(this).scrollTop();
+                if ($current > scrollDistance) {
+                    $navbar.addClass('navbar-color');
+                } else {
+                    $navbar.removeClass('navbar-color');
+                }
+            });
         });
-    });
     </script>
-    
+
 
     <script>
         jQuery(function($) {
             var $navbar = $('.header');
             var scrollDistance = 2000; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
-            
-            $(window).scroll(function(event){
+
+            $(window).scroll(function(event) {
                 var $current = $(this).scrollTop();
                 if ($current > scrollDistance) {
                     $navbar.addClass('navbar-color-part2');
@@ -56,64 +56,65 @@
                 }
             });
         });
-        </script>
+    </script>
 
 
 
 
-    
+
 </head>
 <nav>
     <div class="header">
-    <ul>
-        <li>
-            <h1>KALIGRAFI</h1>
-        </li>
-        <li><a href="tentang">Tentang</a></li>
-        <li><a href="layanan">Layanan</a></li>
-        <li><a href="bahan">Bahan</a></li>
-        <li><a href="ornamen">Ornamen</a></li>
-        <li><a href="portofolio">Portofolio</a></li>
-        <li><a href="galeri">Galeri</a></li>
-        <li><a href="testimoni">Testimoni</a></li>
-        <li>
-            @auth
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                        aria-expanded="true">
-                        {{ auth()->user()->nama_lengkap }}
-                    </a>
-                    <ul class="dropdown-menu">
-                        @if (auth()->user()->level == '1')
-                            <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
-                        @else
-                            <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
-                        @endif
-                        <li>
-                            <hr class="dropdown-divider">
-                            </hr>
-                        </li>
-                        <li>
-                            <form action="/logout" method="POST">
-                                @csrf
-                                <button type="submit" class="dropdown-item">Logout</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            @else
-            <li><a href="/login" class="btn">Sign In</a></li>
-        @endauth
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <h1>KALIGRAFI</h1>
+            </li>
+            <li><a href="tentang">Tentang</a></li>
+            <li><a href="layanan">Layanan</a></li>
+            <li><a href="bahan">Bahan</a></li>
+            <li><a href="ornamen">Ornamen</a></li>
+            <li><a href="portofolio">Portofolio</a></li>
+            <li><a href="galeri">Galeri</a></li>
+            <li><a href="testimoni">Testimoni</a></li>
+            <li>
+                @auth
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="true">
+                            {{ auth()->user()->nama_lengkap }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            @if (auth()->user()->level == '1')
+                                <li><a class="dropdown-item" href="/admin">Dashboard</a></li>
+                            @else
+                                <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
+                            @endif
+                            <li>
+                                <hr class="dropdown-divider">
+                                </hr>
+                            </li>
+                            <li>
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                <li><a href="/login" class="btn">Sign In</a></li>
+            @endauth
+            </li>
+        </ul>
 
-</div>
+    </div>
 </nav>
 <div class="content">
     <h2>KALIGRAFI</h2>
     <h3>Pembuatan</h3>
     <p class="textutama"> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Pariatur sit nisi a nemo, nihil
-        voluptatibus dicta veniam <br> fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere repellat
+        voluptatibus dicta veniam <br> fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere
+        repellat
         perspiciatis odio.</p>
     <button class="btn"><a href="https://wa.me/6285845510008"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                 height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -211,46 +212,17 @@
             <h1>Bahan</h1>
             <div class="container mt-5">
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
-                                <h6 class="card-title">PVC</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                    @foreach ($bahans as $bahan)
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
+                                    <h6 class="card-title mt-2">{{ $bahan->nama_bahan }}</h6>
+                                    <p class="card-text">{{ $bahan->deskripsi_bahan }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="image/layanan1.jpg" class="card-img-top" alt="Experienced Image">
-                                <h6 class="card-title">PVC</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="image/layanan1.jpg" class="card-img-top" alt="Expert Image">
-                                <h6 class="card-title">PVC</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="image/layanan1.jpg" class="card-img-top" alt="Trustworthy Image">
-                                <h6 class="card-title">PVC</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
