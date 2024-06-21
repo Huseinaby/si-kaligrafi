@@ -35,3 +35,38 @@
             ]
         });
     });
+
+
+    // Navbar Berubah Warna Jangan di utak atik kina Error Navbar nya ku sabit nyawa
+
+    jQuery(function($) {
+        var $navbar = $('.header');
+        var scrollDistance = 700; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
+    
+        $(window).scroll(function(event) {
+            var $current = $(this).scrollTop();
+            if ($current > scrollDistance) {
+                $navbar.addClass('navbar-color');
+            } else {
+                $navbar.removeClass('navbar-color');
+            }
+        });
+    });
+    
+    
+    
+    
+    jQuery(function($) {
+        var $navbar = $('.header');
+        var scrollDistance = 2000; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
+    
+        $(window).scroll(function(event) {
+            var $current = $(this).scrollTop();
+            if ($current > scrollDistance) {
+                $navbar.addClass('navbar-color-part2');
+            } else {
+                $navbar.removeClass('navbar-color-part2');
+            }
+        });
+    });
+    

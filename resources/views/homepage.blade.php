@@ -25,96 +25,58 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
-    <script>
-        jQuery(function($) {
-            var $navbar = $('.header');
-            var scrollDistance = 700; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
-
-            $(window).scroll(function(event) {
-                var $current = $(this).scrollTop();
-                if ($current > scrollDistance) {
-                    $navbar.addClass('navbar-color');
-                } else {
-                    $navbar.removeClass('navbar-color');
-                }
-            });
-        });
-    </script>
-
-
-    <script>
-        jQuery(function($) {
-            var $navbar = $('.header');
-            var scrollDistance = 2000; // Ganti nilai ini dengan jarak scroll yang Anda inginkan (dalam piksel)
-
-            $(window).scroll(function(event) {
-                var $current = $(this).scrollTop();
-                if ($current > scrollDistance) {
-                    $navbar.addClass('navbar-color-part2');
-                } else {
-                    $navbar.removeClass('navbar-color-part2');
-                }
-            });
-        });
-    </script>
-
-
-
-
-
 </head>
 <nav>
     <div class="header">
-        <ul>
-            <li>
-                <h1>KALIGRAFI</h1>
-            </li>
-            <li><a href="tentang">Tentang</a></li>
-            <li><a href="layanan">Layanan</a></li>
-            <li><a href="bahan">Bahan</a></li>
-            <li><a href="ornamen">Ornamen</a></li>
-            <li><a href="portofolio">Portofolio</a></li>
-            <li><a href="galeri">Galeri</a></li>
-            <li><a href="testimoni">Testimoni</a></li>
-            <li>
-                @auth
-                    <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="true">
-                            {{ auth()->user()->nama_lengkap }}
-                        </a>
-                        <ul class="dropdown-menu">
-                            @if (auth()->user()->level == '1')
-                                <li><a class="dropdown-item" href="/admin">Dashboard</a></li>
-                            @else
-                                <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
-                            @endif
-                            <li>
-                                <hr class="dropdown-divider">
-                                </hr>
-                            </li>
-                            <li>
-                                <form action="/logout" method="POST">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                @else
-                <li><a href="/login" class="btn">Sign In</a></li>
-            @endauth
-            </li>
-        </ul>
+    <ul>
+        <li>
+            <h1>KALIGRAFI</h1>
+        </li>
+        <li><a href="tentang1">Tentang</a></li>
+        <li><a href="layanan">Layanan</a></li>
+        <li><a href="bahan">Bahan</a></li>
+        <li><a href="ornamen">Ornamen</a></li>
+        <li><a href="portofolio">Portofolio</a></li>
+        <li><a href="galeri">Galeri</a></li>
+        <li><a href="testimoni">Testimoni</a></li>
+        <li>
+            @auth
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="true">
+                        {{ auth()->user()->nama_lengkap }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        @if (auth()->user()->level == '1')
+                            <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                        @else
+                            <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
+                        @endif
+                        <li>
+                            <hr class="dropdown-divider">
+                            </hr>
+                        </li>
+                        <li>
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            @else
+            <li><a href="/login" class="btn">Sign In</a></li>
+        @endauth
+        </li>
+    </ul>
 
-    </div>
+</div>
 </nav>
 <div class="content">
     <h2>KALIGRAFI</h2>
     <h3>Pembuatan</h3>
     <p class="textutama"> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Pariatur sit nisi a nemo, nihil
-        voluptatibus dicta veniam <br> fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere
-        repellat
+        voluptatibus dicta veniam <br> fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere repellat
         perspiciatis odio.</p>
     <button class="btn"><a href="https://wa.me/6285845510008"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                 height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -122,6 +84,10 @@
                     d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
             </svg> Hubungi Kami</a></button>
 </div>
+
+{{-- Tentang --}}
+
+
 <div class="tentang">
     <img src="image/tentang.jpg">
     <div class="textten">
@@ -130,6 +96,11 @@
             repellat! <br> Doloremque vitae blanditiis sunt itaque.<br> Impedit facilis voluptatum cupiditate nostrum
             sunt dolor dicta nihil enim?</p>
     </div>
+
+
+
+
+
 </div>
 <div class="kualitas">
     <h2>Kualitas Kami</h2>
@@ -193,6 +164,9 @@
             </div>
         </div>
     </div>
+
+{{-- Layanan --}}
+
     <div class="layanan">
         <h5>Layanan</h5>
         <div class="swiper mySwiper">
@@ -208,24 +182,60 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+
+{{-- Bahan --}}
+
         <div class="bahan">
             <h1>Bahan</h1>
             <div class="container mt-5">
                 <div class="row">
-                    @foreach ($bahans as $bahan)
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
-                                    <h6 class="card-title mt-2">{{ $bahan->nama_bahan }}</h6>
-                                    <p class="card-text">{{ $bahan->deskripsi_bahan }}</p>
-                                </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
+                                <h6 class="card-title">PVC</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
                             </div>
                         </div>
-                    @endforeach
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="image/layanan1.jpg" class="card-img-top" alt="Experienced Image">
+                                <h6 class="card-title">PVC</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="image/layanan1.jpg" class="card-img-top" alt="Expert Image">
+                                <h6 class="card-title">PVC</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="image/layanan1.jpg" class="card-img-top" alt="Trustworthy Image">
+                                <h6 class="card-title">PVC</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+{{-- Ornamen --}}
+
+
         <div class="ornamen">
             <h6>Ornamen</h6>
             <div class="container mt-5">
@@ -275,6 +285,8 @@
                 </div>
             </div>
         </div>
+
+        {{-- Galeri --}}
         <div class="galeri">
             <h6>Galeri</h6>
             <div class="container mt-5">
@@ -324,6 +336,8 @@
                 </div>
             </div>
         </div>
+{{-- Testimoni --}}
+
         <div class="testimoni">
             <div class="testi-header">
                 <h4>Testimoni</h4>

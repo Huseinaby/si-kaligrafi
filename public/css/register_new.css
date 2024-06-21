@@ -10,9 +10,11 @@ html {
 }
 
 body {
+   
     background-image: url(../image/bg.png);
     background-size: cover ;
     background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
     background-attachment: fixed;
     background-position: center;
 

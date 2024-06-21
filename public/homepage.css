@@ -462,7 +462,14 @@ footer {
   }
 
 
-  .navbar-color{
+  .footer-address2 img {
+    margin-top: -10px;
+}
+  
+
+/* Navbar Berwarna */
+
+.navbar-color{
     background: #003c34;
     height: 100px;
 }
@@ -471,3 +478,5 @@ footer {
     background: black;
     height: 100px;
 }
+
+

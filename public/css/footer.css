@@ -1,8 +1,8 @@
 footer {
-    background-color: #333333;  /* Navbar background color */
-    color: white; /* Text color */
-    width: 100%; /* Make navbar full width */
-    height: 285px; /* Set navbar height (optional) */
+    background-color: #333333;  
+    color: white; 
+    width: 100%; 
+    height: 285px; 
     text-align: left;
     padding: 10px;
   }
@@ -31,3 +31,8 @@ footer {
     text-align: center;
     justify-content: center;
   }
+
+
+  .footer-address2 img {
+    margin-top: 2px;
+}
