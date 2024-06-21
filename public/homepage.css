@@ -24,7 +24,7 @@ nav {
 
 nav h1{
     font-family: 'Urbanist';
-    color: white;
+    color: white; 
     padding-top: 10px;
     margin-right: 600px;
 }
@@ -147,6 +147,10 @@ a.btn:hover{
 .kualitas{
     background-color: white;
     height: 780px;
+    
+
+    
+
 }
 
 .kualitas h2{
@@ -156,6 +160,9 @@ a.btn:hover{
     font-family: 'Urbanist';
     font-weight: bold;
     color: #003c43;
+    margin-left: 120px;
+   
+    
 }
 
 .kualitas .card{
@@ -177,6 +184,7 @@ a.btn:hover{
     height: 800px;
     background-color: #ffff;
     margin-top: 200px;
+    
 }
 
 .layanan h5{
@@ -187,6 +195,8 @@ a.btn:hover{
     padding-top: 180px;
     padding-bottom: 30px;
     padding-left: 90px;
+    display: flex;
+   justify-content: Center;
 }
 
 .swiper {
@@ -228,7 +238,8 @@ a.btn:hover{
     font-weight: bold;
     font-size: 60px;
     padding-top: 200px;
-    margin-left: 760px;
+   display: flex;
+   justify-content: Center;
     margin-bottom: -50px;
 }
 
@@ -250,9 +261,8 @@ a.btn:hover{
     font-weight: bold;
     font-size: 60px;
     padding-top: 100px;
-    margin-left: 700px;
-    margin-bottom: -50px;
-    padding-bottom: 30px;
+   
+    display: flex;
     justify-content: center;
 }
 
@@ -319,10 +329,9 @@ a.btn:hover{
     font-weight: bold;
     font-size: 60px;
     padding-top: 100px;
-    margin-left: 760px;
-    margin-bottom: -50px;
-    padding-bottom: 30px;
+  
     justify-content: center;
+    display: flex;
 }
 
 .galeri .grid-item {
