@@ -18,17 +18,16 @@
             <h2 class="logo"><a
                     href="\">Kaligrafi</a></h2>
         </div>
-          <ul>
-            <li><a href="#">Tentang</a>
-                </li>
-                <li><a href="#">Layanan</a></li>
-                <li><a href="#">Bahan</a></li>
-                <li><a href="/ornamens">Ornamen</a></li>
-                <li><a href="">Portofolio</a></li>
-                <li><a href="#">Galeri</a></li>
-                <li><a href="testimonis">Testimoni</a></li>
+            <ul>
+                <li><a href="{{ url('/') }}#tentang">Tentang</a></li>
+                <li><a href="{{ url('/') }}#layanan">Layanan</a></li>
+                <li><a href="{{ url('/') }}#bahan">Bahan</a></li>
+                <li><a href="{{ url('/') }}#ornamen">Ornamen</a></li>
+                <li><a href="#">Portofolio</a></li>
+                <li><a href="{{ url('/') }}#galeri">Galeri</a></li>
+                <li><a href="{{ url('/') }}#testimoni">Testimoni</a></li>
                 <li><a href="register" class="tbl">Sign In</a></li>
-                </ul>
+            </ul>
     </header>
 
     <!-- carousel -->

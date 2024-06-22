@@ -46,29 +46,35 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item dashboard">
+                <a class="nav-link" href="{{ url('/') }}" >
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Go To Website</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item dashboard">
                 <a class="nav-link" href="/user/dashboard" >
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
-
-
-            
             <!-- Nav Item - Requests-management -->
             <li class="nav-item request-management">
                 <a class="nav-link" href="/user/testimonis">
-                    <i class="fas fa-fw fa-bell"></i>
-                    <span>Isi Testimoni</span></a>
+                    <i class="fas fa-fw fa-bell"></i><span>Isi Testimoni</span></a>
             </li>
 
             <!-- Nav Item - Logout -->
             <li class="nav-item request-management">
-                    <form action="/logout" method="POST">
-                        @csrf
-
-                        <button type="submit" class="nav-link bg-gradient-primary border-0"><i class="fas fa-fw fa-door-open"></i> Logout</button>  
-                      </form>  
+                <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                    <i class="fas fa-fw fa-door-open"></i>
+                    <span>Logout</span>
+                </a>
+                <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </li>
             
             <!-- Divider -->
@@ -128,7 +134,7 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item ">
-                            <h6 class="nav-item mt-2">Selamat datang, {{ auth()->user()->username }}</h6>
+                            <h6 class="nav-item mt-2">Selamat datang, {{ auth()->user()->nama_lengkap }}</h6>
                         </li>
                     </ul>
 
