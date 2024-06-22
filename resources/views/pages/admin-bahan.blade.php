@@ -40,7 +40,7 @@
                                 <td>{{ $row->nama_bahan }}</td>
                                 <td>{{ $row->jenis_bahan }}</td>
                                 <td>{{ $row->deskripsi_bahan }}</td>
-                                <td><img src="{{ asset('storage/storage/' . $row->foto_bahan) }}" alt="Gambar Bahan"
+                                <td><img src="{{ asset('storage/public/storage/' . $row->foto_bahan) }}" alt="Gambar Bahan"
                                         width="100"></td>
                                 <td>
                                     <a href="" class="btn btn-warning btn-sm" data-toggle="modal"
@@ -95,7 +95,7 @@
                                                     <input type="hidden" name="oldImage" value="{{ $row->foto_bahan }}">
                                                     <input type="file" class="form-control-file" id="foto_bahan" name="foto_bahan" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
                                                     @if ($row->foto_bahan)
-                                                        <img src="{{ asset('storage/storage/' . $row->foto_bahan) }}" alt="{{ $row->nama_bahan }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                        <img src="{{ asset('storage/public/storage/' . $row->foto_bahan) }}" alt="{{ $row->nama_bahan }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
                                                     @else
                                                         <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                     @endif

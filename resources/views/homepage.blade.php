@@ -28,54 +28,57 @@
 </head>
 <nav>
     <div class="header">
-    <ul>
-        <li><a href="#"><h1>KALIGRAFI</h1></a></li>
-        
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#bahan">Bahan</a></li>
-        <li><a href="#ornamen">Ornamen</a></li>
-        <li><a href="portofolio">Portofolio</a></li>
-        <li><a href="#galeri">Galeri</a></li>
-        <li><a href="#testimoni">Testimoni</a></li>
-        <li>
-            @auth
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                        aria-expanded="true">
-                        {{ auth()->user()->nama_lengkap }}
-                    </a>
-                    <ul class="dropdown-menu">
-                        @if (auth()->user()->level == '1')
-                            <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
-                        @else
-                            <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
-                        @endif
-                        <li>
-                            <hr class="dropdown-divider">
-                            </hr>
-                        </li>
-                        <li>
-                            <form action="/logout" method="POST">
-                                @csrf
-                                <button type="submit" class="dropdown-item">Logout</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            @else
-            <li><a href="/login" class="btn">Sign In</a></li>
-        @endauth
-        </li>
-    </ul>
+        <ul>
+            <li><a href="#">
+                    <h1>KALIGRAFI</h1>
+                </a></li>
 
-</div>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#bahan">Bahan</a></li>
+            <li><a href="#ornamen">Ornamen</a></li>
+            <li><a href="portofolio">Portofolio</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
+            <li>
+                @auth
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="true">
+                            {{ auth()->user()->nama_lengkap }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            @if (auth()->user()->level == '1')
+                                <li><a class="dropdown-item" href="/admin">Dashboard</a></li>
+                            @else
+                                <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
+                            @endif
+                            <li>
+                                <hr class="dropdown-divider">
+                                </hr>
+                            </li>
+                            <li>
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                <li><a href="/login" class="btn">Sign In</a></li>
+            @endauth
+            </li>
+        </ul>
+
+    </div>
 </nav>
 <div class="content">
     <h2>KALIGRAFI</h2>
     <h3>Pembuatan</h3>
     <p class="textutama"> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Pariatur sit nisi a nemo, nihil
-        voluptatibus dicta veniam <br> fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere repellat
+        voluptatibus dicta veniam <br> fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere
+        repellat
         perspiciatis odio.</p>
     <button class="btn"><a href="https://wa.me/6285845510008"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                 height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -91,7 +94,8 @@
         <div class="textten">
             <h4>Tentang Kami</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique explicabo deserunt cum iste, tenetur
-                repellat! <br> Doloremque vitae blanditiis sunt itaque.<br> Impedit facilis voluptatum cupiditate nostrum
+                repellat! <br> Doloremque vitae blanditiis sunt itaque.<br> Impedit facilis voluptatum cupiditate
+                nostrum
                 sunt dolor dicta nihil enim?</p>
         </div>
     </div>
@@ -160,225 +164,197 @@
             </div>
         </div>
     </div>
-<!-- End Kualitas -->
+    <!-- End Kualitas -->
 
-<!-- Layanan Section -->
-<section id="layanan">
-    <div class="layanan">
-        <h5>Layanan</h5>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="image/layanan1.jpg"></div>
-                <div class="swiper-slide"><img src="image/layanan2.jpg"></div>
-                <div class="swiper-slide"><img src="image/layanan3.jpg"></div>
-                <div class="swiper-slide"><img src="image/layanan4.jpg"></div>
-                <div class="swiper-slide"><img src="image/layanan5.jpg"></div>
-                <div class="swiper-slide"><img src="image/layanan6.jpg"></div>
-                <div class="swiper-slide"><img src="image/layanan7.jpg"></div>
-                <div class="swiper-slide"><img src="image/layanan8.jpg"></div>
+    <!-- Layanan Section -->
+    <section id="layanan">
+        <div class="layanan">
+            <h5>Layanan</h5>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="image/layanan1.jpg"></div>
+                    <div class="swiper-slide"><img src="image/layanan2.jpg"></div>
+                    <div class="swiper-slide"><img src="image/layanan3.jpg"></div>
+                    <div class="swiper-slide"><img src="image/layanan4.jpg"></div>
+                    <div class="swiper-slide"><img src="image/layanan5.jpg"></div>
+                    <div class="swiper-slide"><img src="image/layanan6.jpg"></div>
+                    <div class="swiper-slide"><img src="image/layanan7.jpg"></div>
+                    <div class="swiper-slide"><img src="image/layanan8.jpg"></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
-<!-- End Layanan Section -->
+            <!-- End Layanan Section -->
 
-<!-- Bahan Section -->
-<section id="bahan">
-    <div class="bahan">
-        <h1>Bahan</h1>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
-                            <h6 class="card-title">PVC</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
+            <!-- Bahan Section -->
+            <section id="bahan">
+                <div class="bahan">
+                    <h1>Bahan</h1>
+                    <div class="container mt-5">
+                        <div class="row">
+                            @foreach ( $bahans as $bahan)
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="{{ asset('storage/public/storage/' . $bahan->foto_bahan) }}" class="card-img-top" alt="Professional Image">
+                                        <h6 class="card-title">{{ $bahan->nama_bahan }}</h6>
+                                        <p class="card-text">{{ $bahan->deskripsi_bahan }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="image/layanan1.jpg" class="card-img-top" alt="Experienced Image">
-                            <h6 class="card-title">PVC</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="image/layanan1.jpg" class="card-img-top" alt="Expert Image">
-                            <h6 class="card-title">PVC</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="image/layanan1.jpg" class="card-img-top" alt="Trustworthy Image">
-                            <h6 class="card-title">PVC</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Bahan Section -->
-        
-<!-- Ornamen Section -->
-<section id="ornamen">
-    <div class="ornamen">
-        <h6>Ornamen</h6>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="grid-slider">
-                        <!-- Baris 1 -->
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 1">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 2">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 3">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <!-- Baris 2 -->
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 4">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 5">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 6">
-                            <div class="overlay">
-                                <h4>Testing</h4>
+            </section>
+            <!-- End Bahan Section -->
+
+            <!-- Ornamen Section -->
+            <section id="ornamen">
+                <div class="ornamen">
+                    <h6>Ornamen</h6>
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="grid-slider">
+                                    <!-- Baris 1 -->
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 1">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 2">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 3">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <!-- Baris 2 -->
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 4">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 5">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 6">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Ornamen Section -->
-        
-<!-- Galeri Section -->
-<section id="galeri">
-    <div class="galeri">
-        <h6>Galeri</h6>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="grid-slider">
-                        <!-- Baris 1 -->
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 1">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 2">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 3">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <!-- Baris 2 -->
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 4">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 5">
-                            <div class="overlay">
-                                <h4>Testing</h4>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <img src="image/layanan1.jpg" alt="Image 6">
-                            <div class="overlay">
-                                <h4>Testing</h4>
+            </section>
+            <!-- End Ornamen Section -->
+
+            <!-- Galeri Section -->
+            <section id="galeri">
+                <div class="galeri">
+                    <h6>Galeri</h6>
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="grid-slider">
+                                    <!-- Baris 1 -->
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 1">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 2">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 3">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <!-- Baris 2 -->
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 4">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 5">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="image/layanan1.jpg" alt="Image 6">
+                                        <div class="overlay">
+                                            <h4>Testing</h4>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Galeri Section -->
-  
-<!-- Testimoni Section -->
-<section id="testimoni">
-    <div class="testimoni">
-        <div class="testi-header">
-            <h4>Testimoni</h4>
-            <p>Bagikan <strong>Pengalaman</strong> anda<br> yang telah menggunakan<br> layanan kami, dan bantu<br>
-                kami memperbaiki layanan<br> kami lebih baik lagi!</p>
-            <button class="isi-testi-btn">Isi Testimoni</button>
-        </div>
+            </section>
+            <!-- End Galeri Section -->
 
-    </div>
-</section>
-<!-- End Testimoni Section -->
+            <!-- Testimoni Section -->
+            <section id="testimoni">
+                <div class="testimoni">
+                    <div class="testi-header">
+                        <h4>Testimoni</h4>
+                        <p>Bagikan <strong>Pengalaman</strong> anda<br> yang telah menggunakan<br> layanan kami, dan
+                            bantu<br>
+                            kami memperbaiki layanan<br> kami lebih baik lagi!</p>
+                        <button class="isi-testi-btn">Isi Testimoni</button>
+                    </div>
 
-    <footer id="navbar">
-        <div class="footer-side">
-            <div class="footer-address">
-                <img src="../image/Ok.svg" alt="icon ok">
-                <h4>Alamat Workshop Kami</h4>
-            </div>
+                </div>
+            </section>
+            <!-- End Testimoni Section -->
+
+            <footer id="navbar">
+                <div class="footer-side">
+                    <div class="footer-address">
+                        <img src="../image/Ok.svg" alt="icon ok">
+                        <h4>Alamat Workshop Kami</h4>
+                    </div>
 
 
-            <p class="address">Jl. Keramat Raya, RT. 12 No. 55 Kel. Sungai Bilu,<br>
-                    Kec. Banjarmasin Timur Kota Banjarmasin, <br>
-                    Kalimantan Selatan,70236</p>
-        </div>
-        <br>
-        <div class="footer-address2">
-            <img src="../image/c.png" alt="">
-            <p>2024 [merk]</p>
-        </div>
-    </footer>
+                    <p class="address">Jl. Keramat Raya, RT. 12 No. 55 Kel. Sungai Bilu,<br>
+                        Kec. Banjarmasin Timur Kota Banjarmasin, <br>
+                        Kalimantan Selatan,70236</p>
+                </div>
+                <br>
+                <div class="footer-address2">
+                    <img src="../image/c.png" alt="">
+                    <p>2024 [merk]</p>
+                </div>
+            </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <script src="homepage.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+            <script src="homepage.js"></script>
 
-    </body>
+            </body>
 
 </html>

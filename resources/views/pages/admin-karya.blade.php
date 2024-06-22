@@ -46,7 +46,7 @@
                                     <td>{{ $row->jenis_karya }}</td>
                                     <td>{{ $row->ornamen->jenis_ornamen }}</td>
                                     <td>{{ $row->deskripsi_karya }}</td>
-                                    <td><img src="{{ asset('storage/storage/' . $row->foto_karya) }}" alt="Gambar karya" width="100"></td>
+                                    <td><img src="{{ asset('storage/public/storage/' . $row->foto_karya) }}" alt="Gambar karya" width="100"></td>
                                     <td>{{ $row->tgl_pembuatan }}</td>
                                     <td>
                                         <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditKarya{{ $row->id }}"><i class="fas fa-edit"></i> Edit</a>
@@ -109,7 +109,7 @@
                                                         <input type="hidden" name="oldImage" value="{{ $row->foto_karya }}">
                                                         <input type="file" class="form-control-file" id="foto_karya" name="foto_karya" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
                                                         @if ($row->foto_karya)
-                                                            <img src="{{ asset('storage/storage/' . $row->foto_karya) }}" alt="{{ $row->nama_karya }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                            <img src="{{ asset('storage/public/storage/' . $row->foto_karya) }}" alt="{{ $row->nama_karya }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
                                                         @else
                                                             <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                         @endif
