@@ -5,7 +5,7 @@
 @section('dashboard-content')
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Daftar Karya Anda</h1>
+        <h1 class="h3 mb-2 text-gray-800">Beri Testimoni</h1>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">

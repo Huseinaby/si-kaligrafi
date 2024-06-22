@@ -4,7 +4,7 @@
 
 @section('dashboard-content')
 
-    <h1 class="h3 mb-2 ml-4 text-gray-800">Daftar testimoni</h1>
+    <h1 class="h3 mb-2 ml-4 text-gray-800">User Dashboard</h1>
 
 
     <!-- Begin Page Content -->
