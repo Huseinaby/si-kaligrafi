@@ -29,16 +29,15 @@
 <nav>
     <div class="header">
     <ul>
-        <li>
-            <h1>KALIGRAFI</h1>
-        </li>
-        <li><a href="tentang1">Tentang</a></li>
-        <li><a href="layanan">Layanan</a></li>
-        <li><a href="bahan">Bahan</a></li>
-        <li><a href="ornamen">Ornamen</a></li>
+        <li><a href="#"><h1>KALIGRAFI</h1></a></li>
+        
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#bahan">Bahan</a></li>
+        <li><a href="#ornamen">Ornamen</a></li>
         <li><a href="portofolio">Portofolio</a></li>
-        <li><a href="galeri">Galeri</a></li>
-        <li><a href="testimoni">Testimoni</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
         <li>
             @auth
                 <div class="dropdown">
@@ -85,23 +84,20 @@
             </svg> Hubungi Kami</a></button>
 </div>
 
-{{-- Tentang --}}
-
-
-<div class="tentang">
-    <img src="image/tentang.jpg">
-    <div class="textten">
-        <h4>Tentang Kami</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique explicabo deserunt cum iste, tenetur
-            repellat! <br> Doloremque vitae blanditiis sunt itaque.<br> Impedit facilis voluptatum cupiditate nostrum
-            sunt dolor dicta nihil enim?</p>
+<!-- Tentang section -->
+<section id="tentang">
+    <div class="tentang">
+        <img src="image/tentang.jpg">
+        <div class="textten">
+            <h4>Tentang Kami</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique explicabo deserunt cum iste, tenetur
+                repellat! <br> Doloremque vitae blanditiis sunt itaque.<br> Impedit facilis voluptatum cupiditate nostrum
+                sunt dolor dicta nihil enim?</p>
+        </div>
     </div>
+</section>
 
-
-
-
-
-</div>
+<!-- Kualitas -->
 <div class="kualitas">
     <h2>Kualitas Kami</h2>
     <div class="container">
@@ -164,9 +160,10 @@
             </div>
         </div>
     </div>
+<!-- End Kualitas -->
 
-{{-- Layanan --}}
-
+<!-- Layanan Section -->
+<section id="layanan">
     <div class="layanan">
         <h5>Layanan</h5>
         <div class="swiper mySwiper">
@@ -182,198 +179,206 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+<!-- End Layanan Section -->
 
-{{-- Bahan --}}
-
-        <div class="bahan">
-            <h1>Bahan</h1>
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
-                                <h6 class="card-title">PVC</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
+<!-- Bahan Section -->
+<section id="bahan">
+    <div class="bahan">
+        <h1>Bahan</h1>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="image/layanan1.jpg" class="card-img-top" alt="Professional Image">
+                            <h6 class="card-title">PVC</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="image/layanan1.jpg" class="card-img-top" alt="Experienced Image">
-                                <h6 class="card-title">PVC</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="image/layanan1.jpg" class="card-img-top" alt="Experienced Image">
+                            <h6 class="card-title">PVC</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="image/layanan1.jpg" class="card-img-top" alt="Expert Image">
-                                <h6 class="card-title">PVC</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="image/layanan1.jpg" class="card-img-top" alt="Expert Image">
+                            <h6 class="card-title">PVC</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="image/layanan1.jpg" class="card-img-top" alt="Trustworthy Image">
-                                <h6 class="card-title">PVC</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="image/layanan1.jpg" class="card-img-top" alt="Trustworthy Image">
+                            <h6 class="card-title">PVC</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Bahan Section -->
+        
+<!-- Ornamen Section -->
+<section id="ornamen">
+    <div class="ornamen">
+        <h6>Ornamen</h6>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="grid-slider">
+                        <!-- Baris 1 -->
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 1">
+                            <div class="overlay">
+                                <h4>Testing</h4>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 2">
+                            <div class="overlay">
+                                <h4>Testing</h4>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 3">
+                            <div class="overlay">
+                                <h4>Testing</h4>
+                            </div>
+                        </div>
+                        <!-- Baris 2 -->
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 4">
+                            <div class="overlay">
+                                <h4>Testing</h4>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 5">
+                            <div class="overlay">
+                                <h4>Testing</h4>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 6">
+                            <div class="overlay">
+                                <h4>Testing</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-{{-- Ornamen --}}
-
-
-        <div class="ornamen">
-            <h6>Ornamen</h6>
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="grid-slider">
-                            <!-- Baris 1 -->
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 1">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
+    </div>
+</section>
+<!-- End Ornamen Section -->
+        
+<!-- Galeri Section -->
+<section id="galeri">
+    <div class="galeri">
+        <h6>Galeri</h6>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="grid-slider">
+                        <!-- Baris 1 -->
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 1">
+                            <div class="overlay">
+                                <h4>Testing</h4>
                             </div>
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 2">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 2">
+                            <div class="overlay">
+                                <h4>Testing</h4>
                             </div>
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 3">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 3">
+                            <div class="overlay">
+                                <h4>Testing</h4>
                             </div>
-                            <!-- Baris 2 -->
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 4">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
+                        </div>
+                        <!-- Baris 2 -->
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 4">
+                            <div class="overlay">
+                                <h4>Testing</h4>
                             </div>
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 5">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 5">
+                            <div class="overlay">
+                                <h4>Testing</h4>
                             </div>
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 6">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="image/layanan1.jpg" alt="Image 6">
+                            <div class="overlay">
+                                <h4>Testing</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        {{-- Galeri --}}
-        <div class="galeri">
-            <h6>Galeri</h6>
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="grid-slider">
-                            <!-- Baris 1 -->
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 1">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 2">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 3">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
-                            </div>
-                            <!-- Baris 2 -->
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 4">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 5">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <img src="image/layanan1.jpg" alt="Image 6">
-                                <div class="overlay">
-                                    <h4>Testing</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+</section>
+<!-- End Galeri Section -->
+  
+<!-- Testimoni Section -->
+<section id="testimoni">
+    <div class="testimoni">
+        <div class="testi-header">
+            <h4>Testimoni</h4>
+            <p>Bagikan <strong>Pengalaman</strong> anda<br> yang telah menggunakan<br> layanan kami, dan bantu<br>
+                kami memperbaiki layanan<br> kami lebih baik lagi!</p>
+            <button class="isi-testi-btn">Isi Testimoni</button>
         </div>
-{{-- Testimoni --}}
 
-        <div class="testimoni">
-            <div class="testi-header">
-                <h4>Testimoni</h4>
-                <p>Bagikan <strong>Pengalaman</strong> anda<br> yang telah menggunakan<br> layanan kami, dan bantu<br>
-                    kami memperbaiki layanan<br> kami lebih baik lagi!</p>
-                <button class="isi-testi-btn">Isi Testimoni</button>
+    </div>
+</section>
+<!-- End Testimoni Section -->
+
+    <footer id="navbar">
+        <div class="footer-side">
+            <div class="footer-address">
+                <img src="../image/Ok.svg" alt="icon ok">
+                <h4>Alamat Workshop Kami</h4>
             </div>
 
-        </div>
-        <footer id="navbar">
-            <div class="footer-side">
-                <div class="footer-address">
-                    <img src="../image/Ok.svg" alt="icon ok">
-                    <h4>Alamat Workshop Kami</h4>
-                </div>
 
-
-                <p class="address">Jl. Keramat Raya, RT. 12 No. 55 Kel. Sungai Bilu,<br>
+            <p class="address">Jl. Keramat Raya, RT. 12 No. 55 Kel. Sungai Bilu,<br>
                     Kec. Banjarmasin Timur Kota Banjarmasin, <br>
                     Kalimantan Selatan,70236</p>
-            </div>
-            <br>
-            <div class="footer-address2">
-                <img src="../image/c.png" alt="">
-                <p>2024 [merk]</p>
-            </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-        <script src="homepage.js"></script>
+        </div>
+        <br>
+        <div class="footer-address2">
+            <img src="../image/c.png" alt="">
+            <p>2024 [merk]</p>
+        </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script src="homepage.js"></script>
 
-
-
-        
-        </body>
+    </body>
 
 </html>
