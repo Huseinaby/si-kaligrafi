@@ -26,7 +26,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Nama Ornamen</th>
+                                <th>Judul</th>
                                 <th>Bahan Ornamen</th>
                                 <th>Deskripsi</th>
                                 <th>Jenis Ornamen</th>
@@ -67,7 +67,7 @@
                                                     @csrf
                                                     @method('PUT')
                                                     <div class="form-group text-gray-800">
-                                                        <label for="exampleInputPassword1">Nama Ornamen</label>
+                                                        <label for="exampleInputPassword1">Judul</label>
                                                         <input type="text" class="form-control" id="nama_ornamen" name="nama_ornamen" value="{{ old('nama_ornamen', $row->nama_ornamen) }}" required>
                                                     </div>
 
@@ -98,16 +98,16 @@
 
                                                     <div class="form-group text-gray-800">
                                                         <label for="foto_ornamen">Gambar</label>
-                                                        <input type="file" class="form-control-file" id="foto_ornamen" name="foto_ornamen">
-                                                        <small class="form-text text-muted">
-                                                            Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
-                                                        </small>
-                                                        @error('foto_ornamen')
-                                                            <div class="text-danger">{{ $message }}</div>
-                                                        @enderror
-                                                        @if($row->foto_ornamen)
-                                                            <img src="{{ asset('storage/storage/' . $row->foto_ornamen) }}" alt="{{ $row->nama_ornamen }}" class="img-thumbnail mt-2" width="150">
+                                                        <input type="hidden" name="oldImage" value="{{ $row->foto_ornamen }}">
+                                                        <input type="file" class="form-control-file" id="foto_ornamen" name="foto_ornamen" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
+                                                        @if ($row->foto_ornamen)
+                                                            <img src="{{ asset('storage/storage/' . $row->foto_ornamen) }}" alt="{{ $row->nama_ornamen }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                        @else
+                                                            <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                         @endif
+                                                        <small class="form-text text-muted">
+                                                            Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
+                                                        </small>
                                                     </div>
 
                                                     <hr>
@@ -170,7 +170,7 @@
                         <form id="tambahOrnamenForm" action="{{ route('ornamen.store') }}" enctype="multipart/form-data" method="POST">
                             @csrf
                             <div class="form-group text-gray-800">
-                                <label for="exampleInputPassword1">Nama Ornamen</label>
+                                <label for="exampleInputPassword1">Judul</label>
                                 <input type="text" class="form-control" id="nama_ornamen" name="nama_ornamen" placeholder="Masukkan nama ornamen" required>
                             </div>
 
@@ -201,9 +201,10 @@
 
                             <div class="form-group text-gray-800">
                                 <label for="exampleFormControlFile1">Gambar</label>
-                                <input type="file" class="form-control-file" id="foto_ornamen" name="foto_ornamen" required>
+                                <input type="file" class="form-control-file" id="foto_ornamen" name="foto_ornamen" onchange="previewImage(event, 'previewTambah')" required>
+                                <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewTambah" style="display: none;">
                                 <small class="form-text text-muted">
-                                    Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
+                                    Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
                                 </small>
                             </div>
 
@@ -224,7 +225,20 @@
         <script>
             function resetForm(formId) {
                 document.getElementById(formId).reset();
+                var previewImage = document.getElementById('previewTambah');
+                previewImage.src = '';
+                previewImage.style.display = 'none';
             }
+
+        function previewImage(event, previewId) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                var output = document.getElementById(previewId);
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
         </script>
 
 @endsection

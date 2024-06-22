@@ -34,7 +34,7 @@ class BahanController extends Controller
             'nama_bahan' => 'required|max:255',
             'jenis_bahan' => 'required|max:255',
             'deskripsi_bahan' => 'required',
-            'foto_bahan' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto_bahan' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
         // Menghasilkan slug dari nama bahan
@@ -45,10 +45,10 @@ class BahanController extends Controller
 
         if ($request->hasFile('foto_bahan')) {
             $image = $request->file('foto_bahan');
-            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
-            $encryptedFileName = Crypt::encrypt($filename);
-            $image->storeAs('public/storage', $encryptedFileName);
-            $validatedData['foto_bahan'] = $encryptedFileName;
+            $uniqueString = 'foto_bahan'; // String unik yang ingin diselipkan
+            $filename = time() . '_'. $uniqueString . '_' . Str::random(10);
+            $image->storeAs('public/storage', $filename);
+            $validatedData['foto_bahan'] = $filename;
         }
 
         Bahan::create($validatedData);
@@ -66,7 +66,7 @@ class BahanController extends Controller
             'nama_bahan' => 'required|max:255',
             'jenis_bahan' => 'required|max:255',
             'deskripsi_bahan' => 'required',
-            'foto_bahan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto_bahan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
         // Menghasilkan slug baru dari nama bahan jika berubah
@@ -81,10 +81,10 @@ class BahanController extends Controller
             }
 
             $image = $request->file('foto_bahan');
-            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
-            $encryptedFileName = Crypt::encrypt($filename);
-            $image->storeAs('public/storage', $encryptedFileName);
-            $validatedData['foto_bahan'] = $encryptedFileName;
+            $uniqueString = 'foto_bahan'; // String unik yang ingin diselipkan
+            $filename = time() . '_'. $uniqueString . '_' . Str::random(10); // Menyimpan nama file secara acak
+            $image->storeAs('public/storage', $filename);
+            $validatedData['foto_bahan'] = $filename;
         } else {
             // Jika tidak ada file baru, tetap gunakan foto lama
             $validatedData['foto_bahan'] = $bahan->foto_bahan;

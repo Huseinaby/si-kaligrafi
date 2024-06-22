@@ -27,8 +27,8 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Nama Bahan</th>
-                            <th>Jenis</th>
+                            <th>Judul</th>
+                            <th>Jenis Bahan</th>
                             <th>Deskripsi</th>
                             <th>Gambar</th>
                             <th>Action</th>
@@ -72,7 +72,7 @@
                                                 @method('PUT')
 
                                                 <div class="form-group text-gray-800">
-                                                    <label for="nama_bahan">Nama Bahan</label>
+                                                    <label for="nama_bahan">Judul</label>
                                                     <input type="text" class="form-control" id="nama_bahan"
                                                         name="nama_bahan" value="{{ old('nama_bahan', $row->nama_bahan) }}"
                                                         required>
@@ -91,17 +91,17 @@
                                                 </div>
 
                                                 <div class="form-group text-gray-800">
-                                                    <label for="foto_bahan">Foto</label>
-                                                    <input type="file" class="form-control-file" id="foto_bahan"
-                                                        name="foto_bahan">
-                                                    <small class="form-text text-muted">
-                                                        Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
-                                                    </small>
+                                                    <label for="foto_bahan">Gambar</label>
+                                                    <input type="hidden" name="oldImage" value="{{ $row->foto_bahan }}">
+                                                    <input type="file" class="form-control-file" id="foto_bahan" name="foto_bahan" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
                                                     @if ($row->foto_bahan)
-                                                        <img src="{{ Storage::url('public/storage/' . $row->foto_bahan) }}"
-                                                            alt="{{ $row->nama_bahan }}" class="img-thumbnail mt-2"
-                                                            width="150">
+                                                        <img src="{{ asset('storage/storage/' . $row->foto_bahan) }}" alt="{{ $row->nama_bahan }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                    @else
+                                                        <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                     @endif
+                                                    <small class="form-text text-muted">
+                                                        Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
+                                                    </small>
                                                 </div>
 
                                                 <hr>
@@ -172,7 +172,7 @@
                         method="POST">
                         @csrf
                         <div class="form-group text-gray-800">
-                            <label for="exampleInputPassword1">Nama Bahan</label>
+                            <label for="exampleInputPassword1">Judul</label>
                             <input type="text" class="form-control" id="nama_bahan" name="nama_bahan"
                                 placeholder="Masukkan nama bahan" required>
                         </div>
@@ -190,18 +190,18 @@
                         </div>
 
                         <div class="form-group text-gray-800">
-                            <label for="foto_bahan">Foto</label>
-                            <input type="file" class="form-control-file" id="foto_bahan" name="foto_bahan" required>
+                            <label for="foto_bahan">Gambar</label>
+                            <input type="file" class="form-control-file" id="foto_bahan" name="foto_bahan" onchange="previewImage(event, 'previewTambah')" required>
+                            <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewTambah" style="display: none;">
                             <small class="form-text text-muted">
-                                Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
+                                Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
                             </small>
                         </div>
 
                         <hr>
                         </hr>
 
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal"
-                            onclick="resetForm('tambahBahanForm')">Batal</button>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm('tambahBahanForm')">Batal</button>
                         <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
                     </form>
                     <!-- End content -->
@@ -216,6 +216,19 @@
     <script>
         function resetForm(formId) {
             document.getElementById(formId).reset();
+            var previewImage = document.getElementById('previewTambah');
+            previewImage.src = '';
+            previewImage.style.display = 'none';
+        }
+
+        function previewImage(event, previewId) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                var output = document.getElementById(previewId);
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
         }
     </script>
 

@@ -36,7 +36,7 @@ class OrnamenController extends Controller
             'bahan_id' => 'required|integer',
             'deskripsi_ornamen' => 'required',
             'jenis_ornamen' => 'required|max:255',
-            'foto_ornamen' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto_ornamen' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
             'kategori' => 'required|max:255',
         ]);
 
@@ -48,10 +48,10 @@ class OrnamenController extends Controller
 
         if ($request->hasFile('foto_ornamen')) {
             $image = $request->file('foto_ornamen');
-            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
-            $encryptedFileName = Crypt::encrypt($filename);
-            $image->storeAs('public/storage', $encryptedFileName);
-            $validatedData['foto_ornamen'] = $encryptedFileName;
+            $uniquestring = 'foto_ornamen';
+            $filename = time() . '_' . $uniquestring . '_' . Str::random(10); // Menyimpan nama file secara acak
+            $image->storeAs('public/storage', $filename);
+            $validatedData['foto_ornamen'] = $filename;
         }
 
         Ornamen::create($validatedData);
@@ -70,7 +70,7 @@ class OrnamenController extends Controller
             'bahan_id' => 'required|max:255',
             'deskripsi_ornamen' => 'required',
             'jenis_ornamen' => 'required|max:255',
-            'foto_ornamen' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto_ornamen' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
             'kategori' => 'required|max:255',
         ]);
 
@@ -86,10 +86,10 @@ class OrnamenController extends Controller
             }
 
             $image = $request->file('foto_ornamen');
-            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
-            $encryptedFileName = Crypt::encrypt($filename);
-            $image->storeAs('public/storage', $encryptedFileName);
-            $validatedData['foto_ornamen'] = $encryptedFileName;
+            $uniquestring = 'foto_ornamen';
+            $filename = time() . '_' . $uniquestring . '_' . Str::random(10);
+            $image->storeAs('public/storage', $filename);
+            $validatedData['foto_ornamen'] = $filename;
         } else {
             // Jika tidak ada file baru, tetap gunakan foto lama
             $validatedData['foto_ornamen'] = $ornamen->foto_ornamen;

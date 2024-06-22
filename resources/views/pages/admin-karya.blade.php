@@ -70,7 +70,7 @@
                                                 <form id="editKaryaForm" action="{{ route('karya.update', ['slug' => $row->slug]) }}" enctype="multipart/form-data" method="POST">
                                                     @csrf
                                                     <div class="form-group text-gray-800">
-                                                        <label for="exampleInputPassword1">Nama Karya</label>
+                                                        <label for="exampleInputPassword1">Judul</label>
                                                         <input type="text" class="form-control" id="nama_karya" name="nama_karya" placeholder="Masukkan nama karya" value="{{ old('nama_karya', $row->nama_karya) }}" required>
                                                     </div>
 
@@ -105,10 +105,16 @@
                                                     </div>
 
                                                     <div class="form-group text-gray-800">
-                                                        <label for="exampleFormControlFile1">Gambar</label>
-                                                        <input type="file" class="form-control-file" id="foto_karya" name="foto_karya" required>
+                                                        <label for="foto_karya">Gambar</label>
+                                                        <input type="hidden" name="oldImage" value="{{ $row->foto_karya }}">
+                                                        <input type="file" class="form-control-file" id="foto_karya" name="foto_karya" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
+                                                        @if ($row->foto_karya)
+                                                            <img src="{{ asset('storage/storage/' . $row->foto_karya) }}" alt="{{ $row->nama_karya }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                        @else
+                                                            <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
+                                                        @endif
                                                         <small class="form-text text-muted">
-                                                            Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
+                                                            Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
                                                         </small>
                                                     </div>
 
@@ -177,7 +183,7 @@
                         <form id="tambahKaryaForm" action="{{ route('karya.store') }}" enctype="multipart/form-data" method="POST">
                             @csrf
                             <div class="form-group text-gray-800">
-                                <label for="exampleInputPassword1">Nama Karya</label>
+                                <label for="exampleInputPassword1">Judul</label>
                                 <input type="text" class="form-control" id="nama_karya" name="nama_karya" placeholder="Masukkan nama karya" required>
                             </div>
 
@@ -213,9 +219,10 @@
 
                             <div class="form-group text-gray-800">
                                 <label for="exampleFormControlFile1">Gambar</label>
-                                <input type="file" class="form-control-file" id="foto_karya" name="foto_karya" required>
+                                <input type="file" class="form-control-file" id="foto_karya" name="foto_karya" onchange="previewImage(event, 'previewTambah')" required>
+                                <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewTambah" style="display: none;">
                                 <small class="form-text text-muted">
-                                    Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
+                                    Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
                                 </small>
                             </div>
 
@@ -241,6 +248,19 @@
         <script>
             function resetForm(formId) {
                 document.getElementById(formId).reset();
+                var previewImage = document.getElementById('previewTambah');
+                previewImage.src = '';
+                previewImage.style.display = 'none';
+            }
+
+            function previewImage(event, previewId) {
+                var reader = new FileReader();
+                reader.onload = function(){
+                    var output = document.getElementById(previewId);
+                    output.src = reader.result;
+                    output.style.display = 'block';
+                };
+                reader.readAsDataURL(event.target.files[0]);
             }
         </script>  
 @endsection
