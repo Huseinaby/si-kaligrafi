@@ -26,7 +26,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Nama Layanan</th>
+                                <th>Judul (Layanan)</th>
                                 <th>Gambar</th>
                                 <th>Action</th>
                             </tr>
@@ -58,19 +58,22 @@
                                                     @method('PUT')
                                                     
                                                     <div class="form-group text-gray-800">
-                                                        <label for="nama_bahan">Nama Layanan</label>
+                                                        <label for="nama_bahan">Judul (Layanan)</label>
                                                         <input type="text" class="form-control" id="nama_layanan" name="nama_layanan" value="{{ old('nama_layanan', $row->nama_layanan) }}" required>
                                                     </div>
 
                                                     <div class="form-group text-gray-800">
-                                                        <label for="foto_layanan">Foto</label>
-                                                        <input type="file" class="form-control-file" id="foto_layanan" name="foto_layanan">
-                                                        <small class="form-text text-muted">
-                                                            Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
-                                                        </small>
-                                                        @if($row->foto_layanan)
-                                                            <img src="{{ Storage::url('public/storage/' . $row->foto_layanan) }}" alt="{{ $row->nama_layanan }}" class="img-thumbnail mt-2" width="150">
+                                                        <label for="foto_layanan">Gambar</label>
+                                                        <input type="hidden" name="oldImage" value="{{ $row->foto_layanan }}">
+                                                        <input type="file" class="form-control-file" id="foto_layanan" name="foto_layanan" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
+                                                        @if ($row->foto_layanan)
+                                                            <img src="{{ asset('storage/storage/' . $row->foto_layanan) }}" alt="{{ $row->nama_layanan }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                        @else
+                                                            <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                         @endif
+                                                        <small class="form-text text-muted">
+                                                            Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
+                                                        </small>
                                                     </div>
 
                                                     <hr>
@@ -132,15 +135,16 @@
                         <form id="tambahLayananForm" action="{{ route('layanan.store') }}" enctype="multipart/form-data" method="POST">
                             @csrf
                             <div class="form-group text-gray-800">
-                                <label for="exampleInputPassword1">Nama Layanan</label>
+                                <label for="exampleInputPassword1">Judul (layanan)</label>
                                 <input type="text" class="form-control" id="nama_layanan" name="nama_layanan" placeholder="Masukkan nama layanan" required>
                             </div>
 
                             <div class="form-group text-gray-800">
-                                <label for="exampleFormControlFile1">Gambar</label>
-                                <input type="file" class="form-control-file" id="foto_layanan" name="foto_layanan" required>
+                                <label for="foto_layanan">Gambar</label>
+                                <input type="file" class="form-control-file" id="foto_layanan" name="foto_layanan" onchange="previewImage(event, 'previewTambah')" required>
+                                <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewTambah" style="display: none;">
                                 <small class="form-text text-muted">
-                                    Ukuran maksimal 2MB. Format file: jpeg, png, jpg, gif.
+                                    Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
                                 </small>
                             </div>
 
@@ -161,6 +165,20 @@
         <script>
             function resetForm(formId) {
                 document.getElementById(formId).reset();
+                var previewImage = document.getElementById('previewTambah');
+                previewImage.src = '';
+                previewImage.style.display = 'none';
             }
+
+            function previewImage(event, previewId) {
+                var reader = new FileReader();
+                reader.onload = function(){
+                    var output = document.getElementById(previewId);
+                    output.src = reader.result;
+                    output.style.display = 'block';
+                };
+                reader.readAsDataURL(event.target.files[0]);
+            }
+            
         </script>
 @endsection

@@ -29,8 +29,12 @@ class GaleriController extends Controller
         $randomString = Str::random(6); 
         $validateData['slug'] = $randomString;
         
-        if ($request->file('foto_galeri')) {
-            $validateData['foto_galeri'] = $request->file('foto_galeri')->store('galeri-images');
+        if ($request->hasFile('foto_galeri')) {
+            $image = $request->file('foto_galeri');
+            $uniquestring = 'foto_galeri';
+            $filename = time() . '_' . $uniquestring . '_' . Str::random(10); // Menyimpan nama file secara acak
+            $image->storeAs('public/storage', $filename);
+            $validateData['foto_galeri'] = $filename;
         }
 
 
@@ -46,23 +50,33 @@ class GaleriController extends Controller
             'foto_galeri' => 'image|file|max:10240'
         ]);
 
-        if($request->file('foto_galeri')){
-            if($request->oldImage){
-                Storage::delete($request->oldImage);
+        if ($request->hasFile('foto_layanan')) {
+            // Hapus file foto lama jika ada
+            if ($galeri->foto_galeri) {
+                Storage::delete('public/storage/' . $galeri->foto_galeri);
             }
-            $validateData['foto_galeri'] = $request->file('foto_galeri')->store('galeri-images');
+
+            $image = $request->file('foto_layanan');
+            $uniquestring = 'foto_galeri';
+            $filename = time() . '_' . $uniquestring . '_' . Str::random(10); // Menyimpan nama file secara acak
+            $image->storeAs('public/storage', $filename);
+            $validateData['foto_galeri'] = $filename;
+        } else {
+            // Jika tidak ada file baru, tetap gunakan foto lama
+            $validateData['foto_galeri'] = $galeri->foto_galeri;
         }
 
         Galeri::where('slug', $galeri->slug)
         ->update($validateData);
 
-        return redirect('/galeri')->with('success', 'Galeri berhasil diubah');
+        return redirect('/galeri')->with('success', 'Galeri berhasil diperbarui');
     }
 
     public function destroy(Galeri $galeri){
         if($galeri->foto_galeri){
-            Storage::delete($galeri->foto_galeri);
+            Storage::delete('public/storage/' . $galeri->foto_galeri);
         }
+
         Galeri::destroy($galeri->id);
 
         return redirect('/galeri')->with('success', 'Galeri berhasil dihapus!');

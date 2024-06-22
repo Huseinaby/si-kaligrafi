@@ -20,7 +20,7 @@ class LayananController extends Controller
     {
         $validatedData = $request->validate([
             'nama_layanan' => 'required|max:255',
-            'foto_layanan' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto_layanan' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
         // Menghasilkan slug dari nama layanan
@@ -31,10 +31,10 @@ class LayananController extends Controller
 
         if ($request->hasFile('foto_layanan')) {
             $image = $request->file('foto_layanan');
-            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
-            $encryptedFileName = Crypt::encrypt($filename);
-            $image->storeAs('public/storage', $encryptedFileName);
-            $validatedData['foto_layanan'] = $encryptedFileName;
+            $uniquestring = 'foto_layanan';
+            $filename = time() . '_' . $uniquestring . '_' . Str::random(10); // Menyimpan nama file secara acak
+            $image->storeAs('public/storage', $filename);
+            $validatedData['foto_layanan'] = $filename;
         }
 
         Layanan::create($validatedData);
@@ -50,7 +50,7 @@ class LayananController extends Controller
         // Validasi data
         $validatedData = $request->validate([
             'nama_layanan' => 'required|max:255',
-            'foto_layanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto_layanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
         // Menghasilkan slug baru dari nama layanan jika berubah
@@ -65,13 +65,13 @@ class LayananController extends Controller
             }
 
             $image = $request->file('foto_layanan');
-            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
-            $encryptedFileName = Crypt::encrypt($filename);
-            $image->storeAs('public/storage', $encryptedFileName);
-            $validatedData['foto_bahan'] = $encryptedFileName;
+            $uniquestring = 'foto_layanan';
+            $filename = time() . '_' . $uniquestring . '_' . Str::random(10); // Menyimpan nama file secara acak
+            $image->storeAs('public/storage', $filename);
+            $validatedData['foto_layanan'] = $filename;
         } else {
             // Jika tidak ada file baru, tetap gunakan foto lama
-            $validatedData['foto_bahan'] = $layanan->foto_layanan;
+            $validatedData['foto_layanan'] = $layanan->foto_layanan;
         }
 
         // Update data bahan

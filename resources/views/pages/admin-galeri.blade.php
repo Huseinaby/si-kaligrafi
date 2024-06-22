@@ -38,7 +38,7 @@
                             <tr>
                                 <td>{{ $row->judul }}</td>
                                 <td>{{ $row->deskripsi_galeri }}</td>
-                                <td>{{ $row->foto_galeri }}</td>
+                                <td><img src="{{ asset('storage/storage/' . $row->foto_galeri) }}" alt="Gambar Galeri" width="100"></td>
                                 <td>
                                     <a href="" class="btn btn-warning btn-sm" data-toggle="modal"
                                         data-target="#formModalEditGaleri{{ $row->id }}"><i class="fas fa-edit"></i> Edit</a>
@@ -63,7 +63,7 @@
                                         <div class="modal-body">
 
                                             <!-- content modal -->
-                                            <form method="POST" action="{{ route('galeri.update', $row->slug) }}" enctype="multipart/form-data">
+                                            <form id="editGaleriForm" method="POST" action="{{ route('galeri.update', $row->slug) }}" enctype="multipart/form-data">
                                                 @method('put')
                                                 @csrf
                                                 <div class="form-group text-gray-800">
@@ -79,11 +79,14 @@
                                                 </div>
 
                                                 <div class="form-group text-gray-800">
-                                                    <label for="image">Foto</label>
+                                                    <label for="image">Gambar</label>
                                                     <input type="hidden" name="oldImage" value="{{ $row->foto_galeri }}">
                                                     <input type="file" class="form-control-file" id="imageEdit{{ $row->id }}" name="foto_galeri" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
+                                                    <small class="form-text text-muted">
+                                                        Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
+                                                    </small>
                                                     @if ($row->foto_galeri)
-                                                        <img src="{{ asset('storage/' . $row->foto_galeri) }}" alt="{{ $row->judul }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                        <img src="{{ asset('storage/storage/' . $row->foto_galeri) }}" alt="{{ $row->judul }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
                                                     @else
                                                         <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                     @endif
@@ -93,7 +96,7 @@
                                                 </hr>
 
                                                 <button class="btn btn-secondary" type="button"
-                                                    data-dismiss="modal">Batal</button>
+                                                    data-dismiss="modal" onclick="resetForm('editGaleriForm')">Batal</button>
                                                 <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
                                                     Simpan</button>
                                             </form>
@@ -160,7 +163,7 @@
                 <div class="modal-body">
 
                     <!-- content modal -->
-                    <form method="POST" action="/galeri/store" enctype="multipart/form-data">
+                    <form id="tambahGaleriForm" method="POST" action="/galeri/store" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group text-gray-800">
                             <label for="judul">Judul</label>
@@ -173,16 +176,19 @@
                         </div>
 
                         <div class="form-group text-gray-800">
-                            <label for="image">Foto</label>
+                            <label for="image">Gambar</label>
                             <input type="file" class="form-control-file" id="imageTambah" name="foto_galeri" onchange="previewImage(event, 'previewTambah')" required>
                             <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewTambah" style="display: none;">
+                            <small class="form-text text-muted">
+                                Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
+                            </small>
                         </div>
                         
 
                         <hr>
                         </hr>
 
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="resetForm('tambahGaleriForm')">Batal</button>
                         <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
                     </form>
                     <!-- End content -->
@@ -196,6 +202,13 @@
         </div>
     </div>
     <script>
+        function resetForm(formId) {
+            document.getElementById(formId).reset();
+            var previewImage = document.getElementById('previewTambah');
+            previewImage.src = '';
+            previewImage.style.display = 'none';
+        }
+            
         function previewImage(event, previewId) {
             var reader = new FileReader();
             reader.onload = function(){

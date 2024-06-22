@@ -45,7 +45,7 @@ class KaryaController extends Controller
             'jenis_karya' => 'required|max:255',
             'deskripsi_karya' => 'required',
             'ornamen_id' => 'required|integer',
-            'foto_karya' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto_karya' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
             'tgl_pembuatan' => 'required|date',
         ]);
 
@@ -57,10 +57,10 @@ class KaryaController extends Controller
 
         if ($request->hasFile('foto_karya')) {
             $image = $request->file('foto_karya');
-            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
-            $encryptedFileName = Crypt::encrypt($filename);
-            $image->storeAs('public/storage', $encryptedFileName);
-            $validatedData['foto_karya'] = $encryptedFileName;
+            $uniquestring = "foto_karya";
+            $filename = time() . '_' . $uniquestring . '_' . Str::random(10);
+            $image->storeAs('public/storage', $filename);
+            $validatedData['foto_karya'] = $filename;
         }
 
         Karya::create($validatedData);
@@ -81,7 +81,7 @@ class KaryaController extends Controller
             'jenis_karya' => 'required|max:255',
             'deskripsi_karya' => 'required',
             'ornamen_id' => 'required|integer',
-            'foto_karya' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto_karya' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
             'tgl_pembuatan' => 'required',
         ]);
 
@@ -97,10 +97,10 @@ class KaryaController extends Controller
             }
 
             $image = $request->file('foto_karya');
-            $filename = time() . '_' . Str::random(10); // Menyimpan nama file secara acak
-            $encryptedFileName = Crypt::encrypt($filename);
-            $image->storeAs('public/storage', $encryptedFileName);
-            $validatedData['foto_karya'] = $encryptedFileName;
+            $uniquestring = "foto_karya";
+            $filename = time() . '_' . $uniquestring . '_' . Str::random(10);
+            $image->storeAs('public/storage', $filename);
+            $validatedData['foto_karya'] = $filename;
         } else {
             // Jika tidak ada file baru, tetap gunakan foto lama
             $validatedData['foto_karya'] = $karya->foto_karya;
