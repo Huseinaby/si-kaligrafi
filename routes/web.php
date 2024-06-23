@@ -112,8 +112,7 @@ Route::middleware(['auth','admin'])->group(function () {
 
     // Testimoni
     Route::get('/testimonies', [TestimoniController::class, 'admTesti'])->name('testimonies');
-    Route::get('/req-testimonies', [TestimoniController::class, 'admReqTesti'])->name('req-testimonies');
-    Route::post('/req-testimonies', [TestimoniController::class, 'adminStore'])->name('testimonies.store');
+    Route::post('/testimonies', [TestimoniController::class, 'adminStore'])->name('testimonies.store');
     Route::get('/accept_status/{id}', [TestimoniController::class, 'accept_status']);
     Route::get('/reject_status/{id}', [TestimoniController::class, 'reject_status']);
 });
