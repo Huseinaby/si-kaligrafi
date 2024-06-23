@@ -1,6 +1,6 @@
 @extends('layouts/admin/admin-dashboard')
 
-@section('title', 'User Management')
+@section('title', 'Kaligrafi | User Management')
 
 @section('dashboard-content')
 

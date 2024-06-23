@@ -20,7 +20,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
-    <title>Home Page</title>
+    <title>Kaligrafi | Homepage</title>
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -172,9 +172,16 @@
             <h5>Layanan</h5>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    @foreach ($layanans as $layanan)
-                    <div class="swiper-slide"><img src="{{ asset('storage/public/storage/' . $layanan->foto_layanan) }}"></div>
-                    @endforeach
+                    @if ($layanans->isEmpty())
+                    <div class="swiper-slide">
+                        <img src="https://via.placeholder.com/350x250" alt="Gambar Kosong">
+                    </div>
+                    @else
+                        @foreach ($layanans as $layanan)
+                            <div class="swiper-slide"><img
+                                    src="{{ asset('storage/public/storage/' . $layanan->foto_layanan) }}"></div>
+                        @endforeach
+                    @endif
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -183,62 +190,33 @@
             <!-- Bahan Section -->
             <section id="bahan">
                 <div class="bahan">
-                   
                     <h1>Bahan</h1>
-                   
-                    
                     <div class="container mt-5">
                         <div class="row">
                             <div class="swiper custom-swiper-container">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 1">
-                                    <div class="slide-title">Nama Bahan</div>
-                                    <div class="slide-description">Description for Slide 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 2">
-                                    <div class="slide-title">Nama Bahan</div>
-                                    <div class="slide-description">Description for Slide 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 3">
-                                    <div class="slide-title">Nama Bahan</div>
-                                    <div class="slide-description">Description for Slide 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 4">
-                                    <div class="slide-title">Nama Bahan</div>
-                                    <div class="slide-description">Description for Slide 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 5">
-                                    <div class="slide-title">Nama Bahan</div>
-                                    <div class="slide-description">Description for Slide 5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 6">
-                                    <div class="slide-title">Nama Bahan</div>
-                                    <div class="slide-description">Description for Slide 6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 7">
-                                    <div class="slide-title">Nama Bahan</div>
-                                    <div class="slide-description">Description for Slide 7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 8">
-                                    <div class="slide-title">Nama Bahan</div>
-                                    <div class="slide-description">Description for Slide 8 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
-                                  <div class="swiper-slide custom-swiper-slide">
-                                    <img src="https://via.placeholder.com/250x375" alt="Image 9">
-                                    <div class="slide-title">Nama Bahan </div>
-                                    <div class="slide-description">Description for Slide 9 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae? Itaque fugiat, porro iste iusto et libero doloribus atque sed! Doloribus, voluptas? Nobis, laudantium debitis!</div>
-                                  </div>
+                                <div class="swiper-wrapper p-3">
+                                    @if ($bahans->isEmpty())
+                                        <div class="swiper-slide custom-swiper-slide">
+                                            <img src="https://via.placeholder.com/250x375" alt="Image 1">
+                                            <div class="slide-title">Nama Bahan</div>
+                                            <div class="slide-description">Description for Slide 1 Lorem ipsum dolor
+                                                sit amet consectetur adipisicing elit. Pariatur nemo cumque recusandae?
+                                                Itaque fugiat, porro iste iusto et libero doloribus atque sed!
+                                                Doloribus, voluptas? Nobis, laudantium debitis!</div>
+                                        </div>
+                                    @else
+                                        @foreach ($bahans as $bahan)
+                                            <div class="swiper-slide custom-swiper-slide">
+                                                <img src="{{ asset('storage/public/storage/' . $bahan->foto_bahan) }}"
+                                                    alt="Image 1">
+                                                <div class="slide-title">{{ $bahan->nama_bahan }}</div>
+                                                <div class="slide-description">{{ $bahan->deskripsi_bahan }}</div>
+                                            </div>
+                                        @endforeach
+                                    @endif
                                 </div>
                                 <div class="swiper-pagination custom-swiper-pagination"></div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -398,32 +376,32 @@
 
             <!-- Initialize Swiper -->
             <script>
-              var swiper = new Swiper(".custom-swiper-container", {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                pagination: {
-                  el: ".custom-swiper-pagination",
-                  clickable: true,
-                },
-                breakpoints: {
-                  "@0.00": {
+                var swiper = new Swiper(".custom-swiper-container", {
                     slidesPerView: 1,
                     spaceBetween: 10,
-                  },
-                  "@0.75": {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                  },
-                  "@1.00": {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                  },
-                  "@1.50": {
-                    slidesPerView: 4,
-                    spaceBetween: 50,
-                  },
-                },
-              });
+                    pagination: {
+                        el: ".custom-swiper-pagination",
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        "@0.00": {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        "@0.75": {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        "@1.00": {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                        },
+                        "@1.50": {
+                            slidesPerView: 4,
+                            spaceBetween: 50,
+                        },
+                    },
+                });
             </script>
 
             </body>

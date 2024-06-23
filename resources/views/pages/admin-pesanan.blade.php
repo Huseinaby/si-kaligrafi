@@ -1,6 +1,6 @@
 @extends('layouts/admin/admin-dashboard')
 
-@section('title', 'Pesanan')
+@section('title', 'Kaligrafi | Pesanan')
 
 @section('dashboard-content')
 

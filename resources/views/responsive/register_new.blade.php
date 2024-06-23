@@ -21,28 +21,27 @@
         <h1 class="logo">Kaligrafi</h1>
 
         <ul id="menu-list" class="hidden">
-            <li>
-                <a href="#">Tentang</a>
-            </li>
-            <li>
-                <a href="#">Layanan</a>
-            </li>
-            <li>
-                <a href="#">Bahan</a>
-            </li>
-            <li>
-                <a href="#">Ornamen</a>
-            </li>
-            <li>
-                <a href="#">Portofolio</a>
-            </li>
-            <li>
-                <a href="#">Galeri</a>
-            </li>
-            <li>
-                <a href="#">Testimoni</a>
-
-            </li>
+          <li>
+            <a href="/">Tentang</a>
+        </li>
+        <li>
+            <a href="/#layanan">Layanan</a>
+        </li>
+        <li>
+            <a href="/#bahan">Bahan</a>
+        </li>
+        <li>
+            <a href="/#ornamen">Ornamen</a>
+        </li>
+        <li>
+            <a href="/portofolio">Portofolio</a>
+        </li>
+        <li>
+            <a href="/#galeri">Galeri</a>
+        </li>
+        <li>
+            <a href="/#testimoni">Testimoni</a>
+        </li>
 
             <!-- Tombol Sign In -->
 

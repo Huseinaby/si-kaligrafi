@@ -1,6 +1,6 @@
 @extends('layouts/admin/admin-dashboard')
 
-@section('title', 'Dashboard')
+@section('title', 'Kaligrafi | Dashboard')
 
 @section('dashboard-content')
     <!-- Begin Page Content -->
