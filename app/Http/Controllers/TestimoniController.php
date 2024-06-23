@@ -27,10 +27,13 @@ class TestimoniController extends Controller
             'admin_req_testimoni' => Testimoni::latest()->get(),
         ]);
     }
+    
 
     public function admTesti(){
         return view('pages.admin-testimoni', [
             "admin_testimoni" => Testimoni::latest()->get(),
+            "users" => User::all(),
+            "karyas" => Karya::all()
         ]);
     }
 

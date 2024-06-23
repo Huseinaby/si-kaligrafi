@@ -43,7 +43,7 @@
                                     <td>{{ $row->deskripsi_ornamen }}</td>
                                     <td>{{ $row->jenis_ornamen }}</td>
                                     <td>{{ $row->kategori }}</td>
-                                    <td><img src="{{ asset('storage/storage/' . $row->foto_ornamen) }}" alt="Gambar Ornamen" width="100"></td>
+                                    <td><img src="{{ asset('storage/public/storage/' . $row->foto_ornamen) }}" alt="Gambar Ornamen" width="100"></td>
                                     <td>
                                         <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditOrnamen{{ $row->id }}"><i class="fas fa-edit"></i> Edit</a>
                                         <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#formModalDeleteOrnamen{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</a>
@@ -101,7 +101,7 @@
                                                         <input type="hidden" name="oldImage" value="{{ $row->foto_ornamen }}">
                                                         <input type="file" class="form-control-file" id="foto_ornamen" name="foto_ornamen" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
                                                         @if ($row->foto_ornamen)
-                                                            <img src="{{ asset('storage/storage/' . $row->foto_ornamen) }}" alt="{{ $row->nama_ornamen }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                            <img src="{{ asset('storage/public/storage/' . $row->foto_ornamen) }}" alt="{{ $row->nama_ornamen }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
                                                         @else
                                                             <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                         @endif

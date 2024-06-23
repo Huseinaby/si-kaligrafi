@@ -38,7 +38,7 @@
                             <tr>
                                 <td>{{ $row->judul }}</td>
                                 <td>{{ $row->deskripsi_galeri }}</td>
-                                <td><img src="{{ asset('storage/storage/' . $row->foto_galeri) }}" alt="Gambar Galeri" width="100"></td>
+                                <td><img src="{{ asset('storage/public/storage/' . $row->foto_galeri) }}" alt="Gambar Galeri" width="100"></td>
                                 <td>
                                     <a href="" class="btn btn-warning btn-sm" data-toggle="modal"
                                         data-target="#formModalEditGaleri{{ $row->id }}"><i class="fas fa-edit"></i> Edit</a>
@@ -86,7 +86,7 @@
                                                         Ukuran maksimal 10MB. Format file: jpeg, png, jpg, gif.
                                                     </small>
                                                     @if ($row->foto_galeri)
-                                                        <img src="{{ asset('storage/storage/' . $row->foto_galeri) }}" alt="{{ $row->judul }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                        <img src="{{ asset('storage/public/storage/' . $row->foto_galeri) }}" alt="{{ $row->judul }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
                                                     @else
                                                         <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                     @endif

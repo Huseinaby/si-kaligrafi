@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Testimoni;
+use App\Models\Karya;
 use App\Models\Layanan;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -24,8 +25,10 @@ class DashboardController extends Controller
         return view('pages.admin-dashboard', [
             "users" => User::all(),
             "layanans" => Layanan::all(),
+            "testimonis" => Testimoni::all(),
             "testimoniPending" => Testimoni::where('status', 'pending')->get(),
-            
+            'karyas' => Karya::all(),
+            'admin_req_testimoni' => Testimoni::latest()->get(),
         ]);
     }
 }

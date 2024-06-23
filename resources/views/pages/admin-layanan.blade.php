@@ -35,7 +35,7 @@
                             @foreach ($admin_layanan as $row)
                                 <tr>
                                     <td>{{ $row->nama_layanan }}</td>
-                                    <td><img src="{{ asset('storage/storage/' . $row->foto_layanan) }}" alt="Gambar Layanan" width="100"></td>
+                                    <td><img src="{{ asset('storage/public/storage/' . $row->foto_layanan) }}" alt="Gambar Layanan" width="100"></td>
                                     <td>
                                         <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#formModalEditLayanan{{ $row->id }}"><i class="fas fa-edit"></i> Edit</a>
                                         <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#formModalDeleteLayanan{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</a>
@@ -67,7 +67,7 @@
                                                         <input type="hidden" name="oldImage" value="{{ $row->foto_layanan }}">
                                                         <input type="file" class="form-control-file" id="foto_layanan" name="foto_layanan" onchange="previewImage(event, 'previewEdit{{ $row->id }}')">
                                                         @if ($row->foto_layanan)
-                                                            <img src="{{ asset('storage/storage/' . $row->foto_layanan) }}" alt="{{ $row->nama_layanan }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
+                                                            <img src="{{ asset('storage/public/storage/' . $row->foto_layanan) }}" alt="{{ $row->nama_layanan }}" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}">
                                                         @else
                                                             <img src="" alt="Preview" class="img-thumbnail mt-2" width="150" id="previewEdit{{ $row->id }}" style="display: none;">
                                                         @endif

@@ -112,14 +112,6 @@
 
             <!-- Nav Item - Requests-management -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="{{ route('req-testimonies') }}">
-                    <i class="fas fa-fw fa-bell"></i>
-                    <span>Requests Management</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Requests-management -->
-            <li class="nav-item request-management">
                 <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
                     <i class="fas fa-fw fa-door-open"></i>
                     <span>Logout</span>

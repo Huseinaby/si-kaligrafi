@@ -2,6 +2,7 @@
 
 use App\Models\Testimoni;
 use App\Models\Bahan;
+use App\Models\Layanan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BahanController;
 use App\Http\Controllers\DashboardController;
@@ -18,7 +19,8 @@ use App\Http\Controllers\PesananController;
 
 Route::get('/', function () {
     return view('homepage', [
-        'bahans' => Bahan::all()
+        'bahans' => Bahan::all(),
+        'layanans' => Layanan::all()
     ]);
 });
 
@@ -110,8 +112,7 @@ Route::middleware(['auth','admin'])->group(function () {
 
     // Testimoni
     Route::get('/testimonies', [TestimoniController::class, 'admTesti'])->name('testimonies');
-    Route::get('/req-testimonies', [TestimoniController::class, 'admReqTesti'])->name('req-testimonies');
-    Route::post('/req-testimonies', [TestimoniController::class, 'adminStore'])->name('testimonies.store');
+    Route::post('/testimonies', [TestimoniController::class, 'adminStore'])->name('testimonies.store');
     Route::get('/accept_status/{id}', [TestimoniController::class, 'accept_status']);
     Route::get('/reject_status/{id}', [TestimoniController::class, 'reject_status']);
 });
