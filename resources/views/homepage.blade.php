@@ -173,9 +173,9 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     @if ($layanans->isEmpty())
-                    <div class="swiper-slide">
-                        <img src="https://via.placeholder.com/350x250" alt="Gambar Kosong">
-                    </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/350x250" alt="Gambar Kosong">
+                        </div>
                     @else
                         @foreach ($layanans as $layanan)
                             <div class="swiper-slide"><img
@@ -234,43 +234,23 @@
                             <div class="col-md-12">
                                 <div class="grid-slider">
                                     <!-- Baris 1 -->
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 1">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
+                                    @if ($ornamens->isEmpty())
+                                        <div class="grid-item">
+                                            <img src="image/layanan1.jpg" alt="Image 5">
+                                            <div class="overlay">
+                                                <h4>Testing</h4>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 2">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 3">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
-                                    <!-- Baris 2 -->
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 4">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 5">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 6">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
+                                    @else
+                                        @foreach ($ornamens as $ornamen)
+                                            <div class="grid-item">
+                                                <img src="{{ asset('storage/public/storage/' . $ornamen->foto_ornamen) }}" alt="Image 1">
+                                                <div class="overlay">
+                                                    <h4>{{ $ornamen->nama_ornamen }}</h4>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -287,44 +267,23 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="grid-slider">
-                                    <!-- Baris 1 -->
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 1">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
+                                    @if ($galeris->isEmpty())
+                                        <div class="grid-item">
+                                            <img src="image/layanan1.jpg" alt="Image 1">
+                                            <div class="overlay">
+                                                <h4>Testing</h4>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 2">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 3">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
-                                    <!-- Baris 2 -->
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 4">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 5">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="image/layanan1.jpg" alt="Image 6">
-                                        <div class="overlay">
-                                            <h4>Testing</h4>
-                                        </div>
-                                    </div>
+                                    @else
+                                        @foreach ($galeris as $galeri)
+                                            <div class="grid-item">
+                                                <img src="{{ asset('storage/public/storage/' . $galeri->foto_galeri) }}" alt="Image 1">
+                                                <div class="overlay">
+                                                    <h4>{{ $galeri->judul }}</h4>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
                         </div>

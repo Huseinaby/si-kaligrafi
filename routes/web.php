@@ -1,8 +1,9 @@
 <?php
 
-use App\Models\Testimoni;
+use App\Models\Ornamen;
 use App\Models\Bahan;
 use App\Models\Layanan;
+use App\Models\Galeri;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BahanController;
 use App\Http\Controllers\DashboardController;
@@ -20,7 +21,9 @@ use App\Http\Controllers\PesananController;
 Route::get('/', function () {
     return view('homepage', [
         'bahans' => Bahan::all(),
-        'layanans' => Layanan::all()
+        'layanans' => Layanan::all(),
+        'ornamens' => Ornamen::all(),
+        'galeris' => Galeri::all()
     ]);
 });
 
