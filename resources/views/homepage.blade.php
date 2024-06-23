@@ -172,14 +172,9 @@
             <h5>Layanan</h5>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="image/layanan1.jpg"></div>
-                    <div class="swiper-slide"><img src="image/layanan2.jpg"></div>
-                    <div class="swiper-slide"><img src="image/layanan3.jpg"></div>
-                    <div class="swiper-slide"><img src="image/layanan4.jpg"></div>
-                    <div class="swiper-slide"><img src="image/layanan5.jpg"></div>
-                    <div class="swiper-slide"><img src="image/layanan6.jpg"></div>
-                    <div class="swiper-slide"><img src="image/layanan7.jpg"></div>
-                    <div class="swiper-slide"><img src="image/layanan8.jpg"></div>
+                    @foreach ($layanans as $layanan)
+                    <div class="swiper-slide"><img src="{{ asset('storage/public/storage/' . $layanan->foto_layanan) }}"></div>
+                    @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
