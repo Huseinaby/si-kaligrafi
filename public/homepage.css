@@ -227,9 +227,9 @@ a.btn:hover{
 }
 
 .bahan{
-    height: 780px;
+    height: 980px;
     background-color: #fff;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .bahan h1{
@@ -238,9 +238,10 @@ a.btn:hover{
     font-weight: bold;
     font-size: 60px;
     padding-top: 200px;
-   display: flex;
-   justify-content: Center;
-    margin-bottom: -50px;
+    display: flex;
+    justify-content: Center;
+    margin-bottom: 100px;
+  
 }
 
 .card {
@@ -251,8 +252,10 @@ a.btn:hover{
 }
 
 .ornamen{
-    height: 950px;
+    height: auto;
     background-color: #fff;
+   
+  
 }
 
 .ornamen h6{
@@ -261,7 +264,6 @@ a.btn:hover{
     font-weight: bold;
     font-size: 60px;
     padding-top: 100px;
-   
     display: flex;
     justify-content: center;
 }
@@ -479,4 +481,41 @@ footer {
     height: 100px;
 }
 
+/* coba */
 
+
+
+.custom-swiper-container {
+  width: 70%;
+  height: 70%;
+}
+
+.custom-swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.custom-swiper-slide img {
+  display: block;
+  width: 250px;
+  height: 375px;
+  object-fit: cover;
+}
+
+.slide-title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.slide-description {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
