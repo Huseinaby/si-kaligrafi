@@ -48,6 +48,12 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+            <li class="nav-item dashboard">
+                <a class="nav-link" href="\"> 
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Go to Website</span></a>
+            </li>
+
             <!-- Nav Item - Dashboard -->
             <li class="nav-item dashboard">
                 <a class="nav-link" href="{{ route('dashboard') }}"> 
