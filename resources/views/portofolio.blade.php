@@ -5,6 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kaligrafi Indah</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/portofolio.css">
@@ -26,7 +37,35 @@
                 <li><a href="#">Portofolio</a></li>
                 <li><a href="{{ url('/') }}#galeri">Galeri</a></li>
                 <li><a href="{{ url('/') }}#testimoni">Testimoni</a></li>
-                <li><a href="register" class="tbl">Sign In</a></li>
+                <li>
+                    @auth
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="true">
+                                {{ auth()->user()->nama_lengkap }}
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (auth()->user()->level == '1')
+                                    <li><a class="dropdown-item" href="/admin">Dashboard</a></li>
+                                @else
+                                    <li><a class="dropdown-item" href="/user/dashboard">Dashboard</a></li>
+                                @endif
+                                <li>
+                                    <hr class="dropdown-divider">
+                                    </hr>
+                                </li>
+                                <li>
+                                    <form action="/logout" method="POST">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                    <li><a href="/login" class="btn">Sign In</a></li>
+                @endauth
+                </li>
             </ul>
     </header>
 
