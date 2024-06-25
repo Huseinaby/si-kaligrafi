@@ -592,22 +592,25 @@
 
 
 
-    html,
-    body {
-        position: relative;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
 
-    .swiper-container-custom {
+    /* Baru */
+
+    .unique-wrapper {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-button: 50px;
+      }
+  
+      .unique-swiper-container {
         width: 40%;
         height: 60%;
-        margin: auto;
         overflow: hidden;
-    }
-
-    .swiper-slide-custom {
+      }
+  
+      .unique-swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff;
@@ -615,57 +618,49 @@
         justify-content: center;
         align-items: center;
         height: 100%;
-        box-sizing: border-box;
-        border: 1px solid transparent;
-        /* dummy border */
+        border: 1px solid transparent; /* dummy border */
         position: relative;
-        flex-direction: column;
-        /* to stack elements vertically */
-    }
-
-    .overlay-custom {
+        flex-direction: column; /* to stack elements vertically */
+      }
+  
+      .unique-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 25%;
-        /* 30% of the slide height */
+        height: 25%; /* 25% of the slide height */
         background-color: #003C43;
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-sizing: border-box;
-        border-radius: 25px;
-        /* Rounded corners at the top */
-    }
-
-    .overlay-content-custom {
+        border-radius: 25px; /* Rounded corners at the top */
+      }
+  
+      .unique-overlay .unique-content {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
         gap: 6px;
-    }
-
-    .overlay-icon-custom {
+      }
+  
+      .unique-overlay .unique-icon {
         position: absolute;
-        left: 10px;
-        /* Adjust as needed */
-    }
-
-    .overlay-icon-custom img {
+        left: 10px; /* Adjust as needed */
+      }
+  
+      .unique-overlay .unique-icon img {
         width: 64px;
         height: 64px;
         border-radius: 50%;
-    }
-
-    .overlay-text-custom {
-        margin-left: 34px;
-        /* Adjust to ensure proper spacing from icon */
-    }
-
-    .slide-footer-custom {
+      }
+  
+      .unique-overlay .unique-text {
+        margin-left: 34px; /* Adjust to ensure proper spacing from icon */
+      }
+  
+      .unique-slide-footer {
         position: absolute;
         bottom: 10px;
         left: 0;
@@ -673,72 +668,4 @@
         text-align: center;
         color: #000;
         font-size: 14px;
-    }
-
-    .overlay-tes {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 25%;
-        /* 30% of the slide height */
-        background-color: #003C43;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        border-radius: 25px;
-        
-        /* Rounded corners at the top */
-    }
-
-    .overlay-tes .content {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        gap: 6px;
-    }
-
-    .overlay-tes .icon {
-        position: absolute;
-        left: 10px;
-        /* Adjust as needed */
-    }
-
-    .overlay-tes .icon img {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-    }
-
-    .overlay-tes .text {
-        margin-left: 34px;
-        /* Adjust to ensure proper spacing from icon */
-    }
-
-    .slide-footer {
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        color: #000;
-        font-size: 14px;
-    }
-
-    .my-swiper-container {
-        position: absolute;
-        width: 500px;
-        height: 450px;
-        overflow: hidden;
-        margin-right: 250px;
-        
-    }
-
-    .swiper-container {
-        position: relative; /* pastikan swiper container memiliki posisi relatif */
-        /* z-index: 5; pastikan z-index lebih tinggi daripada swiper slide */
-    }
-    
+      }
