@@ -70,7 +70,9 @@ h2{
     position: sticky;
     top: 0;
     background-color: white; /* Warna navbar */
-    margin-top: 20px;
+   
+    position: fixed;
+    z-index: 1000;
 
     
   }
