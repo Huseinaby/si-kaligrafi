@@ -68,7 +68,7 @@
         @foreach ($portofolios as $portofolio)
             <div class="col-md-3">
                 <div class="card ">
-                    <img src="image/baru.png" class="card-img-top" alt="...">
+                    <img src="{{ asset('storage/public/storage/' . $portofolio->foto_karya )}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5>{{ $portofolio->nama_karya }}</h5>
                         <p>{{ $portofolio->deskripsi_karya }}</p>
