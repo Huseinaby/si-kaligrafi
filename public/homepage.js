@@ -70,21 +70,7 @@ jQuery(function ($) {
     });
 });
 
-var swiper = new Swiper(".my-swiper-container", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    on: {
-        slideChange: function () {
-            document.querySelectorAll('.swiper-slide').forEach(function (slide, index) {
-                slide.querySelector('.current-page').textContent = swiper.activeIndex + 1;
-                slide.querySelector('.total-pages').textContent = swiper.slides.length;
-            });
-        }
-    }
-});
 
-// Set initial pagination numbers
-document.querySelectorAll('.swiper-slide').forEach(function (slide, index) {
-    slide.querySelector('.current-page').textContent = swiper.activeIndex + 1;
-    slide.querySelector('.total-pages').textContent = swiper.slides.length;
-});
+
+// baru
+
