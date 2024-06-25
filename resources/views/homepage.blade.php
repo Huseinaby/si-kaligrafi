@@ -179,7 +179,11 @@
                     @else
                         @foreach ($layanans as $layanan)
                             <div class="swiper-slide"><img
-                                    src="{{ asset('storage/public/storage/' . $layanan->foto_layanan) }}"></div>
+                                    src="{{ asset('storage/public/storage/' . $layanan->foto_layanan) }}">
+                                    <div class="overlay-lay">
+                                        <p>{{ $layanan->nama_layanan }}</p>
+                                    </div>
+                                </div>
                         @endforeach
                     @endif
                 </div>
@@ -244,7 +248,8 @@
                                     @else
                                         @foreach ($ornamens as $ornamen)
                                             <div class="grid-item">
-                                                <img src="{{ asset('storage/public/storage/' . $ornamen->foto_ornamen) }}" alt="Image 1">
+                                                <img src="{{ asset('storage/public/storage/' . $ornamen->foto_ornamen) }}"
+                                                    alt="Image 1">
                                                 <div class="overlay">
                                                     <h4>{{ $ornamen->nama_ornamen }}</h4>
                                                 </div>
@@ -277,7 +282,8 @@
                                     @else
                                         @foreach ($galeris as $galeri)
                                             <div class="grid-item">
-                                                <img src="{{ asset('storage/public/storage/' . $galeri->foto_galeri) }}" alt="Image 1">
+                                                <img src="{{ asset('storage/public/storage/' . $galeri->foto_galeri) }}"
+                                                    alt="Image 1">
                                                 <div class="overlay">
                                                     <h4>{{ $galeri->judul }}</h4>
                                                 </div>
