@@ -1,10 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body { 
+   
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+ 
+}
+
+h2{
+  margin-top: 11px;
+}
 
 
 .navbar{
     width: 1200px;
     height: 70px;
     margin: auto;
-    
+
+   
   }
   
   .icon{
@@ -15,16 +37,18 @@
   
   .logo{
     color: #003C43;
-    font-size: 35px;
     padding-left: 20px;
     float: left;
     padding-top: 10px;
+   
+    
   }
   
   
   .logo a {
     text-decoration: none;
     color: #003C43;
+    font-size: 35px;
   }
   
   
@@ -34,6 +58,8 @@
     width: 750px;
     float: left;
     height: 90px;
+ 
+  
    
   
   }
@@ -44,6 +70,9 @@
     position: sticky;
     top: 0;
     background-color: white; /* Warna navbar */
+    margin-top: 20px;
+
+    
   }
   
   
@@ -53,20 +82,23 @@
     justify-content: right;
     align-items: center;
     padding: 0 100px;
+    gap: 25px;
   }
   
   ul li{
     list-style: none;
     margin-left: 55px;
     margin-top: 25px;
-    font-size: 15px;
     text-decoration: none;
+  
   }
   ul li a{
     text-decoration: none;
     color: #003C43;
     font-weight: bold;
     transition: 0.4s ease-in-out;
+    font-family: 'Poppins';
+    font-size: 18px;
     
   }
   
@@ -76,22 +108,18 @@
   }
   a.tbl{
     background: #003C43;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 15px 20px 15px 20px;
+    border: none;
     color: white;
-    cursor: pointer;
-    font-weight: bold;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
+    padding: 15px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 20px;
   
   }
   
   a.tbl:hover{
-    background-color: transparent;
-    border-style: solid;
-    border-width: 1px;
+    background-color: #45a049;
+    color: white;
   }
   
   

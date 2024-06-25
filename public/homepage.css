@@ -15,7 +15,6 @@ nav {
 	top: 0;
 	left: 0;
 	width: 100%;
-   
     font-family: 'Poppins';
     font-weight: bold;
     z-index: 2;
@@ -35,6 +34,7 @@ nav ul {
 	align-items: center;
 	padding: 0.5rem;
     padding-top: 20px;
+   
 }
 
 nav ul li {
@@ -216,37 +216,6 @@ a.btn:hover{
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     z-index: 2;
-    position: relative;
-}
-
-.overlay-lay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Background semi-transparent */
-    color: white;
-    display: flex;
-    justify-content: left;
-    align-items:end;
-    opacity: 0;
-    transition: opacity 0.6s;
-    border-radius: 30px;
-    padding: 20px;
-}
-
-.swiper-slide:hover .overlay-lay {
-    opacity: 1;
-}
-
-.overlay-lay p {
-    color: white;
-    font-family: 'Urbanist';
-    text-align: left;
-    font-weight: bold;
-    font-size: 30px;
-
 }
 
 .swiper-slide img {
@@ -552,3 +521,87 @@ footer {
 }
 
 /* Swiper Testimoni */
+
+.coba{
+    display: flex;
+    flex-direction: row;
+}
+
+
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container-custom {
+      width: 40%;
+      height: 60%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .swiper-slide-custom {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      box-sizing: border-box;
+      border: 1px solid transparent; /* dummy border */
+      position: relative;
+      flex-direction: column; /* to stack elements vertically */
+    }
+
+    .overlay-custom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 25%; /* 30% of the slide height */
+      background-color: #003C43;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      border-radius: 25px; /* Rounded corners at the top */
+    }
+
+    .overlay-content-custom {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .overlay-icon-custom {
+      position: absolute;
+      left: 10px; /* Adjust as needed */
+    }
+
+    .overlay-icon-custom img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+
+    .overlay-text-custom {
+      margin-left: 34px; /* Adjust to ensure proper spacing from icon */
+    }
+
+    .slide-footer-custom {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: #000;
+      font-size: 14px;
+    }

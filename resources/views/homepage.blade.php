@@ -303,11 +303,119 @@
                 <div class="testimoni">
                     <div class="testi-header">
                         <h4>Testimoni</h4>
+                        <div class="coba">
                         <p>Bagikan <strong>Pengalaman</strong> anda<br> yang telah menggunakan<br> layanan kami, dan
                             bantu<br>
                             kami memperbaiki layanan<br> kami lebih baik lagi!</p>
+
+                            <div class="swiper-container-custom swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure vitae ducimus laborum, voluptas magni dolor quae fugit, repudiandae deserunt dignissimos, explicabo consectetur. Excepturi magni nam mollitia veniam aliquam, iure voluptatum!
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="profil.png" alt="icon" /></div>
+                                        <div class="overlay-text-custom"> Nama</div>
+                                        <br>
+                                        <div class="overlay-text-custom"> Panitia Masjid 1</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, porro. Nihil ducimus nulla quisquam aperiam quidem aut exercitationem a laborum rem velit consequatur doloribus, fuga consequuntur, ea, atque incidunt aliquid.
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="overlay-text-custom"> Nama</div>
+                                        <div class="overlay-text-custom"> Panitia Masjid 2</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, libero ipsam? Delectus, necessitatibus. Incidunt tempora repudiandae minima aperiam, facilis illo perspiciatis. Fuga laboriosam voluptatum eius quaerat velit architecto quia culpa?
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="overlay-text-custom">Nama Masjid 3</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Slide 4
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="overlay-text-custom"> Nama Masjid 4</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Slide 5
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="overlay-text-custom"> Nama Masjid 5</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Slide 6
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="overlay-text-custom"> Nama Masjid 6</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Slide 7
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="overlay-text-custom"> Nama Masjid 7</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Slide 8
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="overlay-text-custom"> Nama Masjid 8</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                  <div class="swiper-slide swiper-slide-custom">
+                                    Slide 9
+                                    <div class="overlay-custom">
+                                      <div class="overlay-content-custom">
+                                        <div class="overlay-icon-custom"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="overlay-text-custom"> Nama Masjid 9</div>
+                                      </div>
+                                    </div>
+                                    <div class="slide-footer-custom">Halaman <span class="current-page-custom"></span> dari <span class="total-pages-custom"></span></div>
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+
+
+
+                        </div>
                         <button class="isi-testi-btn">Isi Testimoni</button>
                     </div>
+
+               
 
                 </div>
             </section>
@@ -368,6 +476,35 @@
                     },
                 });
             </script>
+
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".swiper-container-custom", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    on: {
+      slideChange: function () {
+        document.querySelectorAll('.swiper-slide').forEach(function (slide, index) {
+          slide.querySelector('.current-page-custom').textContent = swiper.activeIndex + 1;
+          slide.querySelector('.total-pages-custom').textContent = swiper.slides.length;
+        });
+      }
+    }
+  });
+
+  // Set initial pagination numbers
+  document.querySelectorAll('.swiper-slide').forEach(function (slide, index) {
+    slide.querySelector('.current-page-custom').textContent = swiper.activeIndex + 1;
+    slide.querySelector('.total-pages-custom').textContent = swiper.slides.length;
+  });
+</script>
 
             </body>
 

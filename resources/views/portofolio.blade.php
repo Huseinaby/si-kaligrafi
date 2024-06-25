@@ -16,7 +16,7 @@
     <header class="menu">
         <div class="icon">
             <h2 class="logo"><a
-                    href="\">Kaligrafi</a></h2>
+                    href="\">KALIGRAFI</a></h2>
         </div>
             <ul>
                 <li><a href="{{ url('/') }}#tentang">Tentang</a></li>

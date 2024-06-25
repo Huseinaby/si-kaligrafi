@@ -18,7 +18,7 @@
 
 
     <nav>
-        <h1 class="logo">Kaligrafi</h1>
+        <h1 class="logo">KALIGRAFI</h1>
 
         <ul id="menu-list" class="hidden">
           <li>
