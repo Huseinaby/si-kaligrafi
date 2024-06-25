@@ -31,7 +31,7 @@
     </header>
 
     <!-- carousel -->
-    <br>
+    <br><br><br><br><br><br>
 
 
     <div id="carouselExample" class="carousel slide">
@@ -56,7 +56,10 @@
         </button>
     </div>
 
+    <br><br><br><br>
     <h2 class="text">Portofolio</h2>
+
+   
 
     <!-- card -->
 
