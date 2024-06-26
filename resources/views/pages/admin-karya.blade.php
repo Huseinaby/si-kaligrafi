@@ -69,6 +69,7 @@
                                                 <!-- content modal -->
                                                 <form id="editKaryaForm" action="{{ route('karya.update', ['slug' => $row->slug]) }}" enctype="multipart/form-data" method="POST">
                                                     @csrf
+                                                    @method('PUT')
                                                     <div class="form-group text-gray-800">
                                                         <label for="exampleInputPassword1">Judul</label>
                                                         <input type="text" class="form-control" id="nama_karya" name="nama_karya" placeholder="Masukkan nama karya" value="{{ old('nama_karya', $row->nama_karya) }}" required>

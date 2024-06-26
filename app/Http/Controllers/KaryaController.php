@@ -81,12 +81,14 @@ class KaryaController extends Controller
             'jenis_karya' => 'required|max:255',
             'deskripsi_karya' => 'required',
             'ornamen_id' => 'required|integer',
-            'foto_karya' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
+            'foto_karya' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
             'tgl_pembuatan' => 'required',
         ]);
 
+        
+
         // Menghasilkan slug baru dari nama bahan jika berubah
-        $newSlug = Str::slug($validatedData['foto_karya']);
+        $newSlug = Str::slug($validatedData['nama_karya']);
         $validatedData['slug'] = $newSlug;
 
         // Mengolah foto ornamen jika ada file baru yang diunggah
