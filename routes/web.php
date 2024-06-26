@@ -4,6 +4,7 @@ use App\Models\Ornamen;
 use App\Models\Bahan;
 use App\Models\Layanan;
 use App\Models\Galeri;
+use App\Models\Testimoni;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BahanController;
 use App\Http\Controllers\DashboardController;
@@ -23,7 +24,8 @@ Route::get('/', function () {
         'bahans' => Bahan::all(),
         'layanans' => Layanan::all(),
         'ornamens' => Ornamen::all(),
-        'galeris' => Galeri::all()
+        'galeris' => Galeri::all(),
+        'testimonis' => Testimoni::all()
     ]);
 });
 

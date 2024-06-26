@@ -309,99 +309,32 @@
                                 kami memperbaiki layanan<br> kami lebih baik lagi!</p>
                             <button class="isi-testi-btn">Isi Testimoni</button>
                         </div>
-
                         <div class="unique-wrapper">
                             <div class="unique-swiper-container swiper-container">
                               <div class="swiper-wrapper">
+                                @foreach ($testimonis as $testimoni)
+                                <div class="swiper-slide  2">
+                                    
+                                    {{ $testimoni->isi_testimoni }}
+                                    <div class="unique-overlay">
+                                      <div class="unique-content">
+                                        <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
+                                        <div class="unique-text">{{ $testimoni->user->username }}</div>
+                                        <br>
+                                        <div class="unique-text">{{ $testimoni->nama_panitia }}</div>
+                                      </div>
+                                    </div>
+                                    <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
+                                  </div>
+                                @endforeach
                                 <div class="swiper-slide unique-swiper-slide">
                                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure vitae ducimus laborum, voluptas magni dolor quae fugit, repudiandae deserunt dignissimos, explicabo consectetur. Excepturi magni nam mollitia veniam aliquam, iure voluptatum!
                                   <div class="unique-overlay">
                                     <div class="unique-content">
-                                      <div class="unique-icon"><img src="profil.png" alt="icon" /></div>
+                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
                                       <div class="unique-text"> Nama</div>
                                       <br>
                                       <div class="unique-text"> Panitia Masjid 1</div>
-                                    </div>
-                                  </div>
-                                  <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
-                                </div>
-                                <div class="swiper-slide unique-swiper-slide">
-                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, porro. Nihil ducimus nulla quisquam aperiam quidem aut exercitationem a laborum rem velit consequatur doloribus, fuga consequuntur, ea, atque incidunt aliquid.
-                                  <div class="unique-overlay">
-                                    <div class="unique-content">
-                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
-                                      <div class="unique-text"> Nama</div>
-                                      <div class="unique-text"> Panitia Masjid 2</div>
-                                    </div>
-                                  </div>
-                                  <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
-                                </div>
-                                <div class="swiper-slide unique-swiper-slide">
-                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, libero ipsam? Delectus, necessitatibus. Incidunt tempora repudiandae minima aperiam, facilis illo perspiciatis. Fuga laboriosam voluptatum eius quaerat velit architecto quia culpa?
-                                  <div class="unique-overlay">
-                                    <div class="unique-content">
-                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
-                                      <div class="unique-text">Nama Masjid 3</div>
-                                    </div>
-                                  </div>
-                                  <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
-                                </div>
-                                <div class="swiper-slide unique-swiper-slide">
-                                  Slide 4
-                                  <div class="unique-overlay">
-                                    <div class="unique-content">
-                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
-                                      <div class="unique-text"> Nama Masjid 4</div>
-                                    </div>
-                                  </div>
-                                  <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
-                                </div>
-                                <div class="swiper-slide unique-swiper-slide">
-                                  Slide 5
-                                  <div class="unique-overlay">
-                                    <div class="unique-content">
-                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
-                                      <div class="unique-text"> Nama Masjid 5</div>
-                                    </div>
-                                  </div>
-                                  <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
-                                </div>
-                                <div class="swiper-slide unique-swiper-slide">
-                                  Slide 6
-                                  <div class="unique-overlay">
-                                    <div class="unique-content">
-                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
-                                      <div class="unique-text"> Nama Masjid 6</div>
-                                    </div>
-                                  </div>
-                                  <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
-                                </div>
-                                <div class="swiper-slide unique-swiper-slide">
-                                  Slide 7
-                                  <div class="unique-overlay">
-                                    <div class="unique-content">
-                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
-                                      <div class="unique-text"> Nama Masjid 7</div>
-                                    </div>
-                                  </div>
-                                  <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
-                                </div>
-                                <div class="swiper-slide unique-swiper-slide">
-                                  Slide 8
-                                  <div class="unique-overlay">
-                                    <div class="unique-content">
-                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
-                                      <div class="unique-text"> Nama Masjid 8</div>
-                                    </div>
-                                  </div>
-                                  <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
-                                </div>
-                                <div class="swiper-slide unique-swiper-slide">
-                                  Slide 9
-                                  <div class="unique-overlay">
-                                    <div class="unique-content">
-                                      <div class="unique-icon"><img src="https://via.placeholder.com/24" alt="icon" /></div>
-                                      <div class="unique-text"> Nama Masjid 9</div>
                                     </div>
                                   </div>
                                   <div class="unique-slide-footer">Halaman <span class="current-page"></span> dari <span class="total-pages"></span></div>
