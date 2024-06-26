@@ -68,6 +68,7 @@
 
                                                 <!-- content modal -->
                                                 <form id="editKaryaForm" action="{{ route('karya.update', ['slug' => $row->slug]) }}" enctype="multipart/form-data" method="POST">
+                                                    @method('put')
                                                     @csrf
                                                     <div class="form-group text-gray-800">
                                                         <label for="exampleInputPassword1">Judul</label>
