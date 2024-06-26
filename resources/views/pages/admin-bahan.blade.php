@@ -70,7 +70,6 @@
                                                 enctype="multipart/form-data">
                                                 @csrf
                                                 @method('PUT')
-
                                                 <div class="form-group text-gray-800">
                                                     <label for="nama_bahan">Judul</label>
                                                     <input type="text" class="form-control" id="nama_bahan"
