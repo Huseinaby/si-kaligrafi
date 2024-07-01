@@ -25,7 +25,7 @@ Route::get('/', function () {
         'layanans' => Layanan::all(),
         'ornamens' => Ornamen::all(),
         'galeris' => Galeri::all(),
-        'testimonis' => Testimoni::all()
+        'testimonis' => Testimoni::where('status', 'accepted')->get()
     ]);
 });
 
