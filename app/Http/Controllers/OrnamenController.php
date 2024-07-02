@@ -70,7 +70,7 @@ class OrnamenController extends Controller
             'bahan_id' => 'required|max:255',
             'deskripsi_ornamen' => 'required',
             'jenis_ornamen' => 'required|max:255',
-            'foto_ornamen' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
+            'foto_ornamen' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
             'kategori' => 'required|max:255',
         ]);
 
