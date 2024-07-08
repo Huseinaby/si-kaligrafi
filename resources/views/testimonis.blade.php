@@ -1,6 +1,6 @@
 @extends('partials\dashboard')
 
-@section('title', 'Pesanan Anda')
+@section('title', 'Kaligrafi | Beri Testimoni')
 
 @section('dashboard-content')
 

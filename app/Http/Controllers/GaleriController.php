@@ -47,16 +47,17 @@ class GaleriController extends Controller
         $validateData = $request->validate([
             'judul' => 'required|max:50',
             'deskripsi_galeri' => 'required',
-            'foto_galeri' => 'image|file|max:10240'
+            'foto_galeri' => 'image|max:10240'
         ]);
 
-        if ($request->hasFile('foto_layanan')) {
+
+        if ($request->hasFile('foto_galeri')) {
             // Hapus file foto lama jika ada
             if ($galeri->foto_galeri) {
                 Storage::delete('public/storage/' . $galeri->foto_galeri);
             }
 
-            $image = $request->file('foto_layanan');
+            $image = $request->file('foto_galeri');
             $uniquestring = 'foto_galeri';
             $filename = time() . '_' . $uniquestring . '_' . Str::random(10); // Menyimpan nama file secara acak
             $image->storeAs('public/storage', $filename);

@@ -1,6 +1,6 @@
 @extends('partials\dashboard')
 
-@section('title', 'Dashboard')
+@section('title', 'Kaligrafi | Dashboard')
 
 @section('dashboard-content')
 

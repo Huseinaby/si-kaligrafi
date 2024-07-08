@@ -282,7 +282,7 @@
                                         </div>
                                     @else
                                         @foreach ($galeris as $galeri)
-                                            <div class="grid-item">
+                                            <div class="grid-item g-overlay">
                                                 <img src="{{ asset('storage/public/storage/' . $galeri->foto_galeri) }}"
                                                     alt="Image 1">
                                                 <div class="overlay">
