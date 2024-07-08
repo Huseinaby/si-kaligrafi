@@ -76,7 +76,7 @@
                                                         <select class="form-control" id="bahan_id" name="bahan_id">
                                                             <option value="">Pilih Bahan</option>
                                                             @foreach($bahan_list as $bahan)
-                                                                <option value="{{ $bahan->id }}" {{ old('bahan_id', $row->bahan_id) == $bahan->id ? 'selected' : '' }}>{{ $bahan->jenis_bahan }}</option>
+                                                                <option value="{{ $bahan->id }}" {{ old('bahan_id', $row->bahan_id) == $bahan->id ? 'selected' : '' }}>{{ $bahan->nama_bahan }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -179,7 +179,7 @@
                                 <select class="form-control" id="bahan_id" name="bahan_id">
                                     <option value="">Pilih Bahan</option>
                                     @foreach($bahan_list as $row)
-                                        <option value="{{ $row->id }}">{{ $row->jenis_bahan }}</option>
+                                        <option value="{{ $row->id }}">{{ $row->nama_bahan }}</option>
                                     @endforeach
                                 </select>
                             </div>
