@@ -681,3 +681,10 @@
         color: #003c43;
         
      }
+
+     .g-overlay {
+        max-height: 250px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+     }
