@@ -146,9 +146,11 @@ a.btn:hover {
 /* corousel */
 
 
+
 .carousel-item img {
   width: 600px;
   height: 400px;
+  object-fit: cover;
 }
 
 
