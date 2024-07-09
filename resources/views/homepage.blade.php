@@ -94,10 +94,10 @@
         <img src="image/tentang.jpg">
         <div class="textten">
             <h4>Tentang Kami</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique explicabo deserunt cum iste, tenetur
-                repellat! <br> Doloremque vitae blanditiis sunt itaque.<br> Impedit facilis voluptatum cupiditate
-                nostrum
-                sunt dolor dicta nihil enim?</p>
+            <p>Kami berdedikasi untuk menghadirkan karya-karya kaligrafi yang memadukan keindahan tulisan Arab dengan
+                makna spiritual yang mendalam. <br> Dengan keahlian tangan yang terampil dan rasa seni yang tinggi, kami
+                menciptakan dekorasi kaligrafi yang menambah nuansa sakral dan estetis <br> pada interior maupun eksterior
+                masjid. </p>
         </div>
     </div>
 </section>
