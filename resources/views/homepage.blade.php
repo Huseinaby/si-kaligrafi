@@ -76,10 +76,8 @@
 <div class="content">
     <h2>KALIGRAFI</h2>
     <h3>Pembuatan</h3>
-    <p class="textutama"> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Pariatur sit nisi a nemo, nihil
-        voluptatibus dicta veniam <br> fugiat vitae, eveniet autem? Laboriosam aliquam<br> beatae iste fuga facere
-        repellat
-        perspiciatis odio.</p>
+    <p class="textutama"> Percantik masjid Anda dengan sentuhan seni kaligrafi islami dari kami <br> dan rasakan keindahan
+        yang membawa kedamaian dan keberkahan.</p>
     <button class="btn"><a href="https://wa.me/6285845510008?text=Halo%20Mas%20Bro!"><svg
                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-telephone" viewBox="0 0 16 16">
@@ -96,7 +94,8 @@
             <h4>Tentang Kami</h4>
             <p>Kami berdedikasi untuk menghadirkan karya-karya kaligrafi yang memadukan keindahan tulisan Arab dengan
                 makna spiritual yang mendalam. <br> Dengan keahlian tangan yang terampil dan rasa seni yang tinggi, kami
-                menciptakan dekorasi kaligrafi yang menambah nuansa sakral dan estetis <br> pada interior maupun eksterior
+                menciptakan dekorasi kaligrafi yang menambah nuansa sakral dan estetis <br> pada interior maupun
+                eksterior
                 masjid. </p>
         </div>
     </div>
