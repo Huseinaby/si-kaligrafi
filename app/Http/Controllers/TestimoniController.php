@@ -55,6 +55,8 @@ class TestimoniController extends Controller
         $credential['karya_id'] = $karya->id;
         $credential['tgl_testimoni'] = now();
 
+        dd($credential);
+
         Testimoni::create($credential);
 
         return redirect('/user/dashboard')->with('success', 'Testimoni sedang ditinjau');
