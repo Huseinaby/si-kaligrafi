@@ -68,13 +68,10 @@
 
             <!-- Nav Item - Logout -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                <a class="nav-link" href="" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-fw fa-door-open"></i>
                     <span>Logout</span>
                 </a>
-                <form id="logout-form" action="/logout" method="POST" style="display: none;">
-                    @csrf
-                </form>
             </li>
             
             <!-- Divider -->
@@ -170,6 +167,33 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Yakin Ingin Keluar?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a href="#" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                        <i class="fas fa-fw fa-door-open"></i>
+                        <span>Logout</span>
+                    </a>
+
+                    <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </div>
+        </div>
 
 
 

@@ -48,7 +48,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <li class="nav-item dashboard">
+            <li class="nav-item ">
                 <a class="nav-link" href="\"> 
                     <i class="fas fa-fw fa-home"></i>
                     <span>Go to Website</span></a>
@@ -116,15 +116,12 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Requests-management -->
+            <!-- Nav Item - Logout -->
             <li class="nav-item request-management">
-                <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                <a class="nav-link" href="" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-fw fa-door-open"></i>
                     <span>Logout</span>
                 </a>
-                <form id="logout-form" action="/logout" method="POST" style="display: none;">
-                    @csrf
-                </form>
             </li>
             
             <!-- Divider -->
@@ -214,14 +211,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin ingin keluar?</h5>
+                
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Pilih "Logout" di bawah jika Anda siap untuk mengakhiri sesi Anda saat ini.</div>
+                <div class="modal-body">Yakin Ingin Keluar?</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                     <a href="#" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
                         <i class="fas fa-fw fa-door-open"></i>
                         <span>Logout</span>
