@@ -316,9 +316,7 @@
                                             <div class="isites">{{ $testimoni->isi_testimoni }}</div>
                                             <div class="unique-overlay">
                                                 <div class="unique-content">
-                                                    <div class="unique-icon"><img src="https://via.placeholder.com/24"
-                                                            alt="icon" /></div>
-                                                    <div class="unique-text">{{ $testimoni->user->username }}</div>
+                                                    <div class="unique-text">{{ $testimoni->karya->nama_masjid }}</div>
                                                     <br>
                                                     <div class="unique-text">{{ $testimoni->nama_panitia }}</div>
                                                 </div>
@@ -337,9 +335,9 @@
                                             <div class="unique-content">
                                                 <div class="unique-icon"><img src="https://via.placeholder.com/24"
                                                         alt="icon" /></div>
-                                                <div class="unique-text"> Nama</div>
+                                                <div class="unique-text"> Nama Masjid</div>
                                                 <br>
-                                                <div class="unique-text"> Panitia Masjid 1</div>
+                                                <div class="unique-text">Nama Panitia</div>
                                             </div>
                                         </div>
                                         <div class="unique-slide-footer">Halaman <span class="current-page"></span>
