@@ -16,7 +16,7 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    
+
     <!-- Custom styles for this template-->
     <link href="{{ asset('sbadmin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
@@ -44,9 +44,9 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
+            <!-- Nav Item - go-to homepage -->
             <li class="nav-item dashboard">
-                <a class="nav-link" href="{{ url('/') }}" >
+                <a class="nav-link" href="{{ url('/') }}">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Go To Website</span>
                 </a>
@@ -54,26 +54,34 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item dashboard">
-                <a class="nav-link" href="/user/dashboard" >
+                <a class="nav-link" href="/user/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
-            <!-- Nav Item - Requests-management -->
+            <!-- Nav Item - Isi testimoni -->
             <li class="nav-item request-management">
                 <a class="nav-link" href="/user/testimonis">
                     <i class="fas fa-fw fa-bell"></i><span>Isi Testimoni</span></a>
             </li>
 
+            <!-- Nav Item - edit profile -->
+            <li class="nav-item">
+                <a class="nav-link" href="" data-toggle="modal" data-target="#formModalEditUser">
+                    <i class="fas fa-fw fa-pen-to-square"></i>
+                    <span>Edit Profile</span>
+                </a>
+            </li>
+
             <!-- Nav Item - Logout -->
-            <li class="nav-item request-management">
+            <li class="nav-item">
                 <a class="nav-link" href="" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-fw fa-door-open"></i>
                     <span>Logout</span>
                 </a>
             </li>
-            
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             </li>
@@ -175,7 +183,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                
+
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -183,7 +191,8 @@
                 <div class="modal-body">Yakin Ingin Keluar?</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a href="#" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                    <a href="#" class="btn btn-danger"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
                         <i class="fas fa-fw fa-door-open"></i>
                         <span>Logout</span>
                     </a>
@@ -194,8 +203,56 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="modal fade" id="formModalEditUser" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">Edit Data User</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editUserForm" action="{{ route('u-update', ['id' => auth()->user()->id_user]) }}"
+                        method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="form-group text-gray-800">
+                            <label for="nama_lengkap">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap"
+                                value="{{ old('nama_lengkap', auth()->user()->nama_lengkap) }}" required>
+                        </div>
+
+                        <div class="form-group text-gray-800">
+                            <label for="password">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control"
+                                    id="password-edit" name="password"
+                                    placeholder="Panjang password minimal 8 karakter">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="togglePassword('password-edit', 'toggleIcon-edit')">
+                                        <i class="fas fa-eye" id="toggleIcon-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
 
+                        <hr>
+                        </hr>
+
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal"
+                            onclick="resetForm('editUserForm{{ auth()->user()->id_user }}')">Batal</button>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('sbadmin/vendor/jquery/jquery.min.js') }}"></script>

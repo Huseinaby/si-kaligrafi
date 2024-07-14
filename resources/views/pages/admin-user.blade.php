@@ -71,7 +71,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <form id="editUserForm{{ $row->id_user }}"
-                                                action="{{ route('user.update', ['id' => $row->id_user]) }}"
+                                                action="{{ route('users.update', ['id' => $row->id_user]) }}"
                                                 method="POST">
                                                 @csrf
                                                 @method('PUT')

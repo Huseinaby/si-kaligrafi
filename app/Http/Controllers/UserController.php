@@ -46,8 +46,25 @@ class UserController extends Controller
         }
         $user->level = $validatedData['level'];
         $user->save();
-
         return redirect()->route('user')->with('success', 'Data user berhasil diperbarui');
+    }
+
+    public function userUpdate(Request $request, $id_user) 
+    {
+        $validatedData = $request->validate([
+            'nama_lengkap' => 'required|max:255',
+            'password' => 'nullable|min:8|max:255',
+        ]);
+
+        $user = User::where('id_user', $id_user)->firstOrFail();
+        $user->nama_lengkap = $validatedData['nama_lengkap'];
+        if ($request->filled('password')) {
+            $user->password = bcrypt($validatedData['password']);
+        }
+
+        $user->save();
+
+        return redirect()->route('u-dashboard')->with('success', 'Data Anda Berhasil Diperbarui');
     }
 
     public function destroy($id_user)
