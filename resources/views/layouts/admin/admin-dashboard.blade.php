@@ -56,13 +56,13 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item dashboard">
-                <a class="nav-link" href="{{ route('dashboard') }}"> 
+                <a class="nav-link" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
-             <!-- Nav Item - User Management -->
-             <li class="nav-item user-management">
+            <!-- Nav Item - User Management -->
+            <li class="nav-item user-management">
                 <a class="nav-link" href="{{ route('user') }}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>User Management</span></a>
@@ -99,7 +99,7 @@
                         </a>
 
                         <!-- Tabel ornamen-->
-                        <a class="collapse-item" href="{{  route('ornamen') }}"> <!-- route('ornamen') -->
+                        <a class="collapse-item" href="{{ route('ornamen') }}"> <!-- route('ornamen') -->
                             <span>Ornamen</span>
                         </a>
 
@@ -123,7 +123,7 @@
                     <span>Logout</span>
                 </a>
             </li>
-            
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             </li>
@@ -159,12 +159,14 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-900 small">Hi, {{ auth()->user()->nama_lengkap }}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-900 small">Hi,
+                                    {{ auth()->user()->nama_lengkap }}</span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -211,7 +213,8 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                
+                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">Logout
+                    </h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -219,7 +222,8 @@
                 <div class="modal-body">Yakin Ingin Keluar?</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a href="#" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                    <a href="#" class="btn btn-danger"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
                         <i class="fas fa-fw fa-door-open"></i>
                         <span>Logout</span>
                     </a>
