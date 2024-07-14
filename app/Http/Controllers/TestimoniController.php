@@ -55,7 +55,7 @@ class TestimoniController extends Controller
         $credential['karya_id'] = $karya->id;
         $credential['tgl_testimoni'] = now();
 
-        dd($credential);
+        // dd($credential);
 
         Testimoni::create($credential);
 
@@ -121,7 +121,7 @@ class TestimoniController extends Controller
 
         Testimoni::create($validatedData);
 
-        return redirect()->route('req-testimonies')->with('success', 'Data testimoni berhasil ditambah');
+        return redirect()->route('testimonies')->with('success', 'Data testimoni berhasil ditambah');
     }
 
     public function accept_status($id) {
