@@ -7,8 +7,26 @@
     <h1 class="h3 mb-2 ml-4 text-gray-800">User Dashboard</h1>
 
 
+
     <!-- Begin Page Content -->
     <div class="container-fluid">
+        @error('password')
+            <div class="alert alert-danger alert-dismissible fade show animate__animated animate__fadeInDown" role="alert">
+                {{ $message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @enderror
+        @error('nama_lengkap')
+            <div class="alert alert-danger alert-dismissible fade show animate__animated animate__fadeInDown" role="alert">
+                {{ $message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @enderror
+
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show animate__animated animate__fadeInDown "
                 role="alert">

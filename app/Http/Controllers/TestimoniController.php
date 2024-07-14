@@ -102,7 +102,6 @@ class TestimoniController extends Controller
 
     public function adminStore(Request $request)
     {
-        //dd($request->all());
 
         $validatedData = $request->validate([
             'id_user' => 'required|exists:users,id_user',

@@ -83,7 +83,7 @@ Route::middleware(['auth','admin'])->group(function () {
     // Users
     Route::get('/users', [UserController::class, 'index'])->name('user');
     Route::post('/users', [UserController::class, 'store'])->name('user.store');
-    Route::put('/users/{id}', [UserController::class, 'update'])->name('user.update');
+    Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
     Route::delete('/user/{id_user}', [UserController::class, 'destroy'])->name('user.destroy');
 
     // Bahan
@@ -124,6 +124,8 @@ Route::middleware(['auth','admin'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/dashboard', [DashboardController::class, 'index'])->name('u-dashboard');
+    
+    Route::put('/user/edit/{id}', [UserController::class, 'userUpdate'])->name('u-update');
     
     Route::get('/user/testimonis', [KaryaController::class, 'userKarya'])->name('u-testimonis');
 
