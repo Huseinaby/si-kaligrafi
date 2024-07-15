@@ -321,7 +321,7 @@
                                                 <div class="unique-content">
                                                     <div class="unique-text">{{ $testimoni->karya->nama_masjid }}
                                                     </div>
-                                                    <br>
+                                                    
                                                     <div class="unique-text">{{ $testimoni->nama_panitia }}</div>
                                                 </div>
                                             </div>
@@ -340,7 +340,7 @@
                                                 <div class="unique-icon"><img src="https://via.placeholder.com/24"
                                                         alt="icon" /></div>
                                                 <div class="unique-text"> Nama Masjid</div>
-                                                <br>
+                                                
                                                 <div class="unique-text">Nama Panitia</div>
                                             </div>
                                         </div>
