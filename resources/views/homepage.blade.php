@@ -117,7 +117,7 @@
                             </svg></h5>
                         <h6 class="card-title">Profesional</h6>
                         <p class="card-text">Kami berkomitmen memberikan layanan kaligrafi masjid dengan standar
-                            profesional yang tinggi, memastikan setiap proyek dikerjakan dengan presisi dan keindahan.
+                            profesional yang tinggi, memastikan setiap proyek dikerjakan.
                         </p>
                     </div>
                 </div>
@@ -160,8 +160,7 @@
                             </svg></h5>
                         <h6 class="card-title">Terpercaya</h6>
                         <p class="card-text">Kami telah dipercaya oleh banyak masjid untuk menghadirkan kaligrafi yang
-                            berkualitas tinggi, menjadikan kepercayaan Anda sebagai prioritas utama kami dalam setiap
-                            proyek.</p>
+                            berkualitas tinggi, menjadikan kepercayaan Anda sebagai prioritas utama.</p>
                     </div>
                 </div>
             </div>
