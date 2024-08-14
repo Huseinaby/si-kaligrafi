@@ -82,12 +82,12 @@ style="background-image: url('../img/bg.png');">
 
             <!-- Username -->
             <h4 class="sm:text-lg font-semibold">Username</h4>
-            <input class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500" placeholder="Username" type="text">
+            <input class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 px-2" placeholder="Username" type="text">
 
             <!-- Password -->
             <h4 class="sm:text-lg mt-4 font-semibold">Password</h4>
             <div class="relative">
-                <input id="password" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 pr-10" placeholder="Password" type="password">
+                <input id="password" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 pr-10 px-2" placeholder="Password" type="password">
                 <span id="togglePassword" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
                     <i class="fas fa-eye text-gray-600"></i>
                 </span>
