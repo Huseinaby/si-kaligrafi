@@ -87,8 +87,8 @@
         <textarea class="rounded-md p-2 w-full border border-gray-300" id="testimoni" name="testimoni" rows="6" placeholder="Masukan Testimoni Anda" required></textarea>
     </div>
     <div class="flex justify-end">
-        <button type="button" class="text-base sm:text-lg font-semibold bg-yellow-300 rounded-lg h-10 w-24 hover:bg-yellow-400 mr-4">Batal</button>
-        <button type="submit" class="text-base sm:text-lg font-semibold bg-yellow-300 rounded-lg h-10 w-24 hover:bg-yellow-400">Simpan</button>
+        <button type="button" class="text-base sm:text-lg font-semibold bg-yellow-300 rounded-lg h-10 w-24 hover:bg-yellow-400 mr-4 transition-transform duration-300 ease-in-out transform hover:scale-110">Batal</button>
+        <button type="submit" class="text-base sm:text-lg font-semibold bg-yellow-300 rounded-lg h-10 w-24 hover:bg-yellow-400 transition-transform duration-300 ease-in-out transform hover:scale-110">Simpan</button>
     </div>
 </form>
 
