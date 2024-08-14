@@ -162,35 +162,35 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-28 xl:mb-48 ">
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center ">
                 <div class="text-4xl mb-4">
-                    <i class="fas fa-trophy"></i>
+                    <i class="fas fa-trophy"></i> 
                 </div>
                 <h2 class="text-xl font-semibold mb-2">Professional</h2>
-                <p class="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-                    odio libero.</p>
+                <p class="text-gray-600 text-center ">Kami berkomitmen memberikan layanan kaligrafi masjid dengan standar
+                    profesional yang tinggi di setiap proyek dikerjakan.</p>
             </div>
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center">
                 <div class="text-4xl mb-4">
                     <i class="fas fa-users-cog"></i>
                 </div>
                 <h2 class="text-xl font-semibold mb-2">Berpengalaman</h2>
-                <p class="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-                    odio libero.</p>
+                <p class="text-gray-600 text-center">Dengan pengalaman bertahun-tahun dalam seni kaligrafi masjid, kami memiliki
+                    keahlian untuk menciptakan karya yang memukau</p>
             </div>
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center">
                 <div class="text-4xl mb-4">
                     <i class="fas fa-user-cog"></i>
                 </div>
                 <h2 class="text-xl font-semibold mb-2">Tenaga Ahli</h2>
-                <p class="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-                    odio libero.</p>
+                <p class="text-gray-600 text-center">Didukung oleh tenaga ahli yang terlatih dan berkompeten, kami menjamin
+                    setiap detail kaligrafi masjid Anda.</p>
             </div>
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center">
                 <div class="text-4xl mb-4">
                     <i class="fas fa-check-circle"></i>
                 </div>
                 <h2 class="text-xl font-semibold mb-2">Terpercaya</h2>
-                <p class="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-                    odio libero.</p>
+                <p class="text-gray-600 text-center">Kami telah dipercaya oleh banyak masjid untuk menghadirkan kaligrafi yang
+                    berkualitas tinggi, sebagai prioritas utama.</p>
             </div>
           
         </div> 
