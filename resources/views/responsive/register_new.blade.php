@@ -83,8 +83,9 @@ style="background-image: url('../img/bg.png');">
             <!-- Nama Lengkap -->
 
             <h4 class="sm:text-lg font-semibold">Nama Lengkap</h4>
-            <input class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-700 px-2" placeholder="Nama Lengkap" type="text">
-
+            <input class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-700 px-2 my-4" placeholder="Nama Lengkap" type="text">
+            
+            
             <!-- Username -->
             <h4 class="sm:text-lg font-semibold">Username</h4>
             <input class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 px-2" placeholder="Username" type="text">
