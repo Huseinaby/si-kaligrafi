@@ -12,62 +12,7 @@
 <body class="bg-white  ">
 
 <!-- Navbar -->
-<nav class="bg-slate-100 p-4 fixed top-0 left-0 right-0">
-    <div class="max-w-full mx-auto px-2 sm:px-2  lg:px-2">
-        <div class="relative flex items-center justify-between h-16">
-            <div class="flex items-center">
-                <img class="h-14 w-auto" src="../img/kaligrafi2.png" alt="Workflow">
-            </div>
-            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
-                <!-- Mobile menu button -->
-                <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <!-- Icon when menu is closed. -->
-                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                    <!-- Icon when menu is open. -->
-                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Navbar Biasa -->
-
-            <div class="hidden sm:block sm:ml-6">
-                <div class="flex space-x-4">
-                    <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium ">Layanan</a>
-                    <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Tentang</a>
-                    <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Bahan</a>
-                    <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Ornamen</a>
-                    <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Portofolio</a>
-                    <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Galeri</a>
-                    <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Testimoni</a>
-                    <button class="bg-yellow-300 hover:bg-yellow-400  block px-4 py-2 rounded-lg font-medium text-xl">Login</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navbar Mobile -->
-
-    <div class="hidden sm:hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Layanan</a>
-            <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tentang</a>
-            <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Bahan</a>
-            <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Ornamen</a>
-            <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio</a>
-            <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Galeri</a>
-            <a href="#" class="text-[#003C43] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimoni</a>
-            <button class="bg-yellow-300 hover:bg-yellow-400  block px-4 py-2 rounded-lg text-base font-medium">Loginn</button>
-        </div>
-    </div>
-</nav>
-
-
-
+@include('responsive.navbar_new')
 
 
 
