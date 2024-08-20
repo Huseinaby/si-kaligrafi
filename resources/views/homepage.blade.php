@@ -25,92 +25,92 @@
 <body>
 
 <!-- Navbar -->
-    <nav id="navbar" class="bg-transparent p-4 fixed top-0 left-0 right-0 z-20 transition duration-300">
-        <div class="max-w-full mx-auto px-2 sm:px-2 lg:px-2">
-            <div class="relative flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <img class="h-14 w-auto" src="../img/kaligrafi2.png" alt="Workflow">
-                </div>
-                <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
-                    <!-- Mobile menu button -->
-                    <button type="button"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 bg-[#003C43] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <!-- Icon when menu is closed. -->
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                        <!-- Icon when menu is open. -->
-                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- Navbar Biasa -->
-                <div class="hidden sm:block sm:ml-6">
-                    <div class="flex space-x-4">
-                        <a href="#layanan"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Layanan</a>
-                        <a href="#tentang"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Tentang</a>
-                        <a href="#bahan"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Bahan</a>
-                        <a href="#ornamen"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Ornamen</a>
-                        <a href="portofolio"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Portofolio</a>
-                        <a href="#galeri"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Galeri</a>
-                        <a href="#testimoni"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Testimoni</a>
-                            {{-- Tombol button --}}
-                        <button
-                            class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg font-medium text-xl"><a
-                                href="login">Login</a></button>
-                    </div>
+<nav id="navbar" class="bg-transparent p-4 fixed top-0 left-0 right-0 z-20 transition duration-300">
+    <div class="max-w-full mx-auto px-2 lg:px-2">
+        <div class="relative flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <img class="h-14 w-auto" src="../img/kaligrafi2.png" alt="Workflow">
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center lg:hidden">
+                <!-- Mobile menu button -->
+                <button type="button"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 bg-[#003C43] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Icon when menu is closed. -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <!-- Icon when menu is open. -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Navbar Biasa -->
+            <div class="hidden lg:block lg:ml-6">
+                <div class="flex space-x-4">
+                    <a href="#layanan"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Layanan</a>
+                    <a href="#tentang"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Tentang</a>
+                    <a href="#bahan"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Bahan</a>
+                    <a href="#ornamen"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Ornamen</a>
+                    <a href="portofolio"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Portofolio</a>
+                    <a href="#galeri"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Galeri</a>
+                    <a href="#testimoni"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Testimoni</a>
+                    <button
+                        class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg font-medium text-xl"><a
+                            href="login">Login</a></button>
                 </div>
             </div>
         </div>
-        <!-- Navbar Mobile -->
-        <div class="hidden sm:hidden bg-[#003C43]" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#layanan"
-                    class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Layanan</a>
-                <a href="#tentang"
-                    class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Tentang</a>
-                <a href="#bahan"
-                    class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Bahan</a>
-                <a href="#ornamen"
-                    class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Ornamen</a>
-                <a href="portofolio"
-                    class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio</a>
-                <a href="#galeri"
-                    class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Galeri</a>
-                <a href="#testimoni"
-                    class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Testimoni</a>
-                    {{-- Tombol button --}}
-                <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium "><a
-                        href="login">Login</a></button>
-            </div>
+    </div>
+    <!-- Navbar Mobile -->
+    <div class="hidden lg:hidden bg-[#003C43]" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#layanan"
+                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Layanan</a>
+            <a href="#tentang"
+                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Tentang</a>
+            <a href="#bahan"
+                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Bahan</a>
+            <a href="#ornamen"
+                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Ornamen</a>
+            <a href="portofolio"
+                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio</a>
+            <a href="#galeri"
+                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Galeri</a>
+            <a href="#testimoni"
+                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Testimoni</a>
+            <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium"><a
+                    href="login">Login</a></button>
         </div>
-    </nav>
+    </div>
+</nav>
+
    
 
 <!-- Title -->
     <div class="relative bg-center bg-cover h-[500px] sm:h-[600px] md:h-[800px] lg:h-[1000px] -mt-16 "
     style="background-image: url('../img/kali.png');">
-    <div class="absolute inset-0 bg-black opacity-10"></div>
-    <div class="relative z-10 h-full flex flex-col justify-center text-left px-6 lg:px-28 py-10 items-center">
-        <div class="mx-auto px-6 mt-40 container sm:px-20 lg:contain-none lg:px-0 lg:-ml-10 xl:px-16 lg:mt-32 ">
-            <h2 class="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white shadow-xl mb-4 xl:py-14 xl:text-6xl">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    
+    <div class="relative z-10 h-full flex flex-col justify-center text-left px-6 lg:px-28 py-10 items-center ">
+        <div class=" px-12 mt-40 container sm:px-26 lg:contain-none lg:px-0 lg:-ml-10 xl:px-16 lg:mt-32 ">
+            <h2 class="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white  mb-4 xl:py-14 xl:text-6xl">
                 KALIGRAFI
             </h2>
-            <div class="bg-black bg-opacity-25 p-4 rounded-lg max-w-lg w-full mx-auto sm:mx-0">
+            <div class="  rounded-lg max-w-lg w-full mx-auto sm:mx-0">
                 <p class="text-white text-justify font-semibold">
                     Percantik masjid Anda dengan sentuhan seni kaligrafi islami dari kami. Rasakan keindahan yang membawa kedamaian dan keberkahan. Kami menghadirkan kaligrafi dengan desain yang mempesona.
                 </p>
@@ -137,12 +137,12 @@
         <div class="flex flex-col lg:flex-row items-center lg:space-x-10 mb-16 ">
             <div class="lg:w-1/2 lg:flex lg:justify-center">
                 <img src="../img/Trenggalek Jatim.jpg" alt="Peta"
-                    class="w-full max-w-xs rounded-lg cursor-pointer sm:max-w-md lg:max-w-xl xl:max-w-3xl mx-auto">
+                    class="w-full max-w-xs rounded-lg cursor-pointer sm:max-w-[650px] lg:max-w-xl xl:max-w-3xl mx-auto">
             </div>
             <div class="lg:w-1/2 lg:pl-10 mt-8 lg:mt-0">
-                <div class="max-w-md mx-auto lg:mx-0 2xl:-mt-[110px]  lg:mt-[130px] xl:-mt-1">
+                <div class="max-w-[650px] mx-auto lg:mx-0 2xl:-mt-[110px]  lg:mt-[130px] xl:-mt-1 ">
                     <h1 class="text-3xl font-bold mb-8 xl:mb-4 2xl:mb-8">Tentang Kami</h1>
-                    <p class="text-justify bg-slate-200 rounded-lg p-4 lg:p-8 font-semibold 2xl:w-[624px] xl:w-[500px] ">
+                    <p class="text-justify bg-slate-200 rounded-lg p-4 lg:p-8  font-semibold 2xl:w-[624px] xl:w-[500px] ">
                         "Kami berdedikasi menghadirkan kaligrafi yang memadukan keindahan tulisan Arab dengan makna
                         spiritual mendalam. Dengan keahlian tangan terampil dan rasa seni tinggi, kami menciptakan
                         dekorasi kaligrafi yang menambah nuansa sakral dan estetis pada interior serta eksterior masjid.
@@ -159,7 +159,7 @@
             <div class="mt-1 w-10 h-1 bg-black "></div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-28 xl:mb-48 ">
+        <div class="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 gap-6 mb-28 xl:mb-48 ">
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center ">
                 <div class="text-4xl mb-4">
                     <i class="fas fa-trophy"></i> 
@@ -201,7 +201,7 @@
 <!-- Layanan -->
 
 <section id="layanan" class="mb-72"> </section>
-    <div class="bg-slate-900 h-[520px]  md:h-[700px] xl:h-[850px]">
+    <div class="bg-slate-900 h-[620px]  md:h-[650px] lg:h-[750px]  xl:h-[800px]">
 
         <div class="container mx-auto px-6 lg:px-20 mt-32 py-10">
             <h2 class="text-3xl font-bold text-white px-9 xl:px-3">
@@ -210,12 +210,12 @@
             <div class="mt-1 w-10 h-1 bg-white ml-10 xl:ml-3"></div>
         </div>
 
-        <div class="px-10">
-            <div class="w-full max-w-5xl mx-auto">
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item">
-                            <img class="cursor-pointer" src="../img/m2.png" alt="Kubah">
+        <div class="px-10 h-96" >
+            <div class="w-full max-w-5xl mx-auto  ">
+                <div class="carousel  ">
+                    <div class="carousel-inner  mt-4  ">
+                        <div class="carousel-item  ">
+                            <img class="cursor-pointer " src="../img/m2.png" alt="Kubah">
                             <span class="">Kubah</span>
                         </div>
                         <div class="carousel-item active">
@@ -268,8 +268,8 @@
             </h2>
             <div class="mt-2 mx-auto w-16 h-1 bg-black mb-8"></div>
         </div>
-
-        <div class="container mx-auto px-14 sm:px-6 lg:px-24 ">
+<div class="container mx-auto px-14 lg:px-20 mt-32 ">
+        <div class="container mx-auto px-0  ">
             <div class="overflow-x-auto scrollbar-hide max-w-ful">
                 <div class="flex space-x-4">
                     <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
@@ -367,6 +367,7 @@
             </div>
 
         </div>
+    </div>
 
 
     </div>
@@ -394,7 +395,7 @@
 
 
         <div id="cards-container"
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 container mx-auto px-4 sm:px-6 lg:px-16 py-10 ">
+            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 container mx-auto px-4 sm:px-6 lg:px-16 py-10 ">
         </div>
 
         <div class="flex justify-center ">
@@ -516,7 +517,7 @@
 
     <div class="container mx-auto p-10 cursor-pointer">
         <div id="custom-cards-container"
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 container mx-auto px-4 sm:px-6 lg:px-16 py-10  xl:m-1">
+            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 container mx-auto px-4 sm:px-6 lg:px-16 py-10  xl:m-1">
         </div>
 
         <div class="flex justify-center mt-4">
@@ -610,9 +611,9 @@
 <!-- Testimoni -->
 <section id="testimoni" > </section>
 
-<div class="xl:flex container mx-auto lg:px-20 mt-32 ">
+<div class="md:flex container mx-auto lg:px-20 mt-32 ">
 
-<div class="  px-14 lg:px-8 lg:w-96">
+<div class=" px-14 lg:px-8 lg:w-96">
     <div class="">
         <h2 class="text-3xl font-bold  ">
             Testimoni
@@ -640,7 +641,7 @@
 
          <!-- Card Testimoni -->
 
-         <div class=" flex flex-row justify-center items-center  mx-auto w-auto sm:w-auto md:w-auto lg:w-[850px]  ">
+         <div class=" flex flex-row justify-center items-center  mx-auto w-auto sm:w-auto md:w-[480px] lg:w-[500px] xl:w-auto ">
             <!-- Tombol kiri Panah/Scroll -->
             <button class="bg-slate-200 rounded-full p-2 mr-4" id="customPrevBtnTestimoni">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
@@ -727,7 +728,7 @@
         </div>
         
     </div>
-        <!-- JavaScript -->
+
       
         
 

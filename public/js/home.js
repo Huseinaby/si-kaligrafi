@@ -32,7 +32,7 @@
              item.classList.remove('active');
          });
          items[currentIndex].classList.add('active');
-         const isMobile = window.innerWidth < 768;
+         const isMobile = window.innerWidth < 769;
          const isLargeScreen = window.innerWidth >= 1024;
          const offset = isMobile
              ? -currentIndex * 100
@@ -75,7 +75,7 @@
 
     const updateCarousel = () => {
         const items = document.querySelectorAll('.custom-carousel-testimoni > div');
-        const isMobile = window.innerWidth < 768;
+        const isMobile = window.innerWidth < 1279;
         const maxIndex = isMobile ? items.length - 1 : Math.ceil(items.length / 2) - 1;
         const translateValue = isMobile ? -currentIndex * 100 : -currentIndex * (100 / 2);
 
@@ -88,7 +88,7 @@
 
     nextBtn.addEventListener('click', () => {
         const items = document.querySelectorAll('.custom-carousel-testimoni > div');
-        const isMobile = window.innerWidth < 768;
+        const isMobile = window.innerWidth < 1279;
         const maxIndex = isMobile ? items.length - 1 : Math.ceil(items.length / 2) - 1;
         if (currentIndex < maxIndex) {
             currentIndex++;
