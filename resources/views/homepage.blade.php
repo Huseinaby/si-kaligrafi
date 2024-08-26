@@ -68,9 +68,35 @@
                             class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Galeri</a>
                         <a href="#testimoni"
                             class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Testimoni</a>
-                        <button
-                            class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg font-medium text-xl"><a
-                                href="login">Login</a></button>
+                            @auth
+                            <div class="relative inline-block">
+                                <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg font-medium text-xl focus:outline-none" id="userMenuButton">
+                                    {{ Auth::user()->nama_lengkap }} <svg class="w-4 h-4 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="userDropdown" class="hidden absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-10">
+                                    <a href="/login" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                                    <a href="" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                    <form id="logout-form" action="/logout" method="POST" class="hidden">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- JavaScript to toggle dropdown -->
+                            <script>
+                                document.getElementById('userMenuButton').addEventListener('click', function() {
+                                    document.getElementById('userDropdown').classList.toggle('hidden');
+                                });
+                            </script>
+                        @else
+                            <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg font-medium text-xl">
+                                <a href="/login">Login</a>
+                            </button>
+                        @endauth
+                        
                     </div>
                 </div>
             </div>
