@@ -255,8 +255,8 @@
                     <div class="carousel-inner  mt-4  ">
                         @foreach ($layanans as $layanan)
                             <div class="carousel-item  ">
-                                <img class="cursor-pointer " src="storage/public/storage/{{ $layanan->foto_layanan }}" 
-                                alt="Kubah">
+                                <img class="cursor-pointer " src="storage/public/storage/{{ $layanan->foto_layanan }}"
+                                    alt="Kubah">
                                 <span class="">{{ $layanan->nama_layanan }}</span>
                             </div>
                         @endforeach
@@ -662,70 +662,28 @@
 
             <div class="relative max-w-6xl w-full overflow-hidden ">
                 <div class="custom-carousel-testimoni">
-                    <!-- Testimoni 1 -->
-                    <div class="custom-carousel-item rounded-xl bg-slate-200 flex-shrink-0 ">
-                        <div class="bg-[#003C43] rounded-xl h-28 text-center py-6 text-white">
-                            <h2 class="text-lg font-semibold">[Nama 1]</h2>
-                            <h2 class="text-lg font-semibold">[Panitia Mesjid 1]</h2>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-justify leading-relaxed custom-text ">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam, nec
-                                mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum felis
-                                lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi. Maecenas
-                                fermentum odio nec justo feugiat, sit amet vestibulum dolor scelerisque. Sed fermentum
-                                tortor a tellus.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Testimoni 2 -->
-                    <div class="custom-carousel-item rounded-xl bg-slate-200 flex-shrink-0 ">
-                        <div class="bg-[#003C43] rounded-xl h-28 text-center py-6 text-white">
-                            <h2 class="text-lg font-semibold">[Nama 2]</h2>
-                            <h2 class="text-lg font-semibold">[Panitia Mesjid 2]</h2>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-justify leading-relaxed custom-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam, nec
-                                mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum felis
-                                lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi. Maecenas
-                                fermentum odio nec justo feugiat, sit amet vestibulum dolor scelerisque. Sed fermentum
-                                tortor a tellus.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Testimoni 3 -->
-                    <div class="custom-carousel-item rounded-xl bg-slate-200 flex-shrink-0 ">
-                        <div class="bg-[#003C43] rounded-xl h-28 text-center py-6 text-white">
-                            <h2 class="text-lg font-semibold">[Nama 3]</h2>
-                            <h2 class="text-lg font-semibold">[Panitia Mesjid 3]</h2>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-justify leading-relaxed custom-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam, nec
-                                mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum felis
-                                lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi. Maecenas
-                                fermentum odio nec justo feugiat, sit amet vestibulum dolor scelerisque. Sed fermentum
-                                tortor a tellus.
-                            </p>
-                        </div>
-                    </div>
                     <!-- Tambahkan lebih banyak kartu testimoni di sini -->
-                    <div class="custom-carousel-item rounded-xl bg-slate-200 flex-shrink-0 ">
-                        <div class="bg-[#003C43] rounded-xl h-28 text-center py-6 text-white">
-                            <h2 class="text-lg font-semibold">[Nama 4]</h2>
-                            <h2 class="text-lg font-semibold">[Panitia Mesjid 4]</h2>
+                    @foreach ($testimonis as $testimoni)
+                        <div class="custom-carousel-item rounded-xl bg-slate-200 flex-shrink-0 ">
+                            <div class="bg-[#003C43] rounded-xl h-28 text-center py-6 text-white">
+                                <h2 class="text-lg font-semibold">{{ $testimoni->nama_panitia }}</h2>
+                                <h2 class="text-lg font-semibold">{{ $testimoni->karya->nama_masjid }}</h2>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-justify leading-relaxed custom-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam,
+                                    nec
+                                    mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum
+                                    felis
+                                    lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi.
+                                    Maecenas
+                                    fermentum odio nec justo feugiat, sit amet vestibulum dolor scelerisque. Sed
+                                    fermentum
+                                    tortor a tellus.
+                                </p>
+                            </div>
                         </div>
-                        <div class="p-6">
-                            <p class="text-justify leading-relaxed custom-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam, nec
-                                mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum felis
-                                lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi. Maecenas
-                                fermentum odio nec justo feugiat, sit amet vestibulum dolor scelerisque. Sed fermentum
-                                tortor a tellus.
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
