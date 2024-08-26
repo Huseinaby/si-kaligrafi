@@ -272,97 +272,17 @@
         <div class="container mx-auto px-0  ">
             <div class="overflow-x-auto scrollbar-hide max-w-ful">
                 <div class="flex space-x-4">
+                    @foreach ($bahans as $bahan)
                     <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
-                        <img src="../img/m3.png" alt="Image" class="w-full h-64 lg:h-80 object-cover">
+                        <img src="storage/public/storage/{{ $bahan->foto_bahan }}" alt="Image" class="w-full h-64 lg:h-80 object-cover">
                         <div class="p-4">
-                            <h2 class="text-xl font-bold mb-2 text-center">ACP</h2>
+                            <h2 class="text-xl font-bold mb-2 text-center">{{ $bahan->nama_bahan }}</h2>
                             <div class="card-content">
-                                <p class="text-gray-700 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Sed ut
-                                    urna velit. Donec commodo arcu sed odio laoreet, quis dignissim mi bibendum. Integer
-                                    id libero ac risus aliquam fermentum. Mauris vel felis sit amet purus fermentum
-                                    pulvinar. lorem</p>
+                                <p class="text-gray-700 text-justify">{{ $bahan->deskripsi_bahan }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
-                        <img src="../img/m3.png" alt="Image" class="w-full h-64 lg:h-80 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-xl font-bold mb-2 text-center">ACP</h2>
-                            <div class="card-content">
-                                <p class="text-gray-700 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Sed ut
-                                    urna velit. Donec commodo arcu sed odio laoreet, quis dignissim mi bibendum. Integer
-                                    id libero ac risus aliquam fermentum. Mauris vel felis sit amet purus fermentum
-                                    pulvinar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
-                        <img src="../img/m3.png" alt="Image" class="w-full  h-64 lg:h-80 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-xl font-bold mb-2 text-center">ACP</h2>
-                            <div class="card-content">
-                                <p class="text-gray-700 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Sed ut
-                                    urna velit. Donec commodo arcu sed odio laoreet, quis dignissim mi bibendum. Integer
-                                    id libero ac risus aliquam fermentum. Mauris vel felis sit amet purus fermentum
-                                    pulvinar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
-                        <img src="../img/m3.png" alt="Image" class="w-full h-64 lg:h-80 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-xl font-bold mb-2 text-center">ACP</h2>
-                            <div class="card-content">
-                                <p class="text-gray-700 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Sed ut
-                                    urna velit. Donec commodo arcu sed odio laoreet, quis dignissim mi bibendum. Integer
-                                    id libero ac risus aliquam fermentum. Mauris vel felis sit amet purus fermentum
-                                    pulvinar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
-                        <img src="../img/m3.png" alt="Image" class="w-full h-64 lg:h-80 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-xl font-bold mb-2 text-center">ACP</h2>
-                            <div class="card-content">
-                                <p class="text-gray-700 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Sed ut
-                                    urna velit. Donec commodo arcu sed odio laoreet, quis dignissim mi bibendum. Integer
-                                    id libero ac risus aliquam fermentum. Mauris vel felis sit amet purus fermentum
-                                    pulvinar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
-                        <img src="../img/m3.png" alt="Image" class="w-full h-64 lg:h-80 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-xl font-bold mb-2 text-center">ACP</h2>
-                            <div class="card-content">
-                                <p class="text-gray-700 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Sed ut
-                                    urna velit. Donec commodo arcu sed odio laoreet, quis dignissim mi bibendum. Integer
-                                    id libero ac risus aliquam fermentum. Mauris vel felis sit amet purus fermentum
-                                    pulvinar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
-                        <img src="../img/m3.png" alt="Image" class="w-full h-64 lg:h-80 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-xl font-bold mb-2 text-center">ACP</h2>
-                            <div class="card-content">
-                                <p class="text-gray-700 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Sed ut
-                                    urna velit. Donec commodo arcu sed odio laoreet, quis dignissim mi bibendum. Integer
-                                    id libero ac risus aliquam fermentum. Mauris vel felis sit amet purus fermentum
-                                    pulvinar.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
