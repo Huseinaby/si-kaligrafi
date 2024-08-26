@@ -99,22 +99,22 @@ style="background-image: url('../img/bg.png');">
     <h1 class="text-4xl font-semibold text-center text-white sm:text-5xl">Register</h1>
     <div class="mt-2 mx-auto w-16 h-1 bg-white mb-8"></div>
     <div class="bg-slate-200 max-w-xs rounded-xl mx-auto mt-16 px-12 py-10 sm:max-w-xl sm:px-24 duration-500">
-        <form action="">
-
+        <form action="/register" method="POST">
+            @csrf
             <!-- Nama Lengkap -->
 
             <h4 class="sm:text-lg font-semibold">Nama Lengkap</h4>
-            <input class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-700 px-2 my-4" placeholder="Nama Lengkap" type="text">
+            <input name="nama_lengkap" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-700 px-2 my-4" placeholder="Nama Lengkap" type="text">
             
             
             <!-- Username -->
             <h4 class="sm:text-lg font-semibold">Username</h4>
-            <input class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 px-2" placeholder="Username" type="text">
+            <input name="username" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 px-2" placeholder="Username" type="text">
 
             <!-- Password -->
             <h4 class="sm:text-lg mt-4 font-semibold">Password</h4>
             <div class="relative">
-                <input id="password" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 pr-10 px-2" placeholder="Password" type="password">
+                <input id="password" name="password" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 pr-10 px-2" placeholder="Password" type="password">
                 <span id="togglePassword" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
                     <i class="fas fa-eye text-gray-600"></i>
                 </span>
