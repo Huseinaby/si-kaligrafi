@@ -82,7 +82,12 @@
                                 <!-- Dropdown menu -->
                                 <div id="userDropdown"
                                     class="hidden absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-10">
-                                    <a href="/login" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                                    @if (Auth::user()->level == 1)
+                                        <a href="/admin"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                                    @else
+                                    <a href="/user/dashboard" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                                    @endif
                                     <a href="" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                     <form id="logout-form" action="/logout" method="POST" class="hidden">
