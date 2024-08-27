@@ -86,7 +86,8 @@
                                         <a href="/admin"
                                             class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
                                     @else
-                                    <a href="/user/dashboard" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                                        <a href="/user/dashboard"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
                                     @endif
                                     <a href="" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -355,51 +356,14 @@
     <!-- JavaSkrip Ornamen-->
     <script>
         //Data nya ornamen di dalam javaskrip
-        const cardsData = [{
-                src: '../img/m2.png',
-                text: 'Bahan : ACP',
-                category: 'kubah'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Bahan : Cat',
-                category: 'mihrab'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Bahan : ACP',
-                category: 'kubah'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Bahan : Bata',
-                category: 'mihrab'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Bahan : ACP',
-                category: 'kubah'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Bahan : Besi',
-                category: 'mihrab'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Bahan : ACP',
-                category: 'kubah'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Bahan : Kayu',
-                category: 'mihrab'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Bahan : ACP',
-                category: 'kubah'
-            }
+        const cardsData = [
+            @foreach ($ornamens as $ornamen)
+                {
+                    src: 'storage/public/storage/{{ $ornamen->foto_ornamen }}',
+                    text: 'Bahan : {{ $ornamen->bahan->nama_bahan }}',
+                    category: '{{ $ornamen->deskripsi_ornamen }}'
+                },
+            @endforeach
         ];
         const cardsPerPage = 6;
         let currentPage = 1;
@@ -519,42 +483,13 @@
 
     <script>
         //Datanya Di JavaSkrip
-        const customCardsData = [{
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
-            },
+        const customCardsData = [
+            @foreach ($galeris as $galeri)
             {
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
+                src: 'storage/public/storage/{{ $galeri->foto_galeri }}',
+                text: '{{ $galeri->judul }}'
             },
-            {
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
-            },
-            {
-                src: '../img/m2.png',
-                text: 'Pemasangan ACP'
-            }
+            @endforeach            
         ];
         const customCardsPerPage = 6;
         let currentCustomPage = 1;
@@ -617,8 +552,6 @@
             renderCustomPagination();
         });
     </script>
-
-
 
     <!-- Testimoni -->
     <section id="testimoni"> </section>
