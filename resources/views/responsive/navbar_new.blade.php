@@ -45,19 +45,19 @@
             <!-- Navbar Biasa -->
             <div class="hidden lg:block lg:ml-6">
                 <div class="flex space-x-4">
-                    <a href="#layanan"
+                    <a href="/#layanan"
                         class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Layanan</a>
-                    <a href="#tentang"
+                    <a href="/#tentang"
                         class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Tentang</a>
-                    <a href="#bahan"
+                    <a href="/#bahan"
                         class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Bahan</a>
-                    <a href="#ornamen"
+                    <a href="/#ornamen"
                         class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Ornamen</a>
                     <a href="portofolio"
                         class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Portofolio</a>
-                    <a href="#galeri"
+                    <a href="/#galeri"
                         class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Galeri</a>
-                    <a href="#testimoni"
+                    <a href="/#testimoni"
                         class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Testimoni</a>
                     <button
                         class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg font-medium text-xl"><a

@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
+    <title>Kaligrafi | Portofolio</title>
 
     {{-- link config tailwind --}}
     @vite('resources/css/app.css')
@@ -19,7 +18,7 @@
             margin-top: 5rem;
         }
     </style>
-    
+
 </head>
 
 <body class="bg-white  ">
@@ -42,28 +41,28 @@
             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="../img/g1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
+                    <img src="../img/g1.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="../img/g2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
+                    <img src="../img/g2.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="../img/g3.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
+                    <img src="../img/g3.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="../img/g1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
+                    <img src="../img/g1.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 5 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="../img/g2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
+                    <img src="../img/g2.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
             </div>
             <!-- Indikator Slider -->
@@ -112,7 +111,7 @@
 
     <!-- Tulisan Portofolio -->
 
-    
+
     <!-- Card Karya -->
 
     <div class="container mx-auto px-14 lg:px-20 mt-20 sm:mt-32">
@@ -142,15 +141,14 @@
     <script>
         // datanya di sini
         const cardsData = [
-            { title: "Mesjid Ar-Rahman, Batam", year: 2017, category: "mihrab", image: "../img/m2.png" },
-            { title: "Mesjid Ar-Rahman, Batam", year: 2017, category: "mihrab", image: "../img/ok.jpg" },
-            { title: "Mesjid Ar-Rahman, Batam", year: 2017, category: "mihrab", image: "../img/m2.png" },
-            { title: "Mesjid Ar-Rahman, Batam", year: 2017, category: "mihrab", image: "../img/ok.jpg" },
-            { title: "Mesjid Ar-Rahman, Batam", year: 2017, category: "mihrab", image: "../img/ok.jpg" },
-            { title: "Mesjid Ar-Rahman, Batam", year: 2017, category: "mihrab", image: "../img/ok.jpg" },
-            { title: "Mesjid Ar-Rahman, Batam", year: 2017, category: "mihrab", image: "../img/ok.jpg" },
-            { title: "Mesjid Ar-Rahman, Batam", year: 2017, category: "mihrab", image: "../img/ok.jpg" },
-            
+            @foreach ($portofolios as $portofolio)
+                {
+                    title: "{{ $portofolio->nama_masjid }}",
+                    year: "{{ $portofolio->tgl_pembuatan }}".substring(0, 10), 
+                    category: "{{ $portofolio->jenis_karya }}",
+                    image: "storage/public/storage/{{ $portofolio->foto_karya }}"
+                },
+            @endforeach
         ];
 
 
@@ -218,8 +216,8 @@
     <footer class="bg-[#333333] h-96 mt-24">
         <div class="p-8">
             <div class="flex items-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white mr-2" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white mr-2" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 <h2 class="text-lg font-bold text-white sm:text-xl">Alamat workshop kami</h2>

@@ -14,7 +14,7 @@ class KaryaController extends Controller
 {
     public function index(){
         return view('portofolio', [
-            'portofolios' => Karya::latest()->paginate(6)
+            'portofolios' => Karya::all()
         ]);
     }
 
