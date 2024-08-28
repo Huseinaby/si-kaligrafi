@@ -353,6 +353,8 @@
         </div>
     </div>
 
+    
+
     <!-- JavaSkrip Ornamen-->
     <script>
         //Data nya ornamen di dalam javaskrip
@@ -383,7 +385,7 @@
                 //Tampilan nya di sini
                 const cardElement = `
                     <div class="relative w-full overflow-hidden rounded-xl group z-0">
-                        <img src="${card.src}" alt="Gambar" class="w-full rounded-xl">
+                        <img src="${card.src}" alt="Gambar" class="w-full rounded-xl object-cover h-80 w-full">
                         <div class="absolute inset-0 flex items-end py-4 px-4 rounded-xl bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300">
                             <h2 class="text-lg text-white font-semibold shadow-inner">${card.text}</h2>
                         </div>
@@ -506,7 +508,7 @@
             cardsToShow.forEach(card => {
                 const cardElement = `
                     <div class="relative w-full overflow-hidden rounded-xl group z-0">
-                        <img src="${card.src}" alt="Gambar" class="w-full rounded-xl">
+                        <img src="${card.src}" alt="Gambar" class="rounded-xl object-cover h-80 w-full">
                         <div class="absolute inset-0 flex items-end py-4 px-4 rounded-xl bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300">
                             <h2 class="text-lg text-white font-semibold shadow-inner">${card.text}</h2>
                         </div>

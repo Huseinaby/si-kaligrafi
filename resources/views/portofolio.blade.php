@@ -167,7 +167,7 @@
                 //tampilannya disini
                 const cardElement = `
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer">
-                    <img class="w-full h-48 object-cover" src="${card.image}" alt="Image">
+                    <img class="w-full h-52 xl:h-64 object-cover" src="${card.image}" alt="Image">
                     <div class="p-4 bg-[#135D66] text-white">
                         <h3 class="text-xl font-semibold mb-2 text-white">${card.title}</h3>
                         <p class=" mb-1 text-white">${card.year}</p>
