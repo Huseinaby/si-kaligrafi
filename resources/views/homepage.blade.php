@@ -593,7 +593,7 @@
 
         <!-- Card Testimoni -->
 
-        <div class=" 2xl:max-w-5xl xl:max-w-3xl mx-10 px-4 sm:mx-10  bg-red-300">
+        <div class=" 2xl:max-w-5xl xl:max-w-3xl mx-10 px-4 sm:mx-10  ">
             <!-- Carousel 1 -->
             <div class="splide splide1">
               <div class="splide__track">
@@ -606,7 +606,7 @@
                       <h2 class="text-lg font-semibold">{{ $testimoni->karya->nama_masjid }}</h2>
                     </div>
                     <div class="p-6">
-                      <p class="text-justify leading-relaxed overflow-hidden h-52 bg-yellow-400">
+                      <p class="text-justify leading-relaxed overflow-hidden h-52 ">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam, nec
                         mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum felis
                         lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi. Maecenas
