@@ -1,4 +1,6 @@
+ 
  //  JS Navbar
+ 
  const menuButton = document.querySelector('button[aria-controls="mobile-menu"]');
  const menu = document.getElementById('mobile-menu');
  const navbar = document.getElementById('navbar');
@@ -21,6 +23,7 @@
 
 
  //Layanan
+
  document.addEventListener('DOMContentLoaded', function () {
      const carouselInner = document.querySelector('.carousel-inner');
      const items = document.querySelectorAll('.carousel-item');
@@ -66,43 +69,63 @@
  });
 
 
-//  Carousel Testimoni
-(function () {
-    const carousel = document.querySelector('.custom-carousel-testimoni');
-    const nextBtn = document.getElementById('customNextBtnTestimoni');
-    const prevBtn = document.getElementById('customPrevBtnTestimoni');
-    let currentIndex = 0;
 
-    const updateCarousel = () => {
-        const items = document.querySelectorAll('.custom-carousel-testimoni > div');
-        const isMobile = window.innerWidth < 1279;
-        const maxIndex = isMobile ? items.length - 1 : Math.ceil(items.length / 2) - 1;
-        const translateValue = isMobile ? -currentIndex * 100 : -currentIndex * (100 / 2);
+// js Testimoni
 
-        if (currentIndex > maxIndex) {
-            currentIndex = maxIndex;
-        }
+  document.addEventListener('DOMContentLoaded', function () {
+    // Inisialisasi Carousel 1
+    new Splide('.splide1', {
+      type   : 'loop',
+      perPage: 2,
+      gap    : '1rem',
+      breakpoints: {
+        640: {
+          perPage: 1,
+        },
+        768: {
+          perPage: 2,
+        },
+      },
+    }).mount();
 
-        carousel.style.transform = `translateX(${translateValue}%)`;
-    };
+    
+  });
 
-    nextBtn.addEventListener('click', () => {
-        const items = document.querySelectorAll('.custom-carousel-testimoni > div');
-        const isMobile = window.innerWidth < 1279;
-        const maxIndex = isMobile ? items.length - 1 : Math.ceil(items.length / 2) - 1;
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-            updateCarousel();
-        }
-    });
 
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    });
 
-    window.addEventListener('resize', updateCarousel);
-    updateCarousel();
-})();
+
+
+
+// js bahan
+
+var splide = new Splide( '.splide', {
+    type   : 'loop',
+    perPage: 5, // Menampilkan 5 slide sekaligus
+    breakpoints: {
+      1536: {
+        perPage: 4, // 4 slide untuk layar besar (1536px ke atas)
+      },
+      1280: {
+        perPage: 3, // 3 slide untuk layar sedang (1280px ke atas)
+      },
+      1023: {
+        perPage: 2, // 2 slide untuk layar kecil (1024px ke atas)
+      },
+      767: {
+        perPage: 1, // 1 slide untuk layar sangat kecil (768px ke atas)
+        gap: '1rem', // Jarak antar slide lebih kecil untuk layar sangat kecil
+        padding: {
+          left : '0.5rem',
+          right: '0.5rem',
+        },
+      },
+    },
+    focus  : 'center',
+    gap: '2rem', // Jarak antar slide
+    padding: {
+      right: '1rem',
+    }, // Memberikan padding di sisi kiri dan kanan
+  } );
+  splide.mount();
+
+

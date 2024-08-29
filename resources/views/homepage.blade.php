@@ -18,6 +18,14 @@
     {{-- css home --}}
     <link rel="stylesheet" href="css/homepage.css">
 
+      <!--CDN Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+    {{-- splide --}}
+    {{-- <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css"> --}}
+
+
+
 
 </head>
 
@@ -279,47 +287,41 @@
 
 
 
-
-
-
-
     <!-- Bahan -->
 
 
     <section id="bahan" class="mb-32"> </section>
 
-    <div class="">
-
-        <div class="mt-20 text-center">
-            <h2 class="text-3xl font-bold">
-                Bahan
-            </h2>
-            <div class="mt-2 mx-auto w-16 h-1 bg-black mb-8"></div>
-        </div>
-        <div class="container mx-auto px-14 lg:px-20 mt-32 ">
-            <div class="container mx-auto px-0  ">
-                <div class="overflow-x-auto scrollbar-hide max-w-ful">
-                    <div class="flex space-x-4">
-                        @foreach ($bahans as $bahan)
-                            <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64">
-                                <img src="storage/public/storage/{{ $bahan->foto_bahan }}" alt="Image"
-                                    class="w-full h-64 lg:h-80 object-cover">
-                                <div class="p-4">
-                                    <h2 class="text-xl font-bold mb-2 text-center">{{ $bahan->nama_bahan }}</h2>
-                                    <div class="card-content">
-                                        <p class="text-gray-700 text-justify">{{ $bahan->deskripsi_bahan }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
+    
+   <div class="container mx-auto px-14 lg:px-20 mt-32 ">
+    <div class="splide w-full max-w-6xl 2xl:max-w-[1500px] px-4 mx-auto h-auto" >
+      <div class="splide__track">
+        <ul class="splide__list">
+          <!-- Slide 1 -->
+          @foreach ($bahans as $bahan)
+          <li class="splide__slide ">
+            <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64 mx-auto">
+              <img src="storage/public/storage/{{ $bahan->foto_bahan }}" alt="Image" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+              <div class="p-4 h-52">
+                <h2 class="text-xl font-bold mb-2 text-center">{{ $bahan->nama_bahan }}</h2>
+                <div class="card-content object-cover ">
+                  <p class="text-gray-700 text-sm text-justify  object-cover h-32 overflow-hidden">
+                    {{ $bahan->deskripsi_bahan }}
+                  </p>
                 </div>
+              </div>
             </div>
-        </div>
+          </li>
+          @endforeach
 
-
+        </ul>
+      </div>
     </div>
+  </div>
+  
 
+   
+    
 
     <!-- Ornamen -->
     <section id="ornamen" class="mb-32"> </section>
@@ -554,11 +556,12 @@
             renderCustomPagination();
         });
     </script>
+    
 
     <!-- Testimoni -->
     <section id="testimoni"> </section>
 
-    <div class="md:flex container mx-auto lg:px-20 mt-32 ">
+    <div class="xl:flex container mx-auto lg:px-20 mt-32 ">
 
         <div class=" px-14 lg:px-8 lg:w-96">
             <div class="">
@@ -590,55 +593,44 @@
 
         <!-- Card Testimoni -->
 
-        <div
-            class=" flex flex-row justify-center items-center  mx-auto w-auto sm:w-auto md:w-[480px] lg:w-[500px] xl:w-auto ">
-            <!-- Tombol kiri Panah/Scroll -->
-            <button class="bg-slate-200 rounded-full p-2 mr-4" id="customPrevBtnTestimoni">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-
-            <div class="relative max-w-6xl w-full overflow-hidden ">
-                <div class="custom-carousel-testimoni">
-                    <!-- Tambahkan lebih banyak kartu testimoni di sini -->
-                    @foreach ($testimonis as $testimoni)
-                        <div class="custom-carousel-item rounded-xl bg-slate-200 flex-shrink-0 ">
-                            <div class="bg-[#003C43] rounded-xl h-28 text-center py-6 text-white">
-                                <h2 class="text-lg font-semibold">{{ $testimoni->nama_panitia }}</h2>
-                                <h2 class="text-lg font-semibold">{{ $testimoni->karya->nama_masjid }}</h2>
-                            </div>
-                            <div class="p-6">
-                                <p class="text-justify leading-relaxed custom-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam,
-                                    nec
-                                    mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum
-                                    felis
-                                    lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi.
-                                    Maecenas
-                                    fermentum odio nec justo feugiat, sit amet vestibulum dolor scelerisque. Sed
-                                    fermentum
-                                    tortor a tellus.
-                                </p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
+        <div class=" 2xl:max-w-5xl xl:max-w-3xl mx-10 px-4 sm:mx-10  bg-red-300">
+            <!-- Carousel 1 -->
+            <div class="splide splide1">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <!-- Testimoni 1 -->
+                  @foreach ($testimonis as $testimoni)
+                  <li class="splide__slide rounded-xl bg-slate-200 flex-shrink-0 h-96">
+                    <div class="bg-[#003C43] rounded-xl h-28 text-center py-6 text-white">
+                      <h2 class="text-lg font-semibold">{{ $testimoni->nama_panitia }}</h2>
+                      <h2 class="text-lg font-semibold">{{ $testimoni->karya->nama_masjid }}</h2>
+                    </div>
+                    <div class="p-6">
+                      <p class="text-justify leading-relaxed overflow-hidden h-52 bg-yellow-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam, nec
+                        mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum felis
+                        lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi. Maecenas
+                        fermentum odio nec justo feugiat.
+                      </p>
+                    </div>
+                  </li>
+                  @endforeach
+                  <!-- Testimoni 2 -->
+                 
+                  <!-- Tambahkan lebih banyak kartu testimoni di sini jika diperlukan -->
+                </ul>
+              </div>
             </div>
-
-            <!-- Tombol kanan Panah/Scroll -->
-            <button class="bg-slate-200 rounded-full p-2 ml-4" id="customNextBtnTestimoni">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
         </div>
+
+
+
 
     </div>
 
+    
 
+    
 
 
 
@@ -667,7 +659,17 @@
 
     </footer>
 
-    <script src="js/home.js"></script>
+ <!--  CDN Splide JS -->
+ <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+
+ {{-- js home --}}
+ <script src="js/home.js"></script>
+
+ {{-- splide node module --}}
+ {{-- <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script> --}}
+
+ <script type="module" src="js/main.js"></script>
+
 
 </body>
 
