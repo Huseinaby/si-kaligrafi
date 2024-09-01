@@ -14,180 +14,6 @@
 }
 
 
-/* CSS Layanan */
-
-
-.carousel {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    max-width: 5xl;
-    height: 30rem;
-    margin: auto;
-    
-    
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
-    width: 100%;
-    
-   
-}
-
-.carousel-item {
-    min-width: 33.3333%;
-    transition: transform 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 15px;
-    box-sizing: border-box;
-    opacity: 0.5;
-    transform: scale(0.8);
-   
-    
-    
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-}
-
-.carousel-item span {
-    margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 1.25rem;
-    color: white;
-    text-align: center;
-}
-
-.carousel-item.active {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-button.left {
-    left: 1rem;
-}
-
-.carousel-button.right {
-    right: 1rem;
-}
-
-@media (max-width: 768px) {
-    .carousel-item {
-        min-width: 100%;
-        height: 450px;
-    }
-
-    .carousel-button.left {
-        left: 0.5rem;
-    }
-
-    .carousel-button.right {
-        right: 0.5rem;
-    }
-
-    .carousel-item span {
-        font-size: 1rem;
-        padding: 0.25rem 0.5rem;
-    }
-
-    .carousel {
-        height: 30rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .carousel {
-        height: 35rem;
-    }
-
-    .carousel-item {
-        min-width: 33.3333%;
-        padding: 20px;
-    }
-
-    .carousel-item img {
-        border-radius: 1.5rem;
-    }
-
-    .carousel-item span {
-        font-size: 1.5rem;
-        padding: 0.75rem 1.5rem;
-    }
-}
-
-
-/* CSS Testimoni */
-
-.custom-carousel-testimoni {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-}
-
-.custom-carousel-item {
-    min-width: calc(100% / 2 - 1rem);
-    max-width: calc(100% / 2 - 1rem);
-    overflow: hidden;
-    height: auto;
-    margin: 0 0.5rem;
-}
-
-@media (max-width: 1279px) {
-    .custom-carousel-item {
-        min-width: calc(100% - 1rem);
-        max-width: calc(100% - 1rem);
-    }
-}
-
-
-.custom-text {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: auto;
-}
-
-
-/* css title */
-
-@media (min-width: 1700px) {
-    .container.lg\:contain-none {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 65px;
-        padding-right: 20px;
-    }
-}
-
 
 /* Section */
 
@@ -196,3 +22,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Typing */
+
+
+.typing-effect {
+    border-right: 2px solid; /* Garis vertikal untuk efek kursor */
+    overflow: hidden; 
+    white-space: nowrap;
+    display: inline-block; /* Memastikan elemen tetap dalam satu baris */
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.blink-animation {
+    animation: blink 0.75s step-end infinite alternate;
+}
+    

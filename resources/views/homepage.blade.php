@@ -150,31 +150,41 @@
     <div class="relative bg-center bg-cover h-[500px] sm:h-[600px] md:h-[800px] lg:h-[1000px] -mt-16 "
         style="background-image: url('../img/kali.png');">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 h-full flex flex-col justify-center text-left px-2  2xl:py-10 items-center ">
 
-        <div class="relative z-10 h-full flex flex-col justify-center text-left px-6 lg:px-28 py-10 items-center ">
-            <div class=" px-12 mt-40 container sm:px-26 lg:contain-none lg:px-0 lg:-ml-10 xl:px-16 lg:mt-32 ">
+            <div class=" mb-16 mt-48  container mx-auto px-14 lg:px-20 ">
                 <h2
-                    class="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white  mb-4 xl:py-14 xl:text-6xl">
-                    KALIGRAFI
-                </h2>
-                <div class="  rounded-lg max-w-lg w-full mx-auto sm:mx-0">
-                    <p class="text-white text-justify font-semibold">
-                        Percantik masjid Anda dengan sentuhan seni kaligrafi islami dari kami. Rasakan keindahan yang
-                        membawa kedamaian dan keberkahan. Kami menghadirkan kaligrafi dengan desain yang mempesona.
-                    </p>
-                </div>
-                <button
-                    class="flex items-center w-48 bg-yellow-300 hover:bg-yellow-400 text-green-900 font-semibold py-2 px-4 rounded-full shadow-lg mt-6 transition-transform duration-300 ease-in-out transform hover:scale-110">
-                    <svg class="w-6 h-6 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24">
-                        <path
-                            d="M6.62 10.79a15.978 15.978 0 006.79 6.79l2.2-2.2a1.003 1.003 0 011.08-.21c1.12.45 2.33.69 3.58.69.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.3 22 2 13.7 2 3.5 2 2.95 2.45 2.5 3 2.5H6.5c.55 0 1 .45 1 1 0 1.25.24 2.46.69 3.58.1.23.04.5-.21 1.08l-2.2 2.2z" />
-                    </svg>
-                    <a href="https://wa.me/6285845510008?text=Halo%20Mas%20Bro!">Hubungi kami</a>
-                </button>
+                            class="text-2xl  font-semibold text-white mb-4 xl:py-14 xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xl:-mb-2 ">
+                             
+                            <div class="">
+                            
+                                <div class="text-2xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl  typing-effect blink-animation" id="typingText"></div>
+                            </div>
+                            
+
+                        </h2>
+                        <div class="  rounded-lg max-w-lg w-full mx-auto sm:mx-0">
+                            <p class="text-white text-justify font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+                                Percantik masjid Anda dengan sentuhan seni kaligrafi islami dari kami. Rasakan keindahan yang
+                                membawa kedamaian dan keberkahan. Kami menghadirkan kaligrafi dengan desain yang mempesona.
+                            </p>
+                        </div>
+                        <button
+                            class="xl:mt-12 flex items-center w-48 bg-yellow-300 hover:bg-yellow-400 text-green-900 font-semibold py-2 px-4 rounded-full shadow-lg mt-6 transition-transform duration-300 ease-in-out transform hover:scale-110">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M6.62 10.79a15.978 15.978 0 006.79 6.79l2.2-2.2a1.003 1.003 0 011.08-.21c1.12.45 2.33.69 3.58.69.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.3 22 2 13.7 2 3.5 2 2.95 2.45 2.5 3 2.5H6.5c.55 0 1 .45 1 1 0 1.25.24 2.46.69 3.58.1.23.04.5-.21 1.08l-2.2 2.2z" />
+                            </svg>
+                            <a href="https://wa.me/6285845510008?text=Halo%20Mas%20Bro!">Hubungi kami</a>
+                        </button>
             </div>
         </div>
+
     </div>
+
+
+   
 
     <section id="tentang"> </section>
     <!-- Container -->
@@ -210,37 +220,37 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 gap-6 mb-28 xl:mb-48 ">
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center ">
-                <div class="text-4xl mb-4">
+                <div class="text-4xl mb-4 text-[#003C43]">
                     <i class="fas fa-trophy"></i>
                 </div>
-                <h2 class="text-xl font-semibold mb-2">Professional</h2>
+                <h2 class="xl:text-2xl text-xl font-bold mb-2 text-[#003C43]">Professional</h2>
                 <p class="text-gray-600 text-center ">Kami berkomitmen memberikan layanan kaligrafi masjid dengan
                     standar
                     profesional yang tinggi di setiap proyek dikerjakan.</p>
             </div>
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <div class="text-4xl mb-4">
+                <div class="text-4xl mb-4 text-[#003C43]">
                     <i class="fas fa-users-cog"></i>
                 </div>
-                <h2 class="text-xl font-semibold mb-2">Berpengalaman</h2>
+                <h2 class="xl:text-2xl text-xl font-bold mb-2 text-[#003C43]">Berpengalaman</h2>
                 <p class="text-gray-600 text-center">Dengan pengalaman bertahun-tahun dalam seni kaligrafi masjid, kami
                     memiliki
                     keahlian untuk menciptakan karya yang memukau</p>
             </div>
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <div class="text-4xl mb-4">
+                <div class="text-4xl mb-4 text-[#003C43]">
                     <i class="fas fa-user-cog"></i>
                 </div>
-                <h2 class="text-xl font-semibold mb-2">Tenaga Ahli</h2>
+                <h2 class="xl:text-2xl text-xl font-bold mb-2 text-[#003C43]">Tenaga Ahli</h2>
                 <p class="text-gray-600 text-center">Didukung oleh tenaga ahli yang terlatih dan berkompeten, kami
                     menjamin
                     setiap detail kaligrafi masjid Anda.</p>
             </div>
             <div class="bg-slate-200 p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <div class="text-4xl mb-4">
-                    <i class="fas fa-check-circle"></i>
+                <div class="text-4xl mb-4 text-[#003C43]">
+                    <i class="fas fa-check-circle "></i>
                 </div>
-                <h2 class="text-xl font-semibold mb-2">Terpercaya</h2>
+                <h2 class="xl:text-2xl text-xl font-bold mb-2 text-[#003C43]">Terpercaya</h2>
                 <p class="text-gray-600 text-center">Kami telah dipercaya oleh banyak masjid untuk menghadirkan
                     kaligrafi yang
                     berkualitas tinggi, sebagai prioritas utama.</p>
@@ -254,33 +264,40 @@
     <!-- Layanan -->
 
     <section id="layanan" class="mb-72"> </section>
+
     <div class="bg-slate-900 h-[620px]  md:h-[650px] lg:h-[750px]  xl:h-[800px]">
 
-        <div class="container mx-auto px-6 lg:px-20 mt-32 py-10">
-            <h2 class="text-3xl font-bold text-white px-9 xl:px-3">
-                Layanan
-            </h2>
-            <div class="mt-1 w-10 h-1 bg-white ml-10 xl:ml-3"></div>
+        <div class=" mb-16  px-14 lg:px-20 py-10 container mx-auto mt-32 ">
+            <h2 class="text-3xl font-bold text-white">Layanan</h2>
+            <div class="mt-1 w-10 h-1 bg-white "></div>
         </div>
 
-        <div class="px-10 h-96">
-            <div class="w-full max-w-5xl mx-auto  ">
-                <div class="carousel  ">
-                    <div class="carousel-inner  mt-4  ">
-                        @foreach ($layanans as $layanan)
-                            <div class="carousel-item  ">
-                                <img class="cursor-pointer " src="storage/public/storage/{{ $layanan->foto_layanan }}"
-                                    alt="Kubah">
-                                <span class="">{{ $layanan->nama_layanan }}</span>
-                            </div>
-                        @endforeach
-                    </div>
-                    <div class="carousel-button left" id="prevBtnLayanan">&#10094;</div>
-                    <div class="carousel-button right" id="nextBtnLayanan">&#10095;</div>
 
-                </div>
+       
+    <div class="container mx-auto px-8 sm:px-14 lg:px-12 mt-10">
+        <div class="splide splide-layanan max-w-7xl  2xl:max-w-[1500px] ">
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                    @foreach ($layanans as $layanan)
+                    <li class="splide__slide">
+                        <div class="relative mx-auto">
+                            <img src="storage/public/storage/{{ $layanan->foto_layanan }}" alt="Raiden" class="xl:w-[400px] xl:h-[500px] lg:w-[300px] lg:h-[400px] w-[300px] h-[350px] object-cover rounded-2xl mx-auto">
+                            <p class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xl font-semibold bg-black bg-opacity-50 text-white rounded-lg py-2 px-4 transition-opacity duration-300 opacity-100">
+                                {{ $layanan->nama_layanan }}
+                            </p>
+                        </div>
+                    </li>
+                    @endforeach
+                
+                </ul>
             </div>
         </div>
+
+    </div>
+         
+
+
     </div>
 
 
@@ -292,32 +309,37 @@
 
     <section id="bahan" class="mb-32"> </section>
 
-    
-   <div class="container mx-auto px-14 lg:px-20 mt-32 ">
-    <div class="splide w-full max-w-6xl 2xl:max-w-[1500px] px-4 mx-auto h-auto" >
-      <div class="splide__track">
-        <ul class="splide__list">
-          <!-- Slide 1 -->
-          @foreach ($bahans as $bahan)
-          <li class="splide__slide ">
-            <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden w-64 mx-auto">
-              <img src="storage/public/storage/{{ $bahan->foto_bahan }}" alt="Image" class="w-full h-64 lg:h-80 object-cover rounded-xl">
-              <div class="p-4 h-52">
-                <h2 class="text-xl font-bold mb-2 text-center">{{ $bahan->nama_bahan }}</h2>
-                <div class="card-content object-cover ">
-                  <p class="text-gray-700 text-sm text-justify  object-cover h-32 overflow-hidden">
-                    {{ $bahan->deskripsi_bahan }}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </li>
-          @endforeach
-
-        </ul>
-      </div>
+    <div class="mt-20 text-center">
+        <h2 class="text-3xl font-bold">
+            Bahan
+        </h2>
+        <div class="mt-2 mx-auto w-16 h-1 bg-black mb-8"></div>
     </div>
-  </div>
+    
+    <div class="container mx-auto px-8 sm:px-14 lg:px-20 mt-24">
+        <div class="splide splide-bahan w-full max-w-6xl 2xl:max-w-[1450px] px-4 mx-auto h-auto ">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <!-- Slide 1 -->
+                    @foreach ($bahans as $bahan)
+                    <li class="splide__slide">
+                        <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden max-w-64 mx-auto">
+                            <img src="storage/public/storage/{{ $bahan->foto_bahan }}" alt="Image" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+                            <div class="p-4 h-52">
+                                <h2 class="text-xl font-bold mb-2 text-center">{{ $bahan->nama_bahan }}</h2>
+                                <div class="card-content object-cover">
+                                    <p class="text-gray-700 text-sm text-justify object-cover h-32 overflow-hidden">
+                                        {{ $bahan->deskripsi_bahan }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
   
 
    
@@ -325,6 +347,8 @@
 
     <!-- Ornamen -->
     <section id="ornamen" class="mb-32"> </section>
+
+   
 
     <div class="mt-20 text-center">
         <h2 class="text-3xl font-bold">
@@ -575,32 +599,32 @@
 
             <div class="">
 
-                <div>
-                    <p>Bagikan pengalaman anda yang telah <br>
-                        menggunakan layanan kami, dan <br>
-                        bantu kami untuk memperbaiki<br>
-                        layanan kami lebih baik lagi!<br>
+                <div class=" xl:w-[250px] 2xl:w-[390px] lg:w-[650px]">
+                    <p class="text-md  lg:text-2xl sm:text-xl">Bagikan pengalaman anda yang telah menggunakan 
+                        layanan kami, dan  bantu kami untuk memperbaiki 
+                        layanan kami lebih baik lagi!
 
                     </p>
 
                     <Button
                         class="bg-yellow-300 h-10 w-32 rounded-md mt-6 mb-16 hover:bg-yellow-400 transition-transform duration-300 ease-in-out transform hover:scale-110">Isi
                         Testimoni</Button>
-                </div>
+                </div >
 
             </div>
         </div>
 
         <!-- Card Testimoni -->
 
-        <div class=" 2xl:max-w-5xl xl:max-w-3xl mx-10 px-4 sm:mx-10  ">
+        <div class=" 2xl:max-w-3xl xl:max-w-3xl mx-10 2xl:mx-44 px-4 lg:mx-4">
             <!-- Carousel 1 -->
+            
             <div class="splide splide1">
               <div class="splide__track">
                 <ul class="splide__list">
-                  <!-- Testimoni 1 -->
+                  
                   @foreach ($testimonis as $testimoni)
-                  <li class="splide__slide rounded-xl bg-slate-200 flex-shrink-0 h-96">
+                  <li class="splide__slide rounded-xl bg-slate-200 flex-shrink-0 h-96 ">
                     <div class="bg-[#003C43] rounded-xl h-28 text-center py-6 text-white">
                       <h2 class="text-lg font-semibold">{{ $testimoni->nama_panitia }}</h2>
                       <h2 class="text-lg font-semibold">{{ $testimoni->karya->nama_masjid }}</h2>
@@ -615,9 +639,9 @@
                     </div>
                   </li>
                   @endforeach
-                  <!-- Testimoni 2 -->
+                  
                  
-                  <!-- Tambahkan lebih banyak kartu testimoni di sini jika diperlukan -->
+                 
                 </ul>
               </div>
             </div>
@@ -668,7 +692,7 @@
  {{-- splide node module --}}
  {{-- <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script> --}}
 
- <script type="module" src="js/main.js"></script>
+ 
 
 
 </body>

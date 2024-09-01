@@ -22,58 +22,12 @@
  });
 
 
- //Layanan
-
- document.addEventListener('DOMContentLoaded', function () {
-     const carouselInner = document.querySelector('.carousel-inner');
-     const items = document.querySelectorAll('.carousel-item');
-     const totalItems = items.length;
-     let currentIndex = 1;
-
-     function updateCarousel() {
-         items.forEach((item, index) => {
-             item.classList.remove('active');
-         });
-         items[currentIndex].classList.add('active');
-         const isMobile = window.innerWidth < 769;
-         const isLargeScreen = window.innerWidth >= 1024;
-         const offset = isMobile
-             ? -currentIndex * 100
-             : isLargeScreen
-                 ? -(currentIndex - 1) * 100 / 3
-                 : -(currentIndex - 1) * 100 / 3;
-         carouselInner.style.transform = `translateX(${offset}%)`;
-     }
-
-     function prev() {
-         currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-         updateCarousel();
-     }
-
-     function next() {
-         currentIndex = (currentIndex + 1) % totalItems;
-         updateCarousel();
-     }
-
-     document.getElementById('prevBtnLayanan').addEventListener('click', prev);
-     document.getElementById('nextBtnLayanan').addEventListener('click', next);
-
-     window.addEventListener('resize', updateCarousel);
-
-
-     updateCarousel();
-
-
-     window.prev = prev;
-     window.next = next;
- });
-
 
 
 // js Testimoni
 
   document.addEventListener('DOMContentLoaded', function () {
-    // Inisialisasi Carousel 1
+    
     new Splide('.splide1', {
       type   : 'loop',
       perPage: 2,
@@ -91,41 +45,105 @@
     
   });
 
+  
+  
 
-
-
-
-
-// js bahan
-
-var splide = new Splide( '.splide', {
-    type   : 'loop',
-    perPage: 5, // Menampilkan 5 slide sekaligus
-    breakpoints: {
-      1536: {
-        perPage: 4, // 4 slide untuk layar besar (1536px ke atas)
-      },
-      1280: {
-        perPage: 3, // 3 slide untuk layar sedang (1280px ke atas)
-      },
-      1023: {
-        perPage: 2, // 2 slide untuk layar kecil (1024px ke atas)
-      },
-      767: {
-        perPage: 1, // 1 slide untuk layar sangat kecil (768px ke atas)
-        gap: '1rem', // Jarak antar slide lebih kecil untuk layar sangat kecil
-        padding: {
-          left : '0.5rem',
-          right: '0.5rem',
+  document.addEventListener('DOMContentLoaded', function () {
+  // Inisialisasi Splide layanan
+    
+    new Splide('.splide-layanan', {
+      type: 'loop',
+      perPage: 3, 
+      perMove: 1, 
+      breakpoints: {
+        1023: {
+          perPage: 2, 
+        },
+        640: {
+          perPage: 1, 
         },
       },
-    },
-    focus  : 'center',
-    gap: '2rem', // Jarak antar slide
-    padding: {
-      right: '1rem',
-    }, // Memberikan padding di sisi kiri dan kanan
-  } );
-  splide.mount();
+      focus: 'center',
+      gap: '2rem', 
+      padding: {
+        right: '1rem',
+        left: '1rem',
+      },
+    }).mount();
+  
+  // Inisialisasi Splide  bahan
 
+    new Splide('.splide-bahan', {
+      type: 'loop',
+      perPage: 5, 
+      breakpoints: {
+        1536: {
+          perPage: 4, 
+        },
+        1280: {
+          perPage: 3, 
+        },
+        1023: {
+          perPage: 2, 
+        },
+        767: {
+          perPage: 1, 
+          gap: '1rem', 
+          padding: {
+            left: '0.5rem',
+            right: '0.5rem',
+          },
+        },
+      },
+      focus: 'center',
+      gap: '2rem', 
+      padding: {
+        right: '1rem',
+      },
+    }).mount();
+  });
+
+  
+// Typing
+
+const texts = ["Selamat datang di web!", "KALIGRAFI"];
+const textElement = document.getElementById('typingText');
+let textIndex = 0;
+let charIndex = 0;
+const typingSpeed = 100; // Kecepatan mengetik
+const erasingSpeed = 100; // Kecepatan menghapus
+const delayBetweenTexts = 1000; // Jeda antar teks (dalam milidetik)
+const delayAfterLastText = 7000; // Jeda setelah kalimat terakhir sebelum mengulang (dalam milidetik)
+
+function typeEffect() {
+    if (charIndex < texts[textIndex].length) {
+        textElement.innerHTML += texts[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, typingSpeed);
+    } else {
+        if (textIndex === texts.length - 1) {
+            setTimeout(eraseEffect, delayAfterLastText); // Jeda tambahan setelah kalimat terakhir
+        } else {
+            setTimeout(eraseEffect, delayBetweenTexts);
+        }
+    }
+}
+
+function eraseEffect() {
+    if (charIndex > 0) {
+        textElement.innerHTML = texts[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseEffect, erasingSpeed);
+    } else {
+        textIndex = (textIndex + 1) % texts.length; // Pindah ke teks berikutnya
+        setTimeout(typeEffect, typingSpeed);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    typeEffect(); // Mulai efek mengetik saat halaman dimuat
+});
+
+
+  
 
