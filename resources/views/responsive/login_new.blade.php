@@ -9,12 +9,10 @@
     @vite('resources/css/app.css')
     {{-- link icon --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 <!-- bg-[#135D66] -->
 
 <body class="bg-[#135D66]">
-
     <!-- Navbar -->
     <nav id="navbar" class="bg-[#003C43] p-4 fixed top-0 left-0 right-0 z-20 transition duration-300">
         <div class="max-w-full mx-auto px-2 lg:px-2">
@@ -89,50 +87,40 @@
         </div>
     </nav>
 
-
-
     <!-- Form Login -->
     <div class="relative bg-center bg-cover mx-auto h-[500px] sm:h-[600px] md:h-[700px] lg:w-[1050px] xl:w-[1380px] mt-32 z-10 flex flex-col justify-center items-center"
         style="background-image: url('../img/bg.png');">
-
         <div>
             <h1 class="text-4xl font-semibold text-center text-white sm:text-5xl">Login</h1>
             <div class="mt-2 mx-auto w-16 h-1 bg-white mb-8"></div>
             <div class="bg-slate-200 max-w-xs rounded-xl mx-auto mt-16 px-12 py-10 sm:max-w-xl sm:px-24 duration-500">
+                @if(session('loginError'))
+                <div class="bg-red-500 text-white text-center p-4 rounded-lg mb-4">
+                    {{ session('loginError') }}
+                </div>
+                @endif
                 <form action="/login" method="POST">
                     @csrf
                     <!-- Username -->
                     <h4 class="sm:text-lg font-semibold">Username</h4>
-                    <input name="username" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 px-2" placeholder="Username"
-                        type="text">
-
+                    <input name="username" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 px-2" placeholder="Username" type="text">
                     <!-- Password -->
                     <h4 class="sm:text-lg mt-4 font-semibold">Password</h4>
                     <div class="relative">
-                        <input id="password" name="password" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 pr-10 px-2"
-                            placeholder="Password" type="password">
-                        <span id="togglePassword"
-                            class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
+                        <input id="password" name="password" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 pr-10 px-2" placeholder="Password" type="password">
+                        <span id="togglePassword" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
                             <i class="fas fa-eye text-gray-600"></i>
                         </span>
                     </div>
-
                     <!-- Button Login -->
-                    <button
-                        class="bg-yellow-300 rounded-lg h-8 w-56 mt-8 sm:w-96 sm:h-10 sm:text-lg cursor-pointer hover:bg-yellow-400 sm:duration-300 font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110">Login</button>
-
-                    <p class="mt-10 text-center">Tidak memiliki akun? <span
-                            class="text-sky-600 hover:text-sky-700 cursor-pointer">Register</span></p>
+                    <button class="bg-yellow-300 rounded-lg h-8 w-56 mt-8 sm:w-96 sm:h-10 sm:text-lg cursor-pointer hover:bg-yellow-400 sm:duration-300 font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110">Login</button>
+                    <p class="mt-10 text-center">Tidak memiliki akun? <span class="text-sky-600 hover:text-sky-700 cursor-pointer">Register</span></p>
                 </form>
             </div>
         </div>
     </div>
     <br>
     <br>
-
-    {{-- javaskrip password --}}
-
-
 
     <!-- Footer -->
     <footer class="bg-[#333333] h-96 lg:mt-28">
@@ -150,15 +138,12 @@
                 Kalimantan Selatan, 70236
             </p>
             <div class="flex justify-start items-center mt-4">
-
                 <p class="text-gray-400 text-xs mx-auto mt-10 sm:text-base">© 2024 PBL Kel 1</p>
-
             </div>
         </div>
     </footer>
 
     <script src="js/login.js"></script>
-
 </body>
 
 </html>
