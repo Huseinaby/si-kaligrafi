@@ -99,6 +99,11 @@
                     {{ session('loginError') }}
                 </div>
                 @endif
+                @if(session('success'))
+                <div class="bg-green-500 text-white text-center p-4 rounded-lg mb-4">
+                    {{ session('success') }}
+                </div>
+                @endif
                 <form action="/login" method="POST">
                     @csrf
                     <!-- Username -->
@@ -114,7 +119,7 @@
                     </div>
                     <!-- Button Login -->
                     <button class="bg-yellow-300 rounded-lg h-8 w-56 mt-8 sm:w-96 sm:h-10 sm:text-lg cursor-pointer hover:bg-yellow-400 sm:duration-300 font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110">Login</button>
-                    <p class="mt-10 text-center">Tidak memiliki akun? <span class="text-sky-600 hover:text-sky-700 cursor-pointer">Register</span></p>
+                    <p class="mt-10 text-center">Tidak memiliki akun? <span class="text-sky-600 hover:text-sky-700 cursor-pointer"><a href="register">Register</a></span></p>
                 </form>
             </div>
         </div>

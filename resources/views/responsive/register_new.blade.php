@@ -123,7 +123,7 @@ style="background-image: url('../img/bg.png');">
             <!-- Button Login -->
             <button class="bg-yellow-300 rounded-lg h-8 w-56 mt-8 sm:w-96 sm:h-10 sm:text-lg cursor-pointer hover:bg-yellow-400 sm:duration-300 font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110">Resister</button>
       
-            <p class="mt-10 text-center">Sudah punya akun? <span class="text-sky-600 hover:text-sky-700 cursor-pointer">Login</span> </p> 
+            <p class="mt-10 text-center">Sudah punya akun? <span class="text-sky-600 hover:text-sky-700 cursor-pointer"><a href="login">Login</a></span> </p> 
         </form>
     </div>
 </div>
