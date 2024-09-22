@@ -665,10 +665,7 @@
                     </div>
                     <div class="p-6">
                       <p class="text-justify leading-relaxed overflow-hidden h-52 ">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod semper quam, nec
-                        mattis purus laoreet ac. Nullam tincidunt elit id nisi tincidunt, a condimentum felis
-                        lobortis. Integer eu ipsum quis ligula ullamcorper consectetur sed nec nisi. Maecenas
-                        fermentum odio nec justo feugiat.
+                        {{ $testimoni->isi_testimoni }}
                       </p>
                     </div>
                   </li>
