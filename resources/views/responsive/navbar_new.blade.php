@@ -118,7 +118,7 @@
             @auth
                 <div class="relative">
                     <button
-                        class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium w-full text-left"
+                        class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium  text-left"
                         id="userMenuButtonMobile">
                         {{ Auth::user()->nama_lengkap }} 
                         <svg class="w-4 h-4 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
