@@ -93,32 +93,48 @@
 
 <!-- Form Login -->
 <div class="relative bg-center bg-cover mx-auto h-[500px] sm:h-[600px] md:h-[700px] lg:w-[1050px] xl:w-[1380px] mt-32 z-10 flex flex-col justify-center items-center"
-style="background-image: url('../img/bg.png');">
+    style="background-image: url('../img/bg.png');">
 
-<div>
-    <h1 class="text-4xl font-semibold text-center text-white sm:text-5xl">Register</h1>
-    <div class="mt-2 mx-auto w-16 h-1 bg-white mb-8"></div>
-    <div class="bg-slate-200 max-w-xs rounded-xl mx-auto mt-16 px-12 py-10 sm:max-w-xl sm:px-24 duration-500">
-        <form action="/register" method="POST">
-            @csrf
-            <!-- Nama Lengkap -->
+    <div>
+        <h1 class="text-4xl font-semibold text-center text-white sm:text-5xl">Register</h1>
+        <div class="mt-2 mx-auto w-16 h-1 bg-white mb-8"></div>
+        <div class="bg-slate-200 max-w-xs rounded-xl mx-auto mt-16 px-12 py-10 sm:max-w-xl sm:px-24 duration-500">
+            <form action="/register" method="POST">
+                @csrf
+                <!-- Nama Lengkap -->
+                <h4 class="sm:text-lg font-semibold">Nama Lengkap</h4>
+                <input name="nama_lengkap" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-700 px-2 my-4 @error('nama_lengkap') is-invalid @enderror"
+                    placeholder="Nama Lengkap" type="text" value="{{ old('nama_lengkap') }}">
+                @error('nama_lengkap')
+                <div class="text-red-500 text-sm mt-1">
+                    {{ $message }}
+                </div>
+                @enderror
 
-            <h4 class="sm:text-lg font-semibold">Nama Lengkap</h4>
-            <input name="nama_lengkap" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-700 px-2 my-4" placeholder="Nama Lengkap" type="text">
-            
-            
-            <!-- Username -->
-            <h4 class="sm:text-lg font-semibold">Username</h4>
-            <input name="username" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 px-2" placeholder="Username" type="text">
+                <!-- Username -->
+                <h4 class="sm:text-lg font-semibold">Username</h4>
+                <input name="username" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 px-2 my-4 @error('username') is-invalid @enderror"
+                    placeholder="Username" type="text" value="{{ old('username') }}">
+                @error('username')
+                <div class="text-red-500 text-sm mt-1">
+                    {{ $message }}
+                </div>
+                @enderror
 
-            <!-- Password -->
-            <h4 class="sm:text-lg mt-4 font-semibold">Password</h4>
-            <div class="relative">
-                <input id="password" name="password" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 pr-10 px-2" placeholder="Password" type="password">
-                <span id="togglePassword" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
-                    <i class="fas fa-eye text-gray-600"></i>
-                </span>
-            </div>
+                <!-- Password -->
+                <h4 class="sm:text-lg mt-4 font-semibold">Password</h4>
+                <div class="relative">
+                    <input id="password" name="password" class="h-8 w-56 sm:w-96 sm:h-10 rounded-lg sm:duration-500 pr-10 px-2 @error('password') is-invalid @enderror"
+                        placeholder="Password" type="password">
+                    <span id="togglePassword" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
+                        <i class="fas fa-eye text-gray-600"></i>
+                    </span>
+                </div>
+                @error('password')
+                <div class="text-red-500 text-sm mt-1">
+                    {{ $message }}
+                </div>
+                @enderror
 
             <!-- Button Login -->
             <button class="bg-yellow-300 rounded-lg h-8 w-56 mt-8 sm:w-96 sm:h-10 sm:text-lg cursor-pointer hover:bg-yellow-400 sm:duration-300 font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110">Resister</button>
@@ -128,6 +144,7 @@ style="background-image: url('../img/bg.png');">
     </div>
 </div>
 </div>
+
 <br>
 <br>
 

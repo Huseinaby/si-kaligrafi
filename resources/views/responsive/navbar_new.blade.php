@@ -106,24 +106,57 @@
     <!-- Navbar Mobile -->
     <div class="hidden lg:hidden bg-[#003C43]" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#layanan"
-                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Layanan</a>
-            <a href="#tentang"
-                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Tentang</a>
-            <a href="#bahan"
-                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Bahan</a>
-            <a href="#ornamen"
-                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Ornamen</a>
-            <a href="portofolio"
-                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio</a>
-            <a href="#galeri"
-                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Galeri</a>
-            <a href="#testimoni"
-                class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Testimoni</a>
-            <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium"><a
-                    href="login">Login</a></button>
+            <a href="/#layanan" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Layanan</a>
+            <a href="/#tentang" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Tentang</a>
+            <a href="/#bahan" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Bahan</a>
+            <a href="/#ornamen" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Ornamen</a>
+            <a href="portofolio" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio</a>
+            <a href="/#galeri" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Galeri</a>
+            <a href="/#testimoni" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Testimoni</a>
+    
+            <!-- Blade directive untuk autentikasi -->
+            @auth
+                <div class="relative">
+                    <button
+                        class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium  text-left"
+                        id="userMenuButtonMobile">
+                        {{ Auth::user()->nama_lengkap }} 
+                        <svg class="w-4 h-4 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown untuk user -->
+                    <div id="userDropdownMobile" class="hidden bg-white mt-2 w-full rounded-lg shadow-lg z-10">
+                        @if (Auth::user()->level == 1)
+                            <a href="/admin" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                        @else
+                            <a href="/user/dashboard" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                        @endif
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                            onclick="event.preventDefault(); document.getElementById('logout-form-mobile').submit();">Logout</a>
+                        <form id="logout-form-mobile" action="/logout" method="POST" class="hidden">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+    
+                <!-- JavaScript untuk toggle dropdown -->
+                <script>
+                    document.getElementById('userMenuButtonMobile').addEventListener('click', function() {
+                        document.getElementById('userDropdownMobile').classList.toggle('hidden');
+                    });
+                </script>
+            @else
+                <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium ">
+                    <a href="/login">Login</a>
+                </button>
+            @endauth
         </div>
     </div>
+    
+
 </nav>
 
 
