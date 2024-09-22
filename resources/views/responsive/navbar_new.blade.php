@@ -149,7 +149,7 @@
                     });
                 </script>
             @else
-                <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium w-full">
+                <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium ">
                     <a href="/login">Login</a>
                 </button>
             @endauth
