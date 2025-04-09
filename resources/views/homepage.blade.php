@@ -37,7 +37,8 @@
         <div class="max-w-full mx-auto px-2 lg:px-2">
             <div class="relative flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <img class="h-14 w-auto" src="../img/kaligrafi2.png" alt="Workflow">
+                    <!--<img class="h-14 w-auto" src="../img/kaligrafi2.png" alt="Workflow">-->
+                    <a href="/" class="text-gray-300 px-3 py-2 rounded-md text-xl font-bold">Bangro Kalighrafi</a>
                 </div>
                 <div class="absolute inset-y-0 right-0 flex items-center lg:hidden">
                     <!-- Mobile menu button -->
@@ -62,10 +63,10 @@
                 <!-- Navbar Biasa -->
                 <div class="hidden lg:block lg:ml-6">
                     <div class="flex space-x-4">
-                        <a href="#layanan"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Layanan</a>
                         <a href="#tentang"
                             class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Tentang</a>
+                        <a href="#layanan"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Layanan</a>
                         <a href="#bahan"
                             class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Bahan</a>
                         <a href="#ornamen"
@@ -110,11 +111,6 @@
                                     document.getElementById('userDropdown').classList.toggle('hidden');
                                 });
                             </script>
-                        @else
-                            <button
-                                class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg font-medium text-xl">
-                                <a href="/login">Login</a>
-                            </button>
                         @endauth
 
                     </div>
@@ -166,10 +162,6 @@
                             document.getElementById('userDropdownMobile').classList.toggle('hidden');
                         });
                     </script>
-                @else
-                    <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium ">
-                        <a href="/login">Login</a>
-                    </button>
                 @endauth
             </div>
         </div>
@@ -181,17 +173,17 @@
 
 
     <!-- Title -->
-    <div class="relative bg-center bg-cover h-[500px] sm:h-[600px] md:h-[800px] lg:h-[1000px] -mt-16 "
-        style="background-image: url('../img/kali.png');">
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="relative z-10 h-full flex flex-col justify-center text-left px-2  2xl:py-10 items-center ">
+    <div class="relative bg-center bg-cover h-[500px] sm:h-[0px] md:h-[800px] lg:h-[1000px] -mt-16 "
+        style="background-image: url('../img/g4.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+        <div class="relative flex flex-col justify-center text-left px-2  2xl:py-10 items-center ">
 
             <div class=" mb-16 mt-48  container mx-auto px-14 lg:px-20 ">
-                <h2
+                        <h2
                             class="text-2xl  font-semibold text-white mb-4 xl:py-14 xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xl:-mb-2 ">
                              
                             <div class="">
-                            
+            
                                 <div class="text-2xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl  typing-effect blink-animation" id="typingText"></div>
                             </div>
                             
@@ -210,7 +202,7 @@
                                 <path
                                     d="M6.62 10.79a15.978 15.978 0 006.79 6.79l2.2-2.2a1.003 1.003 0 011.08-.21c1.12.45 2.33.69 3.58.69.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.3 22 2 13.7 2 3.5 2 2.95 2.45 2.5 3 2.5H6.5c.55 0 1 .45 1 1 0 1.25.24 2.46.69 3.58.1.23.04.5-.21 1.08l-2.2 2.2z" />
                             </svg>
-                            <a href="https://wa.me/6285845510008?text=Halo%20Mas%20Bro!">Hubungi kami</a>
+                            <a href="https://wa.me/6281250099700">Konsultasikan</a>
                         </button>
             </div>
         </div>
@@ -249,7 +241,7 @@
 
         <div class=" mb-16 mt-32">
             <h2 class="text-3xl font-bold">Kualitas Kami</h2>
-            <div class="mt-1 w-10 h-1 bg-black "></div>
+            <div class="ml-2 mt-3 w-10 h-1 bg-black "></div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 gap-6 mb-28 xl:mb-48 ">
@@ -303,7 +295,7 @@
 
         <div class=" mb-16  px-14 lg:px-20 py-10 container mx-auto mt-32 ">
             <h2 class="text-3xl font-bold text-white">Layanan</h2>
-            <div class="mt-1 w-10 h-1 bg-white "></div>
+            <div class="ml-2 mt-3 w-10 h-1 bg-white "></div>
         </div>
 
 
@@ -316,7 +308,7 @@
                     @foreach ($layanans as $layanan)
                     <li class="splide__slide">
                         <div class="relative mx-auto">
-                            <img src="storage/public/storage/{{ $layanan->foto_layanan }}" alt="Raiden" class="xl:w-[400px] xl:h-[500px] lg:w-[300px] lg:h-[400px] w-[300px] h-[350px] object-cover rounded-2xl mx-auto">
+                            <img src="storage/public/storage/{{ $layanan->foto_layanan }}" alt="Layanan img" class="xl:w-[400px] xl:h-[500px] lg:w-[300px] lg:h-[400px] w-[300px] h-[350px] object-cover rounded-2xl mx-auto">
                             <p class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xl font-semibold bg-black bg-opacity-50 text-white rounded-lg py-2 px-4 transition-opacity duration-300 opacity-100">
                                 {{ $layanan->nama_layanan }}
                             </p>
@@ -334,12 +326,7 @@
 
     </div>
 
-
-
-
-
     <!-- Bahan -->
-
 
     <section id="bahan" class="mb-32"> </section>
 
@@ -347,7 +334,7 @@
         <h2 class="text-3xl font-bold">
             Bahan
         </h2>
-        <div class="mt-2 mx-auto w-16 h-1 bg-black mb-8"></div>
+        <div class="mt-3 mx-auto w-10 h-1 bg-black mb-8"></div>
     </div>
     
     <div class="container mx-auto px-8 sm:px-14 lg:px-20 mt-24">
@@ -388,18 +375,18 @@
         <h2 class="text-3xl font-bold">
             Ornamen
         </h2>
-        <div class="mt-2 mx-auto w-16 h-1 bg-black mb-8"></div>
+        <div class="mt-3 mx-auto w-16 h-1 bg-black mb-8"></div>
     </div>
 
     <div class="container mx-auto p-10 cursor-pointer ">
-        <div class="flex justify-center space-x-4 mb-4">
+        <!--<div class="flex justify-center space-x-4 mb-4">
             <button class="filter-btn px-4 py-2 border bg-slate-200 rounded-lg hover:bg-slate-300"
                 data-filter="all">Semua</button>
             <button class="filter-btn px-4 py-2 border bg-slate-200 rounded-lg hover:bg-slate-300"
                 data-filter="kubah">Kubah</button>
             <button class="filter-btn px-4 py-2 border bg-slate-200 rounded-lg hover:bg-slate-300"
                 data-filter="mihrab">Mihrab</button>
-        </div>
+        </div>-->
 
 
         <div id="cards-container"
@@ -422,7 +409,7 @@
             @foreach ($ornamens as $ornamen)
                 {
                     src: 'storage/public/storage/{{ $ornamen->foto_ornamen }}',
-                    text: 'Bahan : {{ $ornamen->bahan->nama_bahan }}',
+                    text: 'Ornamen : {{ $ornamen->jenis_ornamen }}',
                     category: '{{ $ornamen->deskripsi_ornamen }}'
                 },
             @endforeach
@@ -523,7 +510,7 @@
         <h2 class="text-3xl font-bold">
             Galeri
         </h2>
-        <div class="mt-2 mx-auto w-16 h-1 bg-black lg:mb-8"></div>
+        <div class="mt-3 mx-auto w-10 h-1 bg-black lg:mb-8"></div>
     </div>
 
 
@@ -626,7 +613,7 @@
                 <h2 class="text-3xl font-bold  ">
                     Testimoni
                 </h2>
-                <div class="mt-1 w-10 h-1 bg-black mb-10"></div>
+                <div class="ml-2 mt-3 w-10 h-1 bg-black mb-10"></div>
             </div>
 
 
@@ -639,10 +626,6 @@
                         layanan kami lebih baik lagi!
 
                     </p>
-
-                    <Button
-                        class="bg-yellow-300 h-10 w-32 rounded-md mt-6 mb-16 hover:bg-yellow-400 transition-transform duration-300 ease-in-out transform hover:scale-110">Isi
-                        Testimoni</Button>
                 </div >
 
             </div>
