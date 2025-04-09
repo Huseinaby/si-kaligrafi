@@ -20,7 +20,7 @@
     <div class="max-w-full mx-auto px-2 lg:px-2">
         <div class="relative flex items-center justify-between h-16">
             <div class="flex items-center">
-                <img class="h-14 w-auto" src="../img/kaligrafi2.png" alt="Workflow">
+                <a href="/" class="text-gray-300 px-3 py-2 rounded-md text-xl font-bold">Bangro Kalighrafi</a>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center lg:hidden">
                 <!-- Mobile menu button -->
@@ -93,11 +93,6 @@
                                 document.getElementById('userDropdown').classList.toggle('hidden');
                             });
                         </script>
-                    @else
-                        <button
-                            class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg font-medium text-xl">
-                            <a href="/login">Login</a>
-                        </button>
                     @endauth
                 </div>
             </div>
@@ -148,10 +143,6 @@
                         document.getElementById('userDropdownMobile').classList.toggle('hidden');
                     });
                 </script>
-            @else
-                <button class="bg-yellow-300 hover:bg-yellow-400 block px-4 py-2 rounded-lg text-base font-medium ">
-                    <a href="/login">Login</a>
-                </button>
             @endauth
         </div>
     </div>

@@ -106,7 +106,7 @@
   
 // Typing
 
-const texts = ["Selamat datang di web!", "KALIGRAFI"];
+const texts = ["Ahlan wa Sahlan!", "di Bangro Kalighrafi"];
 const textElement = document.getElementById('typingText');
 let textIndex = 0;
 let charIndex = 0;
