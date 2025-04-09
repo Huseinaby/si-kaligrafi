@@ -34,34 +34,34 @@
         <h1 class="font-semibold text-3xl py-8 md:py-0 px-7 sm:text-4xl"></h1>
     </div>
 
-    <div class="container mx-auto px-14 lg:px-20 mt-32 xl:mt-48   ">
+    <div class="container mx-auto px-14 lg:px-20 mt-32">
 
         <div id="indicators-carousel" class="relative w-full" data-carousel="static">
             <!-- Pembungkus Carousel -->
             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="../img/g1.png"
+                    <img src="../img/g3.jpg"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="../img/g2.png"
+                    <img src="../img/g2.jpg"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="../img/g3.png"
+                    <img src="../img/kali.jpg"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="../img/g1.png"
+                    <img src="../img/g5.jpg"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 5 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="../img/g2.png"
+                    <img src="../img/g6.jpg"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
             </div>
@@ -114,11 +114,11 @@
 
     <!-- Card Karya -->
 
-    <div class="container mx-auto px-14 lg:px-20 mt-20 sm:mt-32">
+    <div class="container mx-auto px-14 lg:px-20 mt-20">
         <div class="container mx-auto ">
             <div class=" mb-16 ">
                 <h2 class="text-3xl font-bold">Portofolio</h2>
-                <div class="mt-1 w-10 h-1 bg-black "></div>
+                <div class="ml-2 mt-3 w-10 h-1 bg-black "></div>
             </div>
 
             <div id="card-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
