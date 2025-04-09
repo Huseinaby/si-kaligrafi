@@ -22,7 +22,7 @@ use App\Http\Controllers\PesananController;
 Route::get('/', function () {
     return view('homepage', [
         'bahans' => Bahan::all(),
-        'layanans' => Layanan::all(),
+        'layanans' => Layanan::all()->unique('foto_layanan'),
         'ornamens' => Ornamen::all(),
         'galeris' => Galeri::all(),
         'testimonis' => Testimoni::where('status', 'accepted')->get()
