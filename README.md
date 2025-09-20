@@ -7,21 +7,17 @@
   <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
 </p>
 
-SI-Kaligrafi is a dynamic profile website and Content Management System (CMS) built for a professional calligraphy service. The application is designed to professionally showcase services, gallery, and testimonials to potential clients.
-
-All content on the public-facing homepage is fully manageable through a secure and user-friendly admin panel, demonstrating a monolithic Laravel architecture with distinct frontend frameworks for public and admin interfaces.
+SI-Kaligrafi is a dynamic profile website and Content Management System (CMS) built for a professional calligraphy service. The application is designed to professionally showcase services, gallery, and testimonials to potential clients. All content on the public-facing homepage is fully manageable through a secure and user-friendly admin panel, demonstrating a monolithic Laravel architecture with distinct frontend frameworks for public and admin interfaces.
 
 ##  Screenshots
 
-| Homepage (Client View) | Admin Panel (Dashboard) |
+| Homepage | Services |
 | :---: | :---: |
-| *Showcasing the Tailwind CSS design for clients.* | *Showcasing the Bootstrap template for administrators.* |
-| **![Homepage](./docs/images/homepage.png)** | **![Admin Dashboard](./docs/images/admin-dashboard.png)** |
+| **![Homepage](./docs/images/Screenshot_1.png)** | **![Admin Dashboard](./docs/images/Screenshot_2.png)** |
 
-| Admin - Gallery Management | Admin - Add/Edit Form |
+| Ornament | Admin  |
 | :---: | :---: |
-| *Example of the CRUD interface for managing content.* | *Demonstrating the form for content input.* |
-| **![Admin CRUD](./docs/images/admin-crud.png)** | **![Admin Form](./docs/images/admin-form.png)** |
+| **![Admin CRUD](./docs/images/Screenshot_3.png)** | **![Admin Form](./docs/images/Screenshot_4.png)** |
 
 ##  Key Features
 
