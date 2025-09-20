@@ -52,7 +52,7 @@ This application is divided into two main parts: the public-facing homepage and 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Huseinaby/si-kaligrafi.git](https://github.com/Huseinaby/si-kaligrafi.git)
+    git clone https://github.com/Huseinaby/si-kaligrafi.git
     cd si-kaligrafi
     ```
 2.  **Install dependencies:**
