@@ -29,7 +29,8 @@ html {
     border-right: 2px solid; /* Garis vertikal untuk efek kursor */
     overflow: hidden; 
     white-space: nowrap;
-    display: inline-block; /* Memastikan elemen tetap dalam satu baris */
+    display: inline-block;
+    padding-bottom: 10px; /* Jarak antara teks dan garis bawah */
 }
 
 @keyframes blink {

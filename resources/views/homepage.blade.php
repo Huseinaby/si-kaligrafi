@@ -178,7 +178,7 @@
         <div class="absolute inset-0 bg-black bg-opacity-80"></div>
         <div class="relative flex flex-col justify-center text-left px-2  2xl:py-10 items-center ">
 
-            <div class=" mb-16 mt-48  container mx-auto px-14 lg:px-20 ">
+            <div class="mb-16 mt-60  container mx-auto px-14 lg:px-20 ">
                         <h2
                             class="text-2xl  font-semibold text-white mb-4 xl:py-14 xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xl:-mb-2 ">
                              
@@ -189,7 +189,7 @@
                             
 
                         </h2>
-                        <div class="  rounded-lg max-w-lg w-full mx-auto sm:mx-0">
+                        <div class="rounded-lg max-w-lg w-full mx-auto sm:mx-0">
                             <p class="text-white text-justify font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
                                 Percantik masjid Anda dengan sentuhan seni kaligrafi islami dari kami. Rasakan keindahan yang
                                 membawa kedamaian dan keberkahan. Kami menghadirkan kaligrafi dengan desain yang mempesona.
@@ -301,7 +301,7 @@
 
        
     <div class="container mx-auto px-8 sm:px-14 lg:px-12 mt-10">
-        <div class="splide splide-layanan max-w-7xl  2xl:max-w-[1500px] ">
+        <div class="splide splide-layanan max-w-8xl  2xl:max-w-[1500px] ">
             <div class="splide__track">
                 <ul class="splide__list">
 
@@ -338,22 +338,17 @@
     </div>
     
     <div class="container mx-auto px-8 sm:px-14 lg:px-20 mt-24">
-        <div class="splide splide-bahan w-full max-w-6xl 2xl:max-w-[1450px] px-4 mx-auto h-auto ">
+        <div class="splide splide-bahan w-full max-w-8xl 2xl:max-w-[1500px] px-4 mx-auto h-auto ">
             <div class="splide__track">
                 <ul class="splide__list">
                     <!-- Slide 1 -->
                     @foreach ($bahans as $bahan)
                     <li class="splide__slide">
-                        <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden max-w-64 mx-auto">
+                        <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden max-w-70 mx-auto">
                             <img src="storage/public/storage/{{ $bahan->foto_bahan }}" alt="Image" class="w-full h-64 lg:h-80 object-cover rounded-xl">
-                            <div class="p-4 h-52">
-                                <h2 class="text-xl font-bold mb-2 text-center">{{ $bahan->nama_bahan }}</h2>
-                                <div class="card-content object-cover">
-                                    <p class="text-gray-700 text-sm text-justify object-cover h-32 overflow-hidden">
-                                        {{ $bahan->deskripsi_bahan }}
-                                    </p>
-                                </div>
-                            </div>
+                            <p class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xl font-semibold bg-black bg-opacity-50 text-white rounded-lg py-2 px-4 transition-opacity duration-300 opacity-100">
+                                {{ $bahan->nama_bahan }}
+                            </p>
                         </div>
                     </li>
                     @endforeach
