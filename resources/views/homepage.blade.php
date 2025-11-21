@@ -32,6 +32,9 @@
 
 <body>
 
+    <!-- menambah floating button whatsapp-->
+    @include('partials.floating-action-button')
+
     <!-- Navbar -->
     <nav id="navbar" class="bg-transparent p-4 fixed top-0 left-0 right-0 z-20 transition duration-300">
         <div class="max-w-full mx-auto px-2 lg:px-2">
@@ -180,7 +183,7 @@
 
             <div class="mb-16 mt-60  container mx-auto px-14 lg:px-20 ">
                         <h2
-                            class="text-2xl  font-semibold text-white mb-4 xl:py-14 xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xl:-mb-2 ">
+                            class="text-2xl  font-bold text-white mb-4 xl:py-14 xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xl:-mb-2 ">
                              
                             <div class="">
             
@@ -196,7 +199,7 @@
                             </p>
                         </div>
                         <button
-                            class="xl:mt-12 flex items-center w-48 bg-yellow-300 hover:bg-yellow-400 text-green-900 font-semibold py-2 px-4 rounded-full shadow-lg mt-6 transition-transform duration-300 ease-in-out transform hover:scale-110">
+                            class="xl:mt-12 flex items-center w-48 bg-yellow-300 hover:bg-yellow-400 text-green-900 font-semibold py-2 px-4 rounded-full shadow-lg mt-10 transition-transform duration-300 ease-in-out transform hover:scale-110">
                             <svg class="w-6 h-6 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24">
                                 <path
@@ -291,7 +294,7 @@
 
     <section id="layanan" class="mb-72"> </section>
 
-    <div class="bg-slate-900 h-[620px]  md:h-[650px] lg:h-[750px]  xl:h-[800px]">
+    <div class="bg-[#003035] h-[620px]  md:h-[650px] lg:h-[750px]  xl:h-[800px]">
 
         <div class=" mb-16  px-14 lg:px-20 py-10 container mx-auto mt-32 ">
             <h2 class="text-3xl font-bold text-white">Layanan</h2>

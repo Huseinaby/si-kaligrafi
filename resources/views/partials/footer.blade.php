@@ -22,7 +22,7 @@
     </div>
     <br>
     <div class="footer-address2">
-        <img src="../image/c.png" alt="">
+        <img src="../image/c.png" alt="copyright_icon">
         <p>2024 [merk]</p>
     </div>
 
