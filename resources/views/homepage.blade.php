@@ -18,7 +18,7 @@
     {{-- css home --}}
     <link rel="stylesheet" href="css/homepage.css">
 
-      <!--CDN Splide CSS -->
+    <!--CDN Splide CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
 
     {{-- splide --}}
@@ -193,7 +193,7 @@
 
                         </h2>
                         <div class="rounded-lg max-w-lg w-full mx-auto sm:mx-0">
-                            <p class="text-white text-justify font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+                            <p class="text-white font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
                                 Percantik masjid Anda dengan sentuhan seni kaligrafi islami dari kami. Rasakan keindahan yang
                                 membawa kedamaian dan keberkahan. Kami menghadirkan kaligrafi dengan desain yang mempesona.
                             </p>
@@ -311,7 +311,9 @@
                     @foreach ($layanans as $layanan)
                     <li class="splide__slide">
                         <div class="relative mx-auto">
-                            <img src="storage/public/storage/{{ $layanan->foto_layanan }}" alt="Layanan img" class="xl:w-[400px] xl:h-[500px] lg:w-[300px] lg:h-[400px] w-[300px] h-[350px] object-cover rounded-2xl mx-auto">
+                            <img src="storage/public/storage/{{ $layanan->foto_layanan }}" alt="Layanan img" class="xl:w-[400px] xl:h-[500px] lg:w-[300px] lg:h-[400px] w-[300px] h-[350px] object-cover rounded-2xl mx-auto"
+                            onclick="previewImage('storage/public/storage/{{ $layanan->foto_layanan }}')"
+                            >
                             <p class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xl font-semibold bg-black bg-opacity-50 text-white rounded-lg py-2 px-4 transition-opacity duration-300 opacity-100">
                                 {{ $layanan->nama_layanan }}
                             </p>
@@ -348,7 +350,9 @@
                     @foreach ($bahans as $bahan)
                     <li class="splide__slide">
                         <div class="flex-none bg-slate-200 rounded-lg shadow-lg overflow-hidden max-w-70 mx-auto">
-                            <img src="storage/public/storage/{{ $bahan->foto_bahan }}" alt="Image" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+                            <img src="storage/public/storage/{{ $bahan->foto_bahan }}" alt="Image" class="w-full h-64 lg:h-80 object-cover rounded-xl"
+                            onclick="previewImage('storage/public/storage/{{ $bahan->foto_bahan }}')"
+                            >
                             <p class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xl font-semibold bg-black bg-opacity-50 text-white rounded-lg py-2 px-4 transition-opacity duration-300 opacity-100">
                                 {{ $bahan->nama_bahan }}
                             </p>
@@ -406,9 +410,9 @@
         const cardsData = [
             @foreach ($ornamens as $ornamen)
                 {
-                    src: 'storage/public/storage/{{ $ornamen->foto_ornamen }}',
-                    text: 'Ornamen : {{ $ornamen->jenis_ornamen }}',
-                    category: '{{ $ornamen->deskripsi_ornamen }}'
+                    src: "storage/public/storage/{{ $ornamen->foto_ornamen }}",
+                    text: "Ornamen : {{ $ornamen->jenis_ornamen }}",
+                    category: "{{ $ornamen->deskripsi_ornamen }}"
                 },
             @endforeach
         ];
@@ -429,8 +433,9 @@
             cardsToShow.forEach(card => {
                 //Tampilan nya di sini
                 const cardElement = `
-                    <div class="relative w-full overflow-hidden rounded-xl group z-0">
-                        <img src="${card.src}" alt="Gambar" class="w-full rounded-xl object-cover h-80 w-full">
+                    <div class="relative w-full overflow-hidden rounded-xl group z-0 cursor-pointer">
+                        <img src="${card.src}" alt="gambar_ornamen" class="w-full rounded-xl object-cover h-80 w-full"
+                        onclick="previewImage('${card.src}')">
                         <div class="absolute inset-0 flex items-end py-4 px-4 rounded-xl bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300">
                             <h2 class="text-lg text-white font-semibold shadow-inner">${card.text}</h2>
                         </div>
@@ -618,10 +623,9 @@
 
             <div class="">
 
-                <div class=" xl:w-[250px] 2xl:w-[390px] lg:w-[650px]">
+                <div class=" xl:w-[250px] 2xl:w-[390px] lg:w-[650px] mb-10">
                     <p class="text-md  lg:text-2xl sm:text-xl">Bagikan pengalaman anda yang telah menggunakan 
-                        layanan kami, dan  bantu kami untuk memperbaiki 
-                        layanan kami lebih baik lagi!
+                        layanan kami!
 
                     </p>
                 </div >
@@ -631,7 +635,7 @@
 
         <!-- Card Testimoni -->
 
-        <div class=" 2xl:max-w-3xl xl:max-w-3xl mx-10 2xl:mx-44 px-4 lg:mx-4">
+        <div class=" w-full px-14">
             <!-- Carousel 1 -->
             
             <div class="splide splide1">
@@ -672,7 +676,7 @@
 
     <!-- Footer -->
 
-    <footer class="bg-[#333333] h-96 mt-16">
+    <footer class="bg-[#333333] mt-16">
 
         <div class="p-8">
             <div class="flex items-center mb-4">
@@ -689,7 +693,7 @@
             </p>
             <div class="flex justify-start items-center mt-4">
 
-                <p class="text-gray-400 text-xs mx-auto mt-10 sm:text-base">© 2024 PBL Kel 1</p>
+                <p class="text-gray-400 text-xs mx-auto mt-10 sm:text-base">© 2024 - TI B 22 (Project Based Learning) POLIBAN Kel. 01</p>
             </div>
         </div>
 
@@ -704,7 +708,21 @@
  {{-- splide node module --}}
  {{-- <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script> --}}
 
- 
+ <!-- Preview image modal -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+ <script>
+    function previewImage(imgUrl) {
+        Swal.fire({
+            imageUrl: imgUrl,
+            imageWidth: "100%",
+            imageAlt: "Preview",
+            background: "#000000aa",
+            showConfirmButton: false,
+            showCloseButton: true,
+        });
+    }
+</script>
 
 
 </body>

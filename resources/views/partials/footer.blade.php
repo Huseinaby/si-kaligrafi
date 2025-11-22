@@ -23,7 +23,7 @@
     <br>
     <div class="footer-address2">
         <img src="../image/c.png" alt="copyright_icon">
-        <p>2024 [merk]</p>
+        <p>2024 - TI B 22 (Project Based Learning) POLIBAN Kel. 01</p>
     </div>
 
 

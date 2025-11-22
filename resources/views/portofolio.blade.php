@@ -23,6 +23,9 @@
 
 <body class="bg-white  ">
 
+    <!-- menambah floating button whatsapp-->
+    @include('partials.floating-action-button')
+
     <!-- Navbar -->
     @include('responsive.navbar_new')
 
@@ -34,7 +37,7 @@
         <h1 class="font-semibold text-3xl py-8 md:py-0 px-7 sm:text-4xl"></h1>
     </div>
 
-    <div class="container mx-auto px-14 lg:px-20 mt-32">
+    <div class="container mx-auto px-14 lg:px-20 mt-40">
 
         <div id="indicators-carousel" class="relative w-full" data-carousel="static">
             <!-- Pembungkus Carousel -->
@@ -42,27 +45,32 @@
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                     <img src="../img/g3.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="img_carousel_1"
+                        onclick="previewImage('../img/g3.jpg')">
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="../img/g2.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="img_carousel_2"
+                        onclick="previewImage('../img/g2.jpg')">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="../img/kali.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="img_carousel_3"
+                        onclick="previewImage('../img/kali.jpg')">
                 </div>
                 <!-- Item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="../img/g5.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="img_carousel_4"
+                        onclick="previewImage('../img/g5.jpg')">
                 </div>
                 <!-- Item 5 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="../img/g6.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="img_carousel_5"
+                        onclick="previewImage('../img/g6.jpg')">
                 </div>
             </div>
             <!-- Indikator Slider -->
@@ -167,11 +175,12 @@
                 //tampilannya disini
                 const cardElement = `
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer">
-                    <img class="w-full h-52 xl:h-64 object-cover" src="${card.image}" alt="Image">
+                    <img class="w-full h-52 xl:h-64 object-cover" src="${card.image}" alt="gambar_portofolio"
+                    onclick="previewImage('${card.image}')">
                     <div class="p-4 bg-[#135D66] text-white">
-                        <h3 class="text-xl font-semibold mb-2 text-white">${card.title}</h3>
+                        <h1 class="text-lg font-semibold mb-2 text-white">${card.title}</h1>
                         <p class=" mb-1 text-white">${card.year}</p>
-                        <p class="text-shite">Kategori karya: ${card.category}</p>
+                        <p class="text-white">Karya: ${card.category}</p>
                     </div>
                 </div>
             `;
@@ -213,7 +222,7 @@
 
     <!-- Footer -->
 
-    <footer class="bg-[#333333] h-96 mt-24">
+    <footer class="bg-[#333333] mt-24">
         <div class="p-8">
             <div class="flex items-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white mr-2" fill="none"
@@ -228,11 +237,28 @@
                 Kalimantan Selatan, 70236
             </p>
             <div class="flex justify-start items-center mt-4">
-                <p class="text-gray-400 text-xs mx-auto mt-10 sm:text-base">© 2024 PBL Kel 1</p>
+                <p class="text-gray-400 text-xs mx-auto mt-10 sm:text-base">© 2024 - TI B 22 (Project Based Learning) POLIBAN Kel. 01</p>
             </div>
         </div>
     </footer>
 
+    <!-- Preview image modal -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+ <script>
+    function previewImage(imgUrl) {
+        Swal.fire({
+            imageUrl: imgUrl,
+            imageWidth: "100%",
+            imageAlt: "Preview",
+            background: "#000000aa",
+            showConfirmButton: false,
+            showCloseButton: true,
+        });
+    }
+</script>
+
 </body>
+
 
 </html>

@@ -7,6 +7,7 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: 0;
+    overflow-x: hidden;
 }
 
 body { 
@@ -16,6 +17,8 @@ body {
     font-family: Arial, sans-serif;
     background-attachment: fixed;
     background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
 
 }
 
@@ -143,7 +146,7 @@ button a:visited {
 /* Form Isi */
 
 .user-login {
-    margin-top: 65px;
+    margin-top: 50px;
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;

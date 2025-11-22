@@ -4,8 +4,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #135D66;
     background-image: url('../image/background.svg');
-    background-position: 100% 50%;
+    background-position: center;
     z-index: 2;
+    background-size: cover;
+    overflow-x: hidden;
 }
 
 

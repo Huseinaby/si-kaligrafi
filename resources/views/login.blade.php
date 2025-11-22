@@ -29,7 +29,7 @@
                 {{ session('loginError') }}
             </div>
         @endif
-        <h1><b> Login</b></h1>
+        <h1><b>Login</b></h1>
         <form action="\login" method="POST">
             @csrf
             <div class="form-group">
